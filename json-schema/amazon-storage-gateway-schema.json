@@ -1,0 +1,116 @@
+{
+  "$id": "https://schema.api.io/amazon-storage-gateway/amazon-storage-gateway-schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Amazon Storage Gateway",
+  "description": "Schema representing an AWS Storage Gateway resource. A Storage Gateway connects on-premises environments to AWS cloud storage, enabling hybrid cloud storage workflows with local caching for low-latency access.",
+  "type": "object",
+  "required": [
+    "GatewayARN"
+  ],
+  "properties": {
+    "GatewayARN": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the gateway.",
+      "pattern": "^arn:aws:storagegateway:[a-z0-9-]+:[0-9]{12}:gateway/sgw-[A-F0-9]+$"
+    },
+    "GatewayId": {
+      "type": "string",
+      "description": "The unique identifier assigned to the gateway.",
+      "pattern": "^sgw-[A-F0-9]+$"
+    },
+    "GatewayName": {
+      "type": "string",
+      "description": "The name of the gateway.",
+      "minLength": 2,
+      "maxLength": 255
+    },
+    "GatewayTimezone": {
+      "type": "string",
+      "description": "A value that indicates the time zone configured for the gateway.",
+      "examples": ["GMT-5:00", "GMT", "GMT+1:00"]
+    },
+    "GatewayType": {
+      "type": "string",
+      "description": "The type of the gateway.",
+      "enum": ["STORED", "CACHED", "VTL", "S3_FILE_GATEWAY", "FSX_SMB"]
+    },
+    "GatewayState": {
+      "type": "string",
+      "description": "A value that indicates the operating state of the gateway.",
+      "enum": ["RUNNING", "SHUTDOWN"]
+    },
+    "GatewayOperationalState": {
+      "type": "string",
+      "description": "The state of the gateway.",
+      "enum": ["ACTIVE", "SHUTDOWN"]
+    },
+    "Ec2InstanceId": {
+      "type": "string",
+      "description": "The ID of the Amazon EC2 instance that was used to launch the gateway."
+    },
+    "Ec2InstanceRegion": {
+      "type": "string",
+      "description": "The AWS Region where the Amazon EC2 instance is located."
+    },
+    "GatewayNetworkInterfaces": {
+      "type": "array",
+      "description": "A list of network interfaces on the gateway.",
+      "items": {
+        "$ref": "#/$defs/NetworkInterface"
+      }
+    },
+    "LastSoftwareUpdate": {
+      "type": "string",
+      "description": "The date on which the last software update was applied to the gateway."
+    },
+    "NextUpdateAvailabilityDate": {
+      "type": "string",
+      "description": "The date on which an update to the gateway is available."
+    },
+    "Tags": {
+      "type": "array",
+      "description": "A list of tags assigned to the gateway.",
+      "items": {
+        "$ref": "#/$defs/Tag"
+      }
+    }
+  },
+  "$defs": {
+    "NetworkInterface": {
+      "type": "object",
+      "properties": {
+        "Ipv4Address": {
+          "type": "string",
+          "description": "The Internet Protocol version 4 (IPv4) address of the interface.",
+          "format": "ipv4"
+        },
+        "MacAddress": {
+          "type": "string",
+          "description": "The Media Access Control (MAC) address of the interface."
+        },
+        "Ipv6Address": {
+          "type": "string",
+          "description": "The Internet Protocol version 6 (IPv6) address of the interface.",
+          "format": "ipv6"
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "required": ["Key", "Value"],
+      "properties": {
+        "Key": {
+          "type": "string",
+          "description": "Tag key.",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "Value": {
+          "type": "string",
+          "description": "Tag value.",
+          "maxLength": 256
+        }
+      }
+    }
+  }
+}

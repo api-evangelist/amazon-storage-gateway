@@ -1,0 +1,241 @@
+openapi: 3.1.0
+info:
+  title: Amazon Storage Gateway REST API
+  description: >-
+    AWS Storage Gateway is a hybrid cloud storage service that gives you
+    on-premises access to virtually unlimited cloud storage. This API enables
+    management of gateways, volumes, virtual tapes, file shares, and cached
+    storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+servers:
+  - url: https://storagegateway.{region}.amazonaws.com
+    description: Amazon Storage Gateway regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - eu-west-1
+          - eu-west-2
+          - eu-central-1
+          - ap-northeast-1
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - sa-east-1
+security:
+  - sigv4: []
+paths:
+  /:
+    post:
+      summary: Activate Gateway
+      description: Activates the gateway you previously deployed on your host.
+      operationId: activateGateway
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ActivateGatewayInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActivateGatewayOutput'
+      x-amz-target: StorageGateway_20130630.ActivateGateway
+  /#ListGateways:
+    post:
+      summary: List Gateways
+      description: Lists gateways owned by an AWS account in an AWS Region.
+      operationId: listGateways
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListGatewaysInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListGatewaysOutput'
+      x-amz-target: StorageGateway_20130630.ListGateways
+  /#DescribeGatewayInformation:
+    post:
+      summary: Describe Gateway Information
+      description: Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version.
+      operationId: describeGatewayInformation
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/DescribeGatewayInformationInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeGatewayInformationOutput'
+      x-amz-target: StorageGateway_20130630.DescribeGatewayInformation
+  /#CreateNFSFileShare:
+    post:
+      summary: Create NFS File Share
+      description: Creates a Network File System (NFS) file share on an existing S3 File Gateway.
+      operationId: createNFSFileShare
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateNFSFileShareInput'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: StorageGateway_20130630.CreateNFSFileShare
+  /#ListVolumes:
+    post:
+      summary: List Volumes
+      description: Lists the iSCSI stored volumes of a gateway.
+      operationId: listVolumes
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListVolumesInput'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: StorageGateway_20130630.ListVolumes
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    ActivateGatewayInput:
+      type: object
+      required:
+        - ActivationKey
+        - GatewayName
+        - GatewayTimezone
+        - GatewayRegion
+      properties:
+        ActivationKey:
+          type: string
+          description: Your gateway activation key.
+        GatewayName:
+          type: string
+          description: The name you configured for your gateway.
+        GatewayTimezone:
+          type: string
+          description: A value that indicates the time zone you want to set for the gateway.
+        GatewayRegion:
+          type: string
+          description: A value that indicates the AWS Region where you want to store your data.
+        GatewayType:
+          type: string
+          enum: [STORED, CACHED, VTL, S3_FILE_GATEWAY, FSX_SMB]
+    ActivateGatewayOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+    ListGatewaysInput:
+      type: object
+      properties:
+        Marker:
+          type: string
+        Limit:
+          type: integer
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
+    GatewayInfo:
+      type: object
+      properties:
+        GatewayId:
+          type: string
+        GatewayARN:
+          type: string
+        GatewayType:
+          type: string
+        GatewayOperationalState:
+          type: string
+        GatewayName:
+          type: string
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+        - GatewayARN
+      properties:
+        GatewayARN:
+          type: string
+    DescribeGatewayInformationOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        GatewayId:
+          type: string
+        GatewayName:
+          type: string
+        GatewayTimezone:
+          type: string
+        GatewayState:
+          type: string
+        GatewayType:
+          type: string
+    CreateNFSFileShareInput:
+      type: object
+      required:
+        - ClientToken
+        - GatewayARN
+        - Role
+        - LocationARN
+      properties:
+        ClientToken:
+          type: string
+        GatewayARN:
+          type: string
+        Role:
+          type: string
+        LocationARN:
+          type: string
+    ListVolumesInput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        Marker:
+          type: string
+        Limit:
+          type: integer

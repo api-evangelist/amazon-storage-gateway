@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "sgw": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "iam": "https://docs.aws.amazon.com/IAM/latest/UserGuide/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "https://schema.org/",
+
+    "Gateway": {
+      "@id": "sgw:API_DescribeGatewayInformation.html",
+      "@context": {
+        "GatewayARN": {
+          "@id": "aws:arn",
+          "@type": "@id"
+        },
+        "GatewayId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "GatewayName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "GatewayType": {
+          "@id": "sgw:GatewayType",
+          "@type": "xsd:string"
+        },
+        "GatewayState": {
+          "@id": "sgw:GatewayState",
+          "@type": "xsd:string"
+        },
+        "GatewayTimezone": {
+          "@id": "sgw:GatewayTimezone",
+          "@type": "xsd:string"
+        },
+        "LastSoftwareUpdate": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Volume": {
+      "@id": "sgw:API_DescribeStorediSCSIVolumes.html",
+      "@context": {
+        "VolumeARN": {
+          "@id": "aws:arn",
+          "@type": "@id"
+        },
+        "VolumeId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "VolumeType": {
+          "@id": "sgw:VolumeType",
+          "@type": "xsd:string"
+        },
+        "VolumeSizeInBytes": {
+          "@id": "schema:contentSize",
+          "@type": "xsd:long"
+        }
+      }
+    },
+
+    "FileShare": {
+      "@id": "sgw:API_CreateNFSFileShare.html",
+      "@context": {
+        "FileShareARN": {
+          "@id": "aws:arn",
+          "@type": "@id"
+        },
+        "FileShareId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "FileShareStatus": {
+          "@id": "sgw:FileShareStatus",
+          "@type": "xsd:string"
+        },
+        "LocationARN": {
+          "@id": "sgw:LocationARN",
+          "@type": "@id"
+        }
+      }
+    }
+  }
+}
