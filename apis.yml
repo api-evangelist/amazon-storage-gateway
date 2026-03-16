@@ -3,7 +3,7 @@ description: AWS Storage Gateway is a hybrid cloud storage service that provides
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/storagegateway/
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 apis:
 - name: Amazon Storage Gateway REST API
   description: RESTful API for AWS Storage Gateway enabling management of gateways, volumes, tapes, file shares, and cached storage for hybrid cloud storage architectures.
