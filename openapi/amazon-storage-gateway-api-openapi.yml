@@ -44,7 +44,7 @@ security:
 paths:
   /:
     post:
-      summary: Activate Gateway
+      summary: Amazon Storage Gateway Activate Gateway
       description: Activates the gateway you previously deployed on your host.
       operationId: activateGateway
       requestBody:
@@ -63,7 +63,7 @@ paths:
       x-amz-target: StorageGateway_20130630.ActivateGateway
   /#ListGateways:
     post:
-      summary: List Gateways
+      summary: Amazon Storage Gateway List Gateways
       description: Lists gateways owned by an AWS account in an AWS Region.
       operationId: listGateways
       requestBody:
@@ -81,7 +81,7 @@ paths:
       x-amz-target: StorageGateway_20130630.ListGateways
   /#DescribeGatewayInformation:
     post:
-      summary: Describe Gateway Information
+      summary: Amazon Storage Gateway Describe Gateway Information
       description: Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version.
       operationId: describeGatewayInformation
       requestBody:
@@ -100,7 +100,7 @@ paths:
       x-amz-target: StorageGateway_20130630.DescribeGatewayInformation
   /#CreateNFSFileShare:
     post:
-      summary: Create NFS File Share
+      summary: Amazon Storage Gateway Create NFS File Share
       description: Creates a Network File System (NFS) file share on an existing S3 File Gateway.
       operationId: createNFSFileShare
       requestBody:
@@ -115,7 +115,7 @@ paths:
       x-amz-target: StorageGateway_20130630.CreateNFSFileShare
   /#ListVolumes:
     post:
-      summary: List Volumes
+      summary: Amazon Storage Gateway List Volumes
       description: Lists the iSCSI stored volumes of a gateway.
       operationId: listVolumes
       requestBody:
