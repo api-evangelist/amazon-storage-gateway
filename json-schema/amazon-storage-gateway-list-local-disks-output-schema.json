@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-local-disks-output-schema.json",
+  "title": "ListLocalDisksOutput",
+  "description": "ListLocalDisksOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "Disks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Disks"
+        },
+        {
+          "description": "<p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>ListLocalDisksOutput$Disks</a> </p> </li> </ul>"
+        }
+      ]
+    }
+  }
+}

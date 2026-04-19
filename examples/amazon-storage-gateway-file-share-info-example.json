@@ -1,0 +1,7 @@
+{
+  "FileShareType": "example-value",
+  "FileShareARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FileShareId": "example-value",
+  "FileShareStatus": "Active",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

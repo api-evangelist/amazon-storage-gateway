@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-volumes-input-schema.json",
+  "title": "ListVolumesInput",
+  "description": "<p>A JSON object that contains one or more of the following fields:</p> <ul> <li> <p> <a>ListVolumesInput$Limit</a> </p> </li> <li> <p> <a>ListVolumesInput$Marker</a> </p> </li> </ul>",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "A string that indicates the position at which to begin the returned list of volumes. Obtain the marker from the response of a previous List iSCSI Volumes request."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "Specifies that the list of volumes returned be limited to the specified number of items."
+        }
+      ]
+    }
+  }
+}

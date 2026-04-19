@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-snapshot-schedule-input-structure.json",
+  "name": "DeleteSnapshotScheduleInput",
+  "description": "DeleteSnapshotScheduleInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The volume which snapshot schedule to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "VolumeARN"
+  ]
+}

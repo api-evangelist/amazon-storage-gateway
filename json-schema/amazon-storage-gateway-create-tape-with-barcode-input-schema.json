@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-create-tape-with-barcode-input-schema.json",
+  "title": "CreateTapeWithBarcodeInput",
+  "description": "CreateTapeWithBarcodeInput",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayARN"
+        },
+        {
+          "description": "The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tape with. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region."
+        }
+      ]
+    },
+    "TapeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeSize"
+        },
+        {
+          "description": "<p>The size, in bytes, of the virtual tape that you want to create.</p> <note> <p>The size must be aligned by gigabyte (1024*1024*1024 bytes).</p> </note>"
+        }
+      ]
+    },
+    "TapeBarcode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeBarcode"
+        },
+        {
+          "description": "<p>The barcode that you want to assign to the tape.</p> <note> <p>Barcodes cannot be reused. This includes barcodes used for tapes that have been deleted.</p> </note>"
+        }
+      ]
+    },
+    "KMSEncrypted": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Set to <code>true</code> to use Amazon S3 server-side encryption with your own KMS key, or <code>false</code> to use a key managed by Amazon S3. Optional.</p> <p>Valid Values: <code>true</code> | <code>false</code> </p>"
+        }
+      ]
+    },
+    "KMSKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KMSKey"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional."
+        }
+      ]
+    },
+    "PoolId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolId"
+        },
+        {
+          "description": "The ID of the pool that you want to add your tape to for archiving. The tape in this pool is archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Deep Archive) that corresponds to the pool."
+        }
+      ]
+    },
+    "Worm": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/boolean"
+        },
+        {
+          "description": "Set to <code>TRUE</code> if the tape you are creating is to be configured as a write-once-read-many (WORM) tape."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "description": "<p>A list of up to 50 tags that can be assigned to a virtual tape that has a barcode. Each tag is a key-value pair.</p> <note> <p>Valid characters for key and value are letters, spaces, and numbers representable in UTF-8 format, and the following special characters: + - = . _ : / @. The maximum length of a tag's key is 128 characters, and the maximum length for a tag's value is 256.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "TapeSizeInBytes",
+    "TapeBarcode"
+  ]
+}

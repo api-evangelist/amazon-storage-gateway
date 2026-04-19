@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-snapshot-schedule-output-schema.json",
+  "title": "UpdateSnapshotScheduleOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the updated storage volume.",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume. Use the <a>ListVolumes</a> operation to return a list of gateway volumes."
+        }
+      ]
+    }
+  }
+}

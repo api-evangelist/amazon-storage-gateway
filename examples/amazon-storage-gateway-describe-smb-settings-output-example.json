@@ -1,0 +1,9 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DomainName": "MyResource",
+  "ActiveDirectoryStatus": "Active",
+  "SMBGuestPasswordSet": "example-value",
+  "SMBSecurityStrategy": "example-value",
+  "FileSharesVisible": "example-value",
+  "SMBLocalGroups": "example-value"
+}

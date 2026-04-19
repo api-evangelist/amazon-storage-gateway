@@ -1,0 +1,8 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "HourOfDay": "example-value",
+  "MinuteOfHour": "example-value",
+  "DayOfWeek": "example-value",
+  "DayOfMonth": "example-value",
+  "Timezone": "example-value"
+}

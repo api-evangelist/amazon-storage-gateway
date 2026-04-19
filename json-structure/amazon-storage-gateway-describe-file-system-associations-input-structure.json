@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-describe-file-system-associations-input-structure.json",
+  "name": "DescribeFileSystemAssociationsInput",
+  "description": "DescribeFileSystemAssociationsInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "FileSystemAssociationARNList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationARNList"
+        },
+        {
+          "description": "An array containing the Amazon Resource Name (ARN) of each file system association to be described."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FileSystemAssociationARNList"
+  ]
+}

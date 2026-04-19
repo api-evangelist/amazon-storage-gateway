@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-nfs-file-shares-output-schema.json",
+  "title": "DescribeNFSFileSharesOutput",
+  "description": "DescribeNFSFileSharesOutput",
+  "type": "object",
+  "properties": {
+    "NFSFileShareInfoList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NFSFileShareInfoList"
+        },
+        {
+          "description": "An array containing a description for each requested file share."
+        }
+      ]
+    }
+  }
+}

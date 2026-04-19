@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-tape-pools-output-schema.json",
+  "title": "ListTapePoolsOutput",
+  "description": "ListTapePoolsOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "PoolInfos": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolInfos"
+        },
+        {
+          "description": "An array of <code>PoolInfo</code> objects, where each object describes a single custom tape pool. If there are no custom tape pools, the <code>PoolInfos</code> is an empty array. "
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "A string that indicates the position at which to begin the returned list of tape pools. Use the marker in your next request to continue pagination of tape pools. If there are no more tape pools to list, this element does not appear in the response body. "
+        }
+      ]
+    }
+  }
+}

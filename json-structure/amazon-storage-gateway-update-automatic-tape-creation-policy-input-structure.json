@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-automatic-tape-creation-policy-input-structure.json",
+  "name": "UpdateAutomaticTapeCreationPolicyInput",
+  "description": "UpdateAutomaticTapeCreationPolicyInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "AutomaticTapeCreationRules": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AutomaticTapeCreationRules"
+        },
+        {
+          "description": "An automatic tape creation policy consists of a list of automatic tape creation rules. The rules determine when and how to automatically create new tapes."
+        }
+      ]
+    },
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  },
+  "required": [
+    "AutomaticTapeCreationRules",
+    "GatewayARN"
+  ]
+}

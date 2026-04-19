@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-gateway-information-output-schema.json",
+  "title": "UpdateGatewayInformationOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway that was updated.",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "GatewayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The name you configured for your gateway."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-list-file-shares-output-structure.json",
+  "name": "ListFileSharesOutput",
+  "description": "ListFileShareOutput",
+  "properties": {
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "If the request includes <code>Marker</code>, the response returns that value in this field."
+        }
+      ]
+    },
+    "NextMarker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "If a value is present, there are more file shares to return. In a subsequent request, use <code>NextMarker</code> as the value for <code>Marker</code> to retrieve the next set of file shares."
+        }
+      ]
+    },
+    "FileShareInfoList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileShareInfoList"
+        },
+        {
+          "description": "An array of information about the S3 File Gateway's file shares."
+        }
+      ]
+    }
+  }
+}

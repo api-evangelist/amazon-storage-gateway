@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-snapshot-schedule-input-schema.json",
+  "title": "DescribeSnapshotScheduleInput",
+  "description": "A JSON object containing the <a>DescribeSnapshotScheduleInput$VolumeARN</a> of the volume.",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume. Use the <a>ListVolumes</a> operation to return a list of gateway volumes."
+        }
+      ]
+    }
+  },
+  "required": [
+    "VolumeARN"
+  ]
+}

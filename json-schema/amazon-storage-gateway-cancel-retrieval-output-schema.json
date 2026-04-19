@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-cancel-retrieval-output-schema.json",
+  "title": "CancelRetrievalOutput",
+  "description": "CancelRetrievalOutput",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the virtual tape for which retrieval was canceled."
+        }
+      ]
+    }
+  }
+}

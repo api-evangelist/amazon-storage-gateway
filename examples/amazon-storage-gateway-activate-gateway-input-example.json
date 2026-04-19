@@ -1,0 +1,10 @@
+{
+  "ActivationKey": "example-value",
+  "GatewayName": "MyResource",
+  "GatewayTimezone": "example-value",
+  "GatewayRegion": "example-value",
+  "GatewayType": "example-value",
+  "TapeDriveType": "example-value",
+  "MediumChangerType": "example-value",
+  "Tags": "example-value"
+}

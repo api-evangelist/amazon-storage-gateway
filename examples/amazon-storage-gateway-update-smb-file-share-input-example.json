@@ -1,0 +1,21 @@
+{
+  "FileShareARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "KMSEncrypted": "example-value",
+  "KMSKey": "example-value",
+  "DefaultStorageClass": "example-value",
+  "ObjectACL": "example-value",
+  "ReadOnly": "example-value",
+  "GuessMIMETypeEnabled": "example-value",
+  "RequesterPays": "example-value",
+  "SMBACLEnabled": "example-value",
+  "AccessBasedEnumeration": "example-value",
+  "AdminUserList": "example-value",
+  "ValidUserList": "example-value",
+  "InvalidUserList": "example-value",
+  "AuditDestinationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "CaseSensitivity": "example-value",
+  "FileShareName": "MyResource",
+  "CacheAttributes": "example-value",
+  "NotificationPolicy": "example-value",
+  "OplocksEnabled": "example-value"
+}

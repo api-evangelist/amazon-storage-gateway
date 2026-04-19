@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-volume-recovery-point-info-schema.json",
+  "title": "VolumeRecoveryPointInfo",
+  "description": "Describes a storage volume recovery point object.",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume target."
+        }
+      ]
+    },
+    "VolumeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The size of the volume in bytes."
+        }
+      ]
+    },
+    "VolumeUsageInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "<p>The size of the data stored on the volume in bytes.</p> <note> <p>This value is not available for volumes created prior to May 13, 2015, until you store data on the volume.</p> </note>"
+        }
+      ]
+    },
+    "VolumeRecoveryPointTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The time the recovery point was taken."
+        }
+      ]
+    }
+  }
+}

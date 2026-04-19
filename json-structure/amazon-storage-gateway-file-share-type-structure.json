@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-file-share-type-structure.json",
+  "name": "FileShareType",
+  "description": "The type of the file share.",
+  "enum": [
+    "NFS",
+    "SMB"
+  ]
+}

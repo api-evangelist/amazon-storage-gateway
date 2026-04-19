@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-network-interface-schema.json",
+  "title": "NetworkInterface",
+  "description": "Describes a gateway's network interface.",
+  "type": "object",
+  "properties": {
+    "Ipv4Address": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The Internet Protocol version 4 (IPv4) address of the interface."
+        }
+      ]
+    },
+    "MacAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "<p>The Media Access Control (MAC) address of the interface.</p> <note> <p>This is currently unsupported and will not be returned in output.</p> </note>"
+        }
+      ]
+    },
+    "Ipv6Address": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The Internet Protocol version 6 (IPv6) address of the interface. <i>Currently not supported</i>."
+        }
+      ]
+    }
+  }
+}

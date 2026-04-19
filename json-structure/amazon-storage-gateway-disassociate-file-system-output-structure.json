@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-disassociate-file-system-output-structure.json",
+  "name": "DisassociateFileSystemOutput",
+  "description": "DisassociateFileSystemOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "FileSystemAssociationARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the deleted file system association."
+        }
+      ]
+    }
+  }
+}

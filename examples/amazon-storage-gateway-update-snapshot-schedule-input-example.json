@@ -1,0 +1,7 @@
+{
+  "VolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "StartAt": "example-value",
+  "RecurrenceInHours": "example-value",
+  "Description": "example-value",
+  "Tags": "example-value"
+}

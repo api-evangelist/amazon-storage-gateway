@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-start-gateway-output-structure.json",
+  "name": "StartGatewayOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway that was restarted.",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

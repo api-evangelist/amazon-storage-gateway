@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-tape-archive-output-structure.json",
+  "name": "DeleteTapeArchiveOutput",
+  "description": "DeleteTapeArchiveOutput",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the virtual tape that was deleted from the virtual tape shelf (VTS)."
+        }
+      ]
+    }
+  }
+}

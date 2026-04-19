@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-add-working-storage-input-schema.json",
+  "title": "AddWorkingStorageInput",
+  "description": "<p>A JSON object containing one or more of the following fields:</p> <ul> <li> <p> <a>AddWorkingStorageInput$DiskIds</a> </p> </li> </ul>",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "DiskIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiskIds"
+        },
+        {
+          "description": "An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the <a>ListLocalDisks</a> API."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "DiskIds"
+  ]
+}

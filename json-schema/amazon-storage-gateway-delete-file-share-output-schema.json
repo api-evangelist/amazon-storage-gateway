@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-delete-file-share-output-schema.json",
+  "title": "DeleteFileShareOutput",
+  "description": "DeleteFileShareOutput",
+  "type": "object",
+  "properties": {
+    "FileShareARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileShareARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the deleted file share."
+        }
+      ]
+    }
+  }
+}

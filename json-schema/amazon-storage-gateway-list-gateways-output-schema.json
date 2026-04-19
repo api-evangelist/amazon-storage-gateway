@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-gateways-output-schema.json",
+  "title": "ListGatewaysOutput",
+  "description": "ListGatewaysOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "Gateways": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Gateways"
+        },
+        {
+          "description": "An array of <a>GatewayInfo</a> objects."
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "Use the marker in your next request to fetch the next set of gateways in the list. If there are no more gateways to list, this field does not appear in the response."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-maintenance-start-time-input-schema.json",
+  "title": "UpdateMaintenanceStartTimeInput",
+  "description": "<p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>UpdateMaintenanceStartTimeInput$DayOfMonth</a> </p> </li> <li> <p> <a>UpdateMaintenanceStartTimeInput$DayOfWeek</a> </p> </li> <li> <p> <a>UpdateMaintenanceStartTimeInput$HourOfDay</a> </p> </li> <li> <p> <a>UpdateMaintenanceStartTimeInput$MinuteOfHour</a> </p> </li> </ul>",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "HourOfDay": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HourOfDay"
+        },
+        {
+          "description": "The hour component of the maintenance start time represented as <i>hh</i>, where <i>hh</i> is the hour (00 to 23). The hour of the day is in the time zone of the gateway."
+        }
+      ]
+    },
+    "MinuteOfHour": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinuteOfHour"
+        },
+        {
+          "description": "The minute component of the maintenance start time represented as <i>mm</i>, where <i>mm</i> is the minute (00 to 59). The minute of the hour is in the time zone of the gateway."
+        }
+      ]
+    },
+    "DayOfWeek": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DayOfWeek"
+        },
+        {
+          "description": "The day of the week component of the maintenance start time week represented as an ordinal number from 0 to 6, where 0 represents Sunday and 6 Saturday."
+        }
+      ]
+    },
+    "DayOfMonth": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DayOfMonth"
+        },
+        {
+          "description": "The day of the month component of the maintenance start time represented as an ordinal number from 1 to 28, where 1 represents the first day of the month and 28 represents the last day of the month."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "HourOfDay",
+    "MinuteOfHour"
+  ]
+}

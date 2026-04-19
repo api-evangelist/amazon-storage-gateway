@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-maintenance-start-time-output-structure.json",
+  "name": "UpdateMaintenanceStartTimeOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway whose maintenance start time is updated.",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

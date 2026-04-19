@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-file-system-associations-output-schema.json",
+  "title": "ListFileSystemAssociationsOutput",
+  "description": "ListFileSystemAssociationsOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "If the request includes <code>Marker</code>, the response returns that value in this field."
+        }
+      ]
+    },
+    "NextMarker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "If a value is present, there are more file system associations to return. In a subsequent request, use <code>NextMarker</code> as the value for <code>Marker</code> to retrieve the next set of file system associations."
+        }
+      ]
+    },
+    "FileSystemAssociationSummaryList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationSummaryList"
+        },
+        {
+          "description": "An array of information about the Amazon FSx gateway's file system associations."
+        }
+      ]
+    }
+  }
+}

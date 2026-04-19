@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-volume-initiators-input-schema.json",
+  "title": "ListVolumeInitiatorsInput",
+  "description": "ListVolumeInitiatorsInput",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume. Use the <a>ListVolumes</a> operation to return a list of gateway volumes for the gateway."
+        }
+      ]
+    }
+  },
+  "required": [
+    "VolumeARN"
+  ]
+}

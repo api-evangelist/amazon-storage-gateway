@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-file-system-association-output-schema.json",
+  "title": "UpdateFileSystemAssociationOutput",
+  "description": "UpdateFileSystemAssociationOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "FileSystemAssociationARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationARN"
+        },
+        {
+          "description": "The ARN of the updated file system association."
+        }
+      ]
+    }
+  }
+}

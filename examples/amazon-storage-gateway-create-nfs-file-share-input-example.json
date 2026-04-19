@@ -1,0 +1,23 @@
+{
+  "ClientToken": "example-value",
+  "NFSFileShareDefaults": "example-value",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "KMSEncrypted": "example-value",
+  "KMSKey": "example-value",
+  "Role": "example-value",
+  "LocationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DefaultStorageClass": "example-value",
+  "ObjectACL": "example-value",
+  "ClientList": "example-value",
+  "Squash": "example-value",
+  "ReadOnly": "example-value",
+  "GuessMIMETypeEnabled": "example-value",
+  "RequesterPays": "example-value",
+  "Tags": "example-value",
+  "FileShareName": "MyResource",
+  "CacheAttributes": "example-value",
+  "NotificationPolicy": "example-value",
+  "VPCEndpointDNSName": "MyResource",
+  "BucketRegion": "example-value",
+  "AuditDestinationARN": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-pool-status-schema.json",
+  "title": "PoolStatus",
+  "description": "PoolStatus schema from Amazon Storage Gateway API",
+  "type": "string",
+  "enum": [
+    "ACTIVE",
+    "DELETED"
+  ]
+}

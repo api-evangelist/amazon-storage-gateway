@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-smb-local-groups-input-schema.json",
+  "title": "UpdateSMBLocalGroupsInput",
+  "description": "UpdateSMBLocalGroupsInput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "SMBLocalGroups": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SMBLocalGroups"
+        },
+        {
+          "description": "A list of Active Directory users and groups that you want to grant special permissions for SMB file shares on the gateway."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "SMBLocalGroups"
+  ]
+}

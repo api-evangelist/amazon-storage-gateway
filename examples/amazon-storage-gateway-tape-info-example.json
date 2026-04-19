@@ -1,0 +1,10 @@
+{
+  "TapeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TapeBarcode": "example-value",
+  "TapeSizeInBytes": "example-value",
+  "TapeStatus": "Active",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "PoolId": "example-value",
+  "RetentionStartDate": "example-value",
+  "PoolEntryDate": "example-value"
+}

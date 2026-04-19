@@ -1,0 +1,23 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayId": "example-value",
+  "GatewayName": "MyResource",
+  "GatewayTimezone": "example-value",
+  "GatewayState": "example-value",
+  "GatewayNetworkInterfaces": "example-value",
+  "GatewayType": "example-value",
+  "NextUpdateAvailabilityDate": "example-value",
+  "LastSoftwareUpdate": "example-value",
+  "Ec2InstanceId": "example-value",
+  "Ec2InstanceRegion": "example-value",
+  "Tags": "example-value",
+  "VPCEndpoint": "example-value",
+  "CloudWatchLogGroupARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "HostEnvironment": "example-value",
+  "EndpointType": "example-value",
+  "SoftwareUpdatesEndDate": "example-value",
+  "DeprecationDate": "example-value",
+  "GatewayCapacity": "example-value",
+  "SupportedGatewayCapacities": "example-value",
+  "HostEnvironmentId": "example-value"
+}

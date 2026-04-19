@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-devicei-scsi-attributes-structure.json",
+  "name": "DeviceiSCSIAttributes",
+  "description": "Lists iSCSI information about a VTL device.",
+  "properties": {
+    "TargetARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetARN"
+        },
+        {
+          "description": "Specifies the unique Amazon Resource Name (ARN) that encodes the iSCSI qualified name(iqn) of a tape drive or media changer target."
+        }
+      ]
+    },
+    "NetworkInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkInterfaceId"
+        },
+        {
+          "description": "The network interface identifier of the VTL device."
+        }
+      ]
+    },
+    "NetworkInterfacePort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/integer"
+        },
+        {
+          "description": "The port used to communicate with iSCSI VTL device targets."
+        }
+      ]
+    },
+    "ChapEnabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/boolean"
+        },
+        {
+          "description": "Indicates whether mutual CHAP is enabled for the iSCSI target."
+        }
+      ]
+    }
+  }
+}

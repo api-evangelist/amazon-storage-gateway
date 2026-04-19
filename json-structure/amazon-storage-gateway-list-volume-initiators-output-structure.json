@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-list-volume-initiators-output-structure.json",
+  "name": "ListVolumeInitiatorsOutput",
+  "description": "ListVolumeInitiatorsOutput",
+  "properties": {
+    "Initiators": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Initiators"
+        },
+        {
+          "description": "The host names and port numbers of all iSCSI initiators that are connected to the gateway."
+        }
+      ]
+    }
+  }
+}

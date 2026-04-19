@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-assign-tape-pool-output-schema.json",
+  "title": "AssignTapePoolOutput",
+  "description": "AssignTapePoolOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The unique Amazon Resource Names (ARN) of the virtual tape that was added to the tape pool."
+        }
+      ]
+    }
+  }
+}

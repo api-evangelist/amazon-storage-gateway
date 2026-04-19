@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-bandwidth-rate-limit-schedule-input-structure.json",
+  "name": "UpdateBandwidthRateLimitScheduleInput",
+  "description": "UpdateBandwidthRateLimitScheduleInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "BandwidthRateLimitIntervals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BandwidthRateLimitIntervals"
+        },
+        {
+          "description": " An array containing bandwidth rate limit schedule intervals for a gateway. When no bandwidth rate limit intervals have been scheduled, the array is empty. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "BandwidthRateLimitIntervals"
+  ]
+}

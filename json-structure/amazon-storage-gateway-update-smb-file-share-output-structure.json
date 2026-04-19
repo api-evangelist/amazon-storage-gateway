@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-smb-file-share-output-structure.json",
+  "name": "UpdateSMBFileShareOutput",
+  "description": "UpdateSMBFileShareOutput",
+  "properties": {
+    "FileShareARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileShareARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the updated SMB file share."
+        }
+      ]
+    }
+  }
+}

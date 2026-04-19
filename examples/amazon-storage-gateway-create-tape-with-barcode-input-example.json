@@ -1,0 +1,10 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TapeSizeInBytes": "example-value",
+  "TapeBarcode": "example-value",
+  "KMSEncrypted": "example-value",
+  "KMSKey": "example-value",
+  "PoolId": "example-value",
+  "Worm": "example-value",
+  "Tags": "example-value"
+}

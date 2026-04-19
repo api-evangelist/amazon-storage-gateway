@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-add-working-storage-output-structure.json",
+  "name": "AddWorkingStorageOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway for which working storage was configured.",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

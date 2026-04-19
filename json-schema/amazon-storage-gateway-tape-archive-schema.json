@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-tape-archive-schema.json",
+  "title": "TapeArchive",
+  "description": "Represents a virtual tape that is archived in the virtual tape shelf (VTS).",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of an archived virtual tape."
+        }
+      ]
+    },
+    "TapeBarcode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeBarcode"
+        },
+        {
+          "description": "The barcode that identifies the archived virtual tape."
+        }
+      ]
+    },
+    "TapeCreatedDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "The date the virtual tape was created."
+        }
+      ]
+    },
+    "TapeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeSize"
+        },
+        {
+          "description": "The size, in bytes, of the archived virtual tape."
+        }
+      ]
+    },
+    "CompletionTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "<p>The time that the archiving of the virtual tape was completed.</p> <p>The default timestamp format is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.</p>"
+        }
+      ]
+    },
+    "RetrievedTo": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayARN"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the tape gateway that the virtual tape is being retrieved to.</p> <p>The virtual tape is retrieved from the virtual tape shelf (VTS).</p>"
+        }
+      ]
+    },
+    "TapeStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeArchiveStatus"
+        },
+        {
+          "description": "The current state of the archived virtual tape."
+        }
+      ]
+    },
+    "TapeUsedInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeUsage"
+        },
+        {
+          "description": "<p>The size, in bytes, of data stored on the virtual tape.</p> <note> <p>This value is not available for tapes created prior to May 13, 2015.</p> </note>"
+        }
+      ]
+    },
+    "KMSKey": {
+      "$ref": "#/components/schemas/KMSKey"
+    },
+    "PoolId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolId"
+        },
+        {
+          "description": "The ID of the pool that was used to archive the tape. The tapes in this pool are archived in the S3 storage class that is associated with the pool."
+        }
+      ]
+    },
+    "Worm": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/boolean"
+        },
+        {
+          "description": "Set to <code>true</code> if the archived tape is stored as write-once-read-many (WORM)."
+        }
+      ]
+    },
+    "RetentionStartDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "If the archived tape is subject to tape retention lock, the date that the archived tape started being retained."
+        }
+      ]
+    },
+    "PoolEntryDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "<p>The time that the tape entered the custom tape pool.</p> <p>The default timestamp format is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.</p>"
+        }
+      ]
+    }
+  }
+}

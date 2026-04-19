@@ -1,0 +1,6 @@
+{
+  "TapeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TapeRecoveryPointTime": "example-value",
+  "TapeSizeInBytes": "example-value",
+  "TapeStatus": "Active"
+}

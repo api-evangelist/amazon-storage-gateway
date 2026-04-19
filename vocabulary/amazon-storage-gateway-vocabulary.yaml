@@ -1,0 +1,160 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Storage Gateway
+  description: Vocabulary for Amazon Storage Gateway covering all resources, actions, and schemas.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: AWS Storage Gateway API
+    namespace: amazon-storage-gateway
+    version: '2024-01-01'
+    baseUrl: https://storagegateway.{region}.amazonaws.com
+    status: active
+  resources:
+  - name: Gateways
+    api: amazon-storage-gateway
+    actions: &id001
+    - ActivateGateway
+    - DeleteGateway
+    - DescribeGatewayInformation
+    - ListGateways
+    - UpdateGatewayInformation
+  - name: File Shares
+    api: amazon-storage-gateway
+    actions: &id002
+    - CreateNFSFileShare
+    - CreateSMBFileShare
+    - DescribeNFSFileShares
+    - DescribeSMBFileShares
+    - DeleteFileShare
+  - name: Volumes
+    api: amazon-storage-gateway
+    actions: &id003
+    - CreateCachediSCSIVolume
+    - DeleteVolume
+    - DescribeStorediSCSIVolumes
+    - DescribeCachediSCSIVolumes
+  - name: Tapes
+    api: amazon-storage-gateway
+    actions: &id004
+    - CreateTapes
+    - DeleteTape
+    - DescribeTapes
+    - ListTapes
+  actions:
+  - name: list
+    httpMethod: GET
+    pattern: read
+  - name: get
+    httpMethod: GET
+    pattern: read
+  - name: describe
+    httpMethod: GET
+    pattern: read
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: delete
+    httpMethod: DELETE
+    pattern: destructive
+  - name: update
+    httpMethod: PUT
+    pattern: write
+  - name: start
+    httpMethod: POST
+    pattern: write
+  - name: stop
+    httpMethod: POST
+    pattern: destructive
+  schemas:
+    core:
+    - Gateways
+    - File Shares
+    - Volumes
+    - Tapes
+  parameters:
+    pagination:
+    - nextToken
+    - maxResults
+    identifiers:
+    - arn
+    - name
+    - id
+  authentication:
+    schemes:
+    - AWS Signature Version 4
+    headers:
+    - Authorization
+    - X-Amz-Date
+    - X-Amz-Security-Token
+capability:
+  workflows:
+  - name: Amazon Storage Gateway Management
+    file: capabilities/shared/amazon-storage-gateway.yaml
+    description: Manage Amazon Storage Gateway resources
+    apis:
+    - AWS Storage Gateway API
+    personas:
+    - Developer
+    - Cloud Engineer
+  personas:
+  - id: developer
+    name: Developer
+    description: Developer using the API for application integration
+    workflows:
+    - Amazon Storage Gateway Management
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing cloud infrastructure
+    workflows:
+    - Amazon Storage Gateway Management
+  domains:
+  - AWS
+  - Storage
+  - Hybrid Cloud
+  - Data Transfer
+  - NFS
+  - SMB
+  namespaces:
+  - name: amazon-storage-gateway
+    type: consumed
+  - name: amazon-storage-gateway-rest
+    type: rest
+    port: 8080
+  - name: amazon-storage-gateway-mcp
+    type: mcp
+    port: 9090
+  binds:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - AWS_REGION
+crossReference:
+- resource: Gateways
+  operations: *id001
+  workflows:
+  - Amazon Storage Gateway Management
+  personas:
+  - Developer
+  - Cloud Engineer
+- resource: File Shares
+  operations: *id002
+  workflows:
+  - Amazon Storage Gateway Management
+  personas:
+  - Developer
+  - Cloud Engineer
+- resource: Volumes
+  operations: *id003
+  workflows:
+  - Amazon Storage Gateway Management
+  personas:
+  - Developer
+  - Cloud Engineer
+- resource: Tapes
+  operations: *id004
+  workflows:
+  - Amazon Storage Gateway Management
+  personas:
+  - Developer
+  - Cloud Engineer

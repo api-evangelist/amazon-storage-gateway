@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-vtl-device-structure.json",
+  "name": "VTLDevice",
+  "description": "Represents a device object associated with a tape gateway.",
+  "properties": {
+    "VTLDeviceARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceARN"
+        },
+        {
+          "description": "Specifies the unique Amazon Resource Name (ARN) of the device (tape drive or media changer)."
+        }
+      ]
+    },
+    "VTLDeviceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceType"
+        },
+        {
+          "description": "Specifies the type of device that the VTL device emulates."
+        }
+      ]
+    },
+    "VTLDeviceVendor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceVendor"
+        },
+        {
+          "description": "Specifies the vendor of the device that the VTL device object emulates."
+        }
+      ]
+    },
+    "VTLDeviceProductIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceProductIdentifier"
+        },
+        {
+          "description": "Specifies the model number of device that the VTL device emulates."
+        }
+      ]
+    },
+    "DeviceiSCSIAttributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeviceiSCSIAttributes"
+        },
+        {
+          "description": "A list of iSCSI information about a VTL device."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-describe-availability-monitor-test-output-structure.json",
+  "name": "DescribeAvailabilityMonitorTestOutput",
+  "description": "DescribeAvailabilityMonitorTestOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AvailabilityMonitorTestStatus"
+        },
+        {
+          "description": "The status of the high availability monitoring test. If a test hasn't been performed, the value of this field is null."
+        }
+      ]
+    },
+    "StartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "The time the high availability monitoring test was started. If a test hasn't been performed, the value of this field is null."
+        }
+      ]
+    }
+  }
+}

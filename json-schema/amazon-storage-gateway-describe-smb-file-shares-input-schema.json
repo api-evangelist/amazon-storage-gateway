@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-smb-file-shares-input-schema.json",
+  "title": "DescribeSMBFileSharesInput",
+  "description": "DescribeSMBFileSharesInput",
+  "type": "object",
+  "properties": {
+    "FileShareARNList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileShareARNList"
+        },
+        {
+          "description": "An array containing the Amazon Resource Name (ARN) of each file share to be described."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FileShareARNList"
+  ]
+}

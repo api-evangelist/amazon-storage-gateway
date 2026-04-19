@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-delete-file-share-input-schema.json",
+  "title": "DeleteFileShareInput",
+  "description": "DeleteFileShareInput",
+  "type": "object",
+  "properties": {
+    "FileShareARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileShareARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the file share to be deleted."
+        }
+      ]
+    },
+    "ForceDelete": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/boolean"
+        },
+        {
+          "description": "<p>If this value is set to <code>true</code>, the operation deletes a file share immediately and aborts all data uploads to Amazon Web Services. Otherwise, the file share is not deleted until all data is uploaded to Amazon Web Services. This process aborts the data upload process, and the file share enters the <code>FORCE_DELETING</code> status.</p> <p>Valid Values: <code>true</code> | <code>false</code> </p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "FileShareARN"
+  ]
+}

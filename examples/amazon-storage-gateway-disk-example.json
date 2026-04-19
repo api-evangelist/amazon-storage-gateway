@@ -1,0 +1,10 @@
+{
+  "DiskId": "example-value",
+  "DiskPath": "example-value",
+  "DiskNode": "example-value",
+  "DiskStatus": "Active",
+  "DiskSizeInBytes": "example-value",
+  "DiskAllocationType": "example-value",
+  "DiskAllocationResource": "example-value",
+  "DiskAttributeList": "example-value"
+}

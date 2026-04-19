@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-file-system-association-status-detail-structure.json",
+  "name": "FileSystemAssociationStatusDetail",
+  "description": "Detailed information on file system association status.",
+  "properties": {
+    "ErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationSyncErrorCode"
+        },
+        {
+          "description": "The error code for a given file system association status."
+        }
+      ]
+    }
+  }
+}

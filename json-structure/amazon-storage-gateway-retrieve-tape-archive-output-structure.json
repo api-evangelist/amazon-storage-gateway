@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-retrieve-tape-archive-output-structure.json",
+  "name": "RetrieveTapeArchiveOutput",
+  "description": "RetrieveTapeArchiveOutput",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the retrieved virtual tape."
+        }
+      ]
+    }
+  }
+}

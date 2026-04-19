@@ -1,0 +1,19 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayId": "example-value",
+  "GatewayName": "MyResource",
+  "GatewayTimezone": "example-value",
+  "GatewayType": "STORED",
+  "GatewayState": "RUNNING",
+  "GatewayOperationalState": "ACTIVE",
+  "Ec2InstanceId": "example-value",
+  "Ec2InstanceRegion": "example-value",
+  "GatewayNetworkInterfaces": [
+    "example-value"
+  ],
+  "LastSoftwareUpdate": "example-value",
+  "NextUpdateAvailabilityDate": "example-value",
+  "Tags": [
+    "example-value"
+  ]
+}

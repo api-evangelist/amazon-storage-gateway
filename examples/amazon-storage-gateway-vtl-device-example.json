@@ -1,0 +1,7 @@
+{
+  "VTLDeviceARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "VTLDeviceType": "example-value",
+  "VTLDeviceVendor": "example-value",
+  "VTLDeviceProductIdentifier": "example-value",
+  "DeviceiSCSIAttributes": "example-value"
+}

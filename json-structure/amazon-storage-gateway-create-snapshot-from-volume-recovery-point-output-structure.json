@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-create-snapshot-from-volume-recovery-point-output-structure.json",
+  "name": "CreateSnapshotFromVolumeRecoveryPointOutput",
+  "description": "CreateSnapshotFromVolumeRecoveryPointOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "SnapshotId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SnapshotId"
+        },
+        {
+          "description": "The ID of the snapshot."
+        }
+      ]
+    },
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the iSCSI volume target. Use the <a>DescribeStorediSCSIVolumes</a> operation to return to retrieve the TargetARN for specified VolumeARN."
+        }
+      ]
+    },
+    "VolumeRecoveryPointTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The time the volume was created from the recovery point."
+        }
+      ]
+    }
+  }
+}

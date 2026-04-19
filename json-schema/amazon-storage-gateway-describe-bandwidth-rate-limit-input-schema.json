@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-bandwidth-rate-limit-input-schema.json",
+  "title": "DescribeBandwidthRateLimitInput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway.",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  },
+  "required": [
+    "GatewayARN"
+  ]
+}

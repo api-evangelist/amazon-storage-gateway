@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-bandwidth-rate-limit-output-structure.json",
+  "name": "UpdateBandwidthRateLimitOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway whose throttle information was updated.",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

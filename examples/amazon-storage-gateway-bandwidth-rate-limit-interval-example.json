@@ -1,0 +1,9 @@
+{
+  "StartHourOfDay": "example-value",
+  "StartMinuteOfHour": "example-value",
+  "EndHourOfDay": "example-value",
+  "EndMinuteOfHour": "example-value",
+  "DaysOfWeek": "example-value",
+  "AverageUploadRateLimitInBitsPerSec": "example-value",
+  "AverageDownloadRateLimitInBitsPerSec": "example-value"
+}

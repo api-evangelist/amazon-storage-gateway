@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-describe-availability-monitor-test-input-structure.json",
+  "name": "DescribeAvailabilityMonitorTestInput",
+  "description": "DescribeAvailabilityMonitorTestInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  },
+  "required": [
+    "GatewayARN"
+  ]
+}

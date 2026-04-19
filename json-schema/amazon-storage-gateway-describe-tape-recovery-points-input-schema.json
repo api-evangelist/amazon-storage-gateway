@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-tape-recovery-points-input-schema.json",
+  "title": "DescribeTapeRecoveryPointsInput",
+  "description": "DescribeTapeRecoveryPointsInput",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "An opaque string that indicates the position at which to begin describing the virtual tape recovery points."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "Specifies that the number of virtual tape recovery points that are described be limited to the specified number."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN"
+  ]
+}

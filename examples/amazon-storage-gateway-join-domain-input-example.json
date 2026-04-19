@@ -1,0 +1,9 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DomainName": "MyResource",
+  "OrganizationalUnit": "example-value",
+  "DomainControllers": "example-value",
+  "TimeoutInSeconds": "example-value",
+  "UserName": "MyResource",
+  "Password": "example-value"
+}

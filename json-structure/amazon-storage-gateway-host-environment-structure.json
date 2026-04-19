@@ -1,0 +1,15 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-host-environment-structure.json",
+  "name": "HostEnvironment",
+  "description": "HostEnvironment schema from Amazon Storage Gateway API",
+  "enum": [
+    "VMWARE",
+    "HYPER-V",
+    "EC2",
+    "KVM",
+    "OTHER",
+    "SNOWBALL"
+  ]
+}

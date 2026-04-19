@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-delete-automatic-tape-creation-policy-output-schema.json",
+  "title": "DeleteAutomaticTapeCreationPolicyOutput",
+  "description": "DeleteAutomaticTapeCreationPolicyOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-add-upload-buffer-input-structure.json",
+  "name": "AddUploadBufferInput",
+  "description": "AddUploadBufferInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "DiskIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiskIds"
+        },
+        {
+          "description": "An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the <a>ListLocalDisks</a> API."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "DiskIds"
+  ]
+}

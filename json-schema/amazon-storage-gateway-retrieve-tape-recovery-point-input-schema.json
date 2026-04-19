@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-retrieve-tape-recovery-point-input-schema.json",
+  "title": "RetrieveTapeRecoveryPointInput",
+  "description": "RetrieveTapeRecoveryPointInput",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the virtual tape for which you want to retrieve the recovery point."
+        }
+      ]
+    },
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  },
+  "required": [
+    "TapeARN",
+    "GatewayARN"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "VolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "VolumeId": "example-value",
+  "VolumeType": "example-value",
+  "VolumeStatus": "Active",
+  "VolumeAttachmentStatus": "Active",
+  "VolumeSizeInBytes": "example-value",
+  "VolumeProgress": "example-value",
+  "VolumeDiskId": "example-value",
+  "SourceSnapshotId": "example-value",
+  "PreservedExistingData": "example-value",
+  "VolumeiSCSIAttributes": "example-value",
+  "CreatedDate": "example-value",
+  "VolumeUsedInBytes": "example-value",
+  "KMSKey": "example-value",
+  "TargetName": "MyResource"
+}

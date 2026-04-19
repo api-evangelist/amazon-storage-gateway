@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-create-storedi-scsi-volume-output-schema.json",
+  "title": "CreateStorediSCSIVolumeOutput",
+  "description": "A JSON object containing the following fields:",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the configured volume."
+        }
+      ]
+    },
+    "VolumeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The size of the volume in bytes."
+        }
+      ]
+    },
+    "TargetARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume target, which includes the iSCSI name that initiators can use to connect to the target."
+        }
+      ]
+    }
+  }
+}

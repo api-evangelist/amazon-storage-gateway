@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-create-tape-with-barcode-output-structure.json",
+  "name": "CreateTapeWithBarcodeOutput",
+  "description": "CreateTapeOutput",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "A unique Amazon Resource Name (ARN) that represents the virtual tape that was created."
+        }
+      ]
+    }
+  }
+}

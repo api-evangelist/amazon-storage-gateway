@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-vtl-device-type-input-schema.json",
+  "title": "UpdateVTLDeviceTypeInput",
+  "description": "UpdateVTLDeviceTypeInput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "VTLDeviceARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the medium changer you want to select."
+        }
+      ]
+    },
+    "DeviceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeviceType"
+        },
+        {
+          "description": "<p>The type of medium changer you want to select.</p> <p>Valid Values: <code>STK-L700</code> | <code>AWS-Gateway-VTL</code> | <code>IBM-03584L32-0402</code> </p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "VTLDeviceARN",
+    "DeviceType"
+  ]
+}

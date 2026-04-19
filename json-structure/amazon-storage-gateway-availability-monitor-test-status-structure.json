@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-availability-monitor-test-status-structure.json",
+  "name": "AvailabilityMonitorTestStatus",
+  "description": "AvailabilityMonitorTestStatus schema from Amazon Storage Gateway API",
+  "enum": [
+    "COMPLETE",
+    "FAILED",
+    "PENDING"
+  ]
+}

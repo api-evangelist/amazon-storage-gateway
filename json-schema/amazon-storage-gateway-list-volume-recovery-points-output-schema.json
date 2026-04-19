@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-volume-recovery-points-output-schema.json",
+  "title": "ListVolumeRecoveryPointsOutput",
+  "description": "ListVolumeRecoveryPointsOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "VolumeRecoveryPointInfos": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeRecoveryPointInfos"
+        },
+        {
+          "description": "An array of <a>VolumeRecoveryPointInfo</a> objects."
+        }
+      ]
+    }
+  }
+}

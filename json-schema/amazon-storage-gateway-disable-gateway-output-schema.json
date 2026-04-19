@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-disable-gateway-output-schema.json",
+  "title": "DisableGatewayOutput",
+  "description": "DisableGatewayOutput",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayARN"
+        },
+        {
+          "description": "The unique Amazon Resource Name (ARN) of the disabled gateway."
+        }
+      ]
+    }
+  }
+}

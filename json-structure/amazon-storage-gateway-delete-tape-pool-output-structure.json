@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-tape-pool-output-structure.json",
+  "name": "DeleteTapePoolOutput",
+  "description": "DeleteTapePoolOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "PoolARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the custom tape pool being deleted."
+        }
+      ]
+    }
+  }
+}

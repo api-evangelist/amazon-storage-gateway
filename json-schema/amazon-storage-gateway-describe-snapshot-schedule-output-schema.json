@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-snapshot-schedule-output-schema.json",
+  "title": "DescribeSnapshotScheduleOutput",
+  "description": "DescribeSnapshotScheduleOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume that was specified in the request."
+        }
+      ]
+    },
+    "StartAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HourOfDay"
+        },
+        {
+          "description": "The hour of the day at which the snapshot schedule begins represented as <i>hh</i>, where <i>hh</i> is the hour (0 to 23). The hour of the day is in the time zone of the gateway."
+        }
+      ]
+    },
+    "RecurrenceInHours": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RecurrenceInHours"
+        },
+        {
+          "description": "The number of hours between snapshots."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The snapshot description."
+        }
+      ]
+    },
+    "Timezone": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayTimezone"
+        },
+        {
+          "description": "A value that indicates the time zone of the gateway."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "description": "A list of up to 50 tags assigned to the snapshot schedule, sorted alphabetically by key name. Each tag is a key-value pair. For a gateway with more than 10 tags assigned, you can view all tags using the <code>ListTagsForResource</code> API operation."
+        }
+      ]
+    }
+  }
+}

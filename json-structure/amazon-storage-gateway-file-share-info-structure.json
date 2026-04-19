@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-file-share-info-structure.json",
+  "name": "FileShareInfo",
+  "description": "Describes a file share. Only supported S3 File Gateway.",
+  "properties": {
+    "FileShareType": {
+      "$ref": "#/components/schemas/FileShareType"
+    },
+    "FileShareARN": {
+      "$ref": "#/components/schemas/FileShareARN"
+    },
+    "FileShareId": {
+      "$ref": "#/components/schemas/FileShareId"
+    },
+    "FileShareStatus": {
+      "$ref": "#/components/schemas/FileShareStatus"
+    },
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

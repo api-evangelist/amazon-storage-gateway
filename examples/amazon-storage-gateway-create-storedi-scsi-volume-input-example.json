@@ -1,0 +1,11 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DiskId": "example-value",
+  "SnapshotId": "example-value",
+  "PreserveExistingData": "example-value",
+  "TargetName": "MyResource",
+  "NetworkInterfaceId": "example-value",
+  "KMSEncrypted": "example-value",
+  "KMSKey": "example-value",
+  "Tags": "example-value"
+}

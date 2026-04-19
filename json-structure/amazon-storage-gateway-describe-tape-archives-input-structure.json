@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-describe-tape-archives-input-structure.json",
+  "name": "DescribeTapeArchivesInput",
+  "description": "DescribeTapeArchivesInput",
+  "properties": {
+    "TapeARNs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARNs"
+        },
+        {
+          "description": "Specifies one or more unique Amazon Resource Names (ARNs) that represent the virtual tapes you want to describe."
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "An opaque string that indicates the position at which to begin describing virtual tapes."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "Specifies that the number of virtual tapes described be limited to the specified number."
+        }
+      ]
+    }
+  }
+}

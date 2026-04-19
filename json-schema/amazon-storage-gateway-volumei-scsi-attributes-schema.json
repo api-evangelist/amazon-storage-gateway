@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-volumei-scsi-attributes-schema.json",
+  "title": "VolumeiSCSIAttributes",
+  "description": "Lists iSCSI information about a volume.",
+  "type": "object",
+  "properties": {
+    "TargetARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the volume target."
+        }
+      ]
+    },
+    "NetworkInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkInterfaceId"
+        },
+        {
+          "description": "The network interface identifier."
+        }
+      ]
+    },
+    "NetworkInterfacePort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/integer"
+        },
+        {
+          "description": "The port used to communicate with iSCSI targets."
+        }
+      ]
+    },
+    "LunNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "The logical disk number."
+        }
+      ]
+    },
+    "ChapEnabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/boolean"
+        },
+        {
+          "description": "Indicates whether mutual CHAP is enabled for the iSCSI target."
+        }
+      ]
+    }
+  }
+}

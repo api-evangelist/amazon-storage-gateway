@@ -1,0 +1,7 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayName": "MyResource",
+  "GatewayTimezone": "example-value",
+  "CloudWatchLogGroupARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayCapacity": "example-value"
+}

@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-describe-vtl-devices-input-structure.json",
+  "name": "DescribeVTLDevicesInput",
+  "description": "DescribeVTLDevicesInput",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "VTLDeviceARNs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VTLDeviceARNs"
+        },
+        {
+          "description": "<p>An array of strings, where each string represents the Amazon Resource Name (ARN) of a VTL device.</p> <note> <p>All of the specified VTL devices must be from the same gateway. If no VTL devices are specified, the result will contain all devices on the specified gateway.</p> </note>"
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "An opaque string that indicates the position at which to begin describing the VTL devices."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "Specifies that the number of VTL devices described be limited to the specified number."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN"
+  ]
+}

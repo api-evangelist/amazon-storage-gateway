@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-list-tape-pools-input-schema.json",
+  "title": "ListTapePoolsInput",
+  "description": "ListTapePoolsInput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "PoolARNs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolARNs"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of each of the custom tape pools you want to list. If you don't specify a custom tape pool ARN, the response lists all custom tape pools. "
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "A string that indicates the position at which to begin the returned list of tape pools."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveIntObject"
+        },
+        {
+          "description": "An optional number limit for the tape pools in the list returned by this call."
+        }
+      ]
+    }
+  }
+}

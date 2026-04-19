@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-pool-info-schema.json",
+  "title": "PoolInfo",
+  "description": "Describes a custom tape pool.",
+  "type": "object",
+  "properties": {
+    "PoolARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the custom tape pool. Use the <a>ListTapePools</a> operation to return a list of custom tape pools for your account and Amazon Web Services Region."
+        }
+      ]
+    },
+    "PoolName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolName"
+        },
+        {
+          "description": "The name of the custom tape pool. <code>PoolName</code> can use all ASCII characters, except '/' and '\\'."
+        }
+      ]
+    },
+    "StorageClass": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeStorageClass"
+        },
+        {
+          "description": "The storage class that is associated with the custom pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool."
+        }
+      ]
+    },
+    "RetentionLockType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionLockType"
+        },
+        {
+          "description": "Tape retention lock type, which can be configured in two modes. When configured in governance mode, Amazon Web Services accounts with specific IAM permissions are authorized to remove the tape retention lock from archived virtual tapes. When configured in compliance mode, the tape retention lock cannot be removed by any user, including the root Amazon Web Services account."
+        }
+      ]
+    },
+    "RetentionLockTimeInDays": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionLockTimeInDays"
+        },
+        {
+          "description": "Tape retention lock time is set in days. Tape retention lock can be enabled for up to 100 years (36,500 days)."
+        }
+      ]
+    },
+    "PoolStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolStatus"
+        },
+        {
+          "description": "Status of the custom tape pool. Pool can be <code>ACTIVE</code> or <code>DELETED</code>."
+        }
+      ]
+    }
+  }
+}

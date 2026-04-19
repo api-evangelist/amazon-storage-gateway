@@ -1,0 +1,7 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TargetName": "MyResource",
+  "VolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "NetworkInterfaceId": "example-value",
+  "DiskId": "example-value"
+}

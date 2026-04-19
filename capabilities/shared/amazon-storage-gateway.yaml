@@ -1,0 +1,313 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: AWS Storage Gateway API
+  description: Amazon Storage Gateway API for cloud resource management.
+  tags:
+  - AWS
+  - Storage
+  - Hybrid Cloud
+  - Data Transfer
+  - NFS
+  - SMB
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-storage-gateway
+    baseUri: https://storagegateway.{region}.amazonaws.com
+    description: Amazon Storage Gateway REST API.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_SIGNATURE_V4}}'
+      placement: header
+    resources:
+    - name: gateways
+      path: /gateways
+      description: Gateways operations
+      operations:
+      - name: activategateway
+        method: POST
+        description: ActivateGateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletegateway
+        method: POST
+        description: DeleteGateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describegatewayinformation
+        method: POST
+        description: DescribeGatewayInformation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listgateways
+        method: POST
+        description: ListGateways
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updategatewayinformation
+        method: POST
+        description: UpdateGatewayInformation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: file-shares
+      path: /file-shares
+      description: File Shares operations
+      operations:
+      - name: createnfsfileshare
+        method: POST
+        description: CreateNFSFileShare
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createsmbfileshare
+        method: POST
+        description: CreateSMBFileShare
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describenfsfileshares
+        method: POST
+        description: DescribeNFSFileShares
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describesmbfileshares
+        method: POST
+        description: DescribeSMBFileShares
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletefileshare
+        method: POST
+        description: DeleteFileShare
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: volumes
+      path: /volumes
+      description: Volumes operations
+      operations:
+      - name: createcachediscsivolume
+        method: POST
+        description: CreateCachediSCSIVolume
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletevolume
+        method: POST
+        description: DeleteVolume
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describestorediscsivolumes
+        method: POST
+        description: DescribeStorediSCSIVolumes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describecachediscsivolumes
+        method: POST
+        description: DescribeCachediSCSIVolumes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tapes
+      path: /tapes
+      description: Tapes operations
+      operations:
+      - name: createtapes
+        method: POST
+        description: CreateTapes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletetape
+        method: POST
+        description: DeleteTape
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describetapes
+        method: POST
+        description: DescribeTapes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listtapes
+        method: POST
+        description: ListTapes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-storage-gateway-rest
+    resources:
+    - path: /v1/gateways
+      name: gateways
+      description: Gateways operations
+      operations:
+      - method: GET
+        name: list-gateways
+        description: List Gateways
+        call: amazon-storage-gateway.activategateway
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/file-shares
+      name: file-shares
+      description: File Shares operations
+      operations:
+      - method: GET
+        name: list-file-shares
+        description: List File Shares
+        call: amazon-storage-gateway.createnfsfileshare
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/volumes
+      name: volumes
+      description: Volumes operations
+      operations:
+      - method: GET
+        name: list-volumes
+        description: List Volumes
+        call: amazon-storage-gateway.createcachediscsivolume
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tapes
+      name: tapes
+      description: Tapes operations
+      operations:
+      - method: GET
+        name: list-tapes
+        description: List Tapes
+        call: amazon-storage-gateway.createtapes
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-storage-gateway-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Storage Gateway management.
+    tools:
+    - name: list-gateways
+      description: List Storage Gateway gateways
+      hints:
+        readOnly: true
+      call: amazon-storagegateway.listgateways
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describe-gateway
+      description: Get gateway details
+      hints:
+        readOnly: true
+      call: amazon-storagegateway.describegatewyinformation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: activate-gateway
+      description: Activate a new gateway
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-storagegateway.activategateway
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-file-shares
+      description: List NFS and SMB file shares
+      hints:
+        readOnly: true
+      call: amazon-storagegateway.listnfsfileshares
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-nfs-file-share
+      description: Create an NFS file share
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-storagegateway.createnfsfileshare
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-volumes
+      description: List gateway volumes
+      hints:
+        readOnly: true
+      call: amazon-storagegateway.listvolumes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-tapes
+      description: List virtual tapes
+      hints:
+        readOnly: true
+      call: amazon-storagegateway.listtapes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: refresh-cache
+      description: Refresh file share cache from S3
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-storagegateway.refreshcache
+      outputParameters:
+      - type: object
+        mapping: $.

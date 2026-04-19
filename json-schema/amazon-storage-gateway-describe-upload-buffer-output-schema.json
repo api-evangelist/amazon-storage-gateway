@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-upload-buffer-output-schema.json",
+  "title": "DescribeUploadBufferOutput",
+  "description": "DescribeUploadBufferOutput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "DiskIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiskIds"
+        },
+        {
+          "description": "An array of the gateway's local disk IDs that are configured as working storage. Each local disk ID is specified as a string (minimum length of 1 and maximum length of 300). If no local disks are configured as working storage, then the DiskIds array is empty."
+        }
+      ]
+    },
+    "UploadBufferUsedInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The total number of bytes being used in the gateway's upload buffer."
+        }
+      ]
+    },
+    "UploadBufferAllocatedInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The total number of bytes allocated in the gateway's as upload buffer."
+        }
+      ]
+    }
+  }
+}

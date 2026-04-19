@@ -1,0 +1,11 @@
+{
+  "GatewayId": "example-value",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayType": "example-value",
+  "GatewayOperationalState": "example-value",
+  "GatewayName": "MyResource",
+  "Ec2InstanceId": "example-value",
+  "Ec2InstanceRegion": "example-value",
+  "HostEnvironment": "example-value",
+  "HostEnvironmentId": "example-value"
+}

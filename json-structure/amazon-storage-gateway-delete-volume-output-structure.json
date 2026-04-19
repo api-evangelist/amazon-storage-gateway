@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-volume-output-structure.json",
+  "name": "DeleteVolumeOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the storage volume that was deleted.",
+  "properties": {
+    "VolumeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the storage volume that was deleted. It is the same ARN you provided in the request."
+        }
+      ]
+    }
+  }
+}

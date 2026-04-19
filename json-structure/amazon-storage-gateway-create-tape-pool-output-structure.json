@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-create-tape-pool-output-structure.json",
+  "name": "CreateTapePoolOutput",
+  "description": "CreateTapePoolOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "PoolARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolARN"
+        },
+        {
+          "description": "The unique Amazon Resource Name (ARN) that represents the custom tape pool. Use the <a>ListTapePools</a> operation to return a list of tape pools for your account and Amazon Web Services Region."
+        }
+      ]
+    }
+  }
+}

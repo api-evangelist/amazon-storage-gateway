@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-notify-when-uploaded-input-structure.json",
+  "name": "NotifyWhenUploadedInput",
+  "description": "NotifyWhenUploadedInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "FileShareARN": {
+      "$ref": "#/components/schemas/FileShareARN"
+    }
+  },
+  "required": [
+    "FileShareARN"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-tapes-output-schema.json",
+  "title": "DescribeTapesOutput",
+  "description": "DescribeTapesOutput",
+  "type": "object",
+  "properties": {
+    "Tapes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tapes"
+        },
+        {
+          "description": "An array of virtual tape descriptions."
+        }
+      ]
+    },
+    "Marker": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Marker"
+        },
+        {
+          "description": "<p>An opaque string that can be used as part of a subsequent <code>DescribeTapes</code> call to retrieve the next page of results.</p> <p>If a response does not contain a marker, then there are no more results to be retrieved.</p>"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-gateway-info-schema.json",
+  "title": "GatewayInfo",
+  "description": "Describes a gateway object.",
+  "type": "object",
+  "properties": {
+    "GatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayId"
+        },
+        {
+          "description": "The unique identifier assigned to your gateway during activation. This ID becomes part of the gateway Amazon Resource Name (ARN), which you use as input for other operations."
+        }
+      ]
+    },
+    "GatewayARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region."
+        }
+      ]
+    },
+    "GatewayType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayType"
+        },
+        {
+          "description": "The type of the gateway."
+        }
+      ]
+    },
+    "GatewayOperationalState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayOperationalState"
+        },
+        {
+          "description": "<p>The state of the gateway.</p> <p>Valid Values: <code>DISABLED</code> | <code>ACTIVE</code> </p>"
+        }
+      ]
+    },
+    "GatewayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The name of the gateway."
+        }
+      ]
+    },
+    "Ec2InstanceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Ec2InstanceId"
+        },
+        {
+          "description": "The ID of the Amazon EC2 instance that was used to launch the gateway."
+        }
+      ]
+    },
+    "Ec2InstanceRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Ec2InstanceRegion"
+        },
+        {
+          "description": "The Amazon Web Services Region where the Amazon EC2 instance is located."
+        }
+      ]
+    },
+    "HostEnvironment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HostEnvironment"
+        },
+        {
+          "description": "The type of hardware or software platform on which the gateway is running."
+        }
+      ]
+    },
+    "HostEnvironmentId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HostEnvironmentId"
+        },
+        {
+          "description": "A unique identifier for the specific instance of the host platform running the gateway. This value is only available for certain host environments, and its format depends on the host environment type."
+        }
+      ]
+    }
+  }
+}

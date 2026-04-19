@@ -1,0 +1,6 @@
+{
+  "FileSystemAssociationId": "example-value",
+  "FileSystemAssociationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FileSystemAssociationStatus": "Active",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

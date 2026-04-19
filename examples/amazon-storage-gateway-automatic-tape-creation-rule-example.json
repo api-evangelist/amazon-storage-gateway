@@ -1,0 +1,7 @@
+{
+  "TapeBarcodePrefix": "example-value",
+  "PoolId": "example-value",
+  "TapeSizeInBytes": "example-value",
+  "MinimumNumTapes": "example-value",
+  "Worm": "example-value"
+}

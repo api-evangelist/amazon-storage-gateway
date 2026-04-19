@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-smb-file-shares-output-schema.json",
+  "title": "DescribeSMBFileSharesOutput",
+  "description": "DescribeSMBFileSharesOutput",
+  "type": "object",
+  "properties": {
+    "SMBFileShareInfoList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SMBFileShareInfoList"
+        },
+        {
+          "description": "An array containing a description for each requested file share."
+        }
+      ]
+    }
+  }
+}

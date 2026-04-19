@@ -1,0 +1,11 @@
+{
+  "FileSystemAssociationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "LocationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FileSystemAssociationStatus": "Active",
+  "AuditDestinationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "Tags": "example-value",
+  "CacheAttributes": "example-value",
+  "EndpointNetworkConfiguration": "example-value",
+  "FileSystemAssociationStatusDetails": "Active"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-bandwidth-rate-limit-output-structure.json",
+  "name": "DeleteBandwidthRateLimitOutput",
+  "description": "A JSON object containing the Amazon Resource Name (ARN) of the gateway whose bandwidth rate information was deleted.",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

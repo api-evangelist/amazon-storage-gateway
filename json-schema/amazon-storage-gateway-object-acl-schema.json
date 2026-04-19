@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-object-acl-schema.json",
+  "title": "ObjectACL",
+  "description": "A value that sets the access control list (ACL) permission for objects in the S3 bucket that an S3 File Gateway puts objects into. The default value is <code>private</code>.",
+  "type": "string",
+  "enum": [
+    "private",
+    "public-read",
+    "public-read-write",
+    "authenticated-read",
+    "bucket-owner-read",
+    "bucket-owner-full-control",
+    "aws-exec-read"
+  ]
+}

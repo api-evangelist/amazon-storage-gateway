@@ -1,90 +1,1095 @@
 {
   "@context": {
     "@version": 1.1,
-    "@vocab": "https://schema.org/",
-    "sgw": "https://docs.aws.amazon.com/storagegateway/latest/APIReference/",
-    "aws": "https://aws.amazon.com/",
-    "iam": "https://docs.aws.amazon.com/IAM/latest/UserGuide/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dcterms": "http://purl.org/dc/terms/",
+    "aws": "https://amazonaws.com/schema/",
     "schema": "https://schema.org/",
-
-    "Gateway": {
-      "@id": "sgw:API_DescribeGatewayInformation.html",
-      "@context": {
-        "GatewayARN": {
-          "@id": "aws:arn",
-          "@type": "@id"
-        },
-        "GatewayId": {
-          "@id": "schema:identifier",
-          "@type": "xsd:string"
-        },
-        "GatewayName": {
-          "@id": "schema:name",
-          "@type": "xsd:string"
-        },
-        "GatewayType": {
-          "@id": "sgw:GatewayType",
-          "@type": "xsd:string"
-        },
-        "GatewayState": {
-          "@id": "sgw:GatewayState",
-          "@type": "xsd:string"
-        },
-        "GatewayTimezone": {
-          "@id": "sgw:GatewayTimezone",
-          "@type": "xsd:string"
-        },
-        "LastSoftwareUpdate": {
-          "@id": "dcterms:modified",
-          "@type": "xsd:dateTime"
-        }
-      }
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ListTagsForResourceInput": "aws:ListTagsForResourceInput",
+    "RetrieveTapeRecoveryPointInput": "aws:RetrieveTapeRecoveryPointInput",
+    "UpdateAutomaticTapeCreationPolicyInput": "aws:UpdateAutomaticTapeCreationPolicyInput",
+    "DetachVolumeInput": "aws:DetachVolumeInput",
+    "UpdateSnapshotScheduleOutput": "aws:UpdateSnapshotScheduleOutput",
+    "StartGatewayOutput": "aws:StartGatewayOutput",
+    "DeleteVolumeOutput": "aws:DeleteVolumeOutput",
+    "SMBFileShareInfo": "aws:SMBFileShareInfo",
+    "CreateTapeWithBarcodeInput": "aws:CreateTapeWithBarcodeInput",
+    "DescribeVTLDevicesInput": "aws:DescribeVTLDevicesInput",
+    "DescribeSnapshotScheduleOutput": "aws:DescribeSnapshotScheduleOutput",
+    "DeleteTapePoolInput": "aws:DeleteTapePoolInput",
+    "UpdateSnapshotScheduleInput": "aws:UpdateSnapshotScheduleInput",
+    "Amazon Storage Gateway": "aws:Amazon Storage Gateway",
+    "CreateSnapshotFromVolumeRecoveryPointInput": "aws:CreateSnapshotFromVolumeRecoveryPointInput",
+    "AddTagsToResourceInput": "aws:AddTagsToResourceInput",
+    "UpdateSMBSecurityStrategyInput": "aws:UpdateSMBSecurityStrategyInput",
+    "UpdateNFSFileShareOutput": "aws:UpdateNFSFileShareOutput",
+    "ListTapePoolsOutput": "aws:ListTapePoolsOutput",
+    "NetworkInterface": "aws:NetworkInterface",
+    "DeleteTapeArchiveOutput": "aws:DeleteTapeArchiveOutput",
+    "ListFileSystemAssociationsInput": "aws:ListFileSystemAssociationsInput",
+    "CachediSCSIVolume": "aws:CachediSCSIVolume",
+    "EndpointNetworkConfiguration": {
+      "@id": "aws:EndpointNetworkConfiguration",
+      "@type": "xsd:string"
     },
-
-    "Volume": {
-      "@id": "sgw:API_DescribeStorediSCSIVolumes.html",
-      "@context": {
-        "VolumeARN": {
-          "@id": "aws:arn",
-          "@type": "@id"
-        },
-        "VolumeId": {
-          "@id": "schema:identifier",
-          "@type": "xsd:string"
-        },
-        "VolumeType": {
-          "@id": "sgw:VolumeType",
-          "@type": "xsd:string"
-        },
-        "VolumeSizeInBytes": {
-          "@id": "schema:contentSize",
-          "@type": "xsd:long"
-        }
-      }
+    "DeleteSnapshotScheduleOutput": "aws:DeleteSnapshotScheduleOutput",
+    "DescribeSMBFileSharesOutput": "aws:DescribeSMBFileSharesOutput",
+    "CreateNFSFileShareInput": "aws:CreateNFSFileShareInput",
+    "UpdateMaintenanceStartTimeInput": "aws:UpdateMaintenanceStartTimeInput",
+    "DeleteGatewayOutput": "aws:DeleteGatewayOutput",
+    "UpdateBandwidthRateLimitScheduleOutput": "aws:UpdateBandwidthRateLimitScheduleOutput",
+    "RetrieveTapeArchiveInput": "aws:RetrieveTapeArchiveInput",
+    "DescribeVTLDevicesOutput": "aws:DescribeVTLDevicesOutput",
+    "AddWorkingStorageInput": "aws:AddWorkingStorageInput",
+    "TapeRecoveryPointInfo": "aws:TapeRecoveryPointInfo",
+    "DeleteTapeOutput": "aws:DeleteTapeOutput",
+    "DeleteAutomaticTapeCreationPolicyInput": "aws:DeleteAutomaticTapeCreationPolicyInput",
+    "DisableGatewayOutput": "aws:DisableGatewayOutput",
+    "AssignTapePoolOutput": "aws:AssignTapePoolOutput",
+    "CreateTapesInput": "aws:CreateTapesInput",
+    "DescribeUploadBufferOutput": "aws:DescribeUploadBufferOutput",
+    "DeleteBandwidthRateLimitOutput": "aws:DeleteBandwidthRateLimitOutput",
+    "VolumeInfo": "aws:VolumeInfo",
+    "AssignTapePoolInput": "aws:AssignTapePoolInput",
+    "JoinDomainOutput": "aws:JoinDomainOutput",
+    "DescribeUploadBufferInput": "aws:DescribeUploadBufferInput",
+    "PoolInfo": "aws:PoolInfo",
+    "DescribeCacheInput": "aws:DescribeCacheInput",
+    "DeleteTapeArchiveInput": "aws:DeleteTapeArchiveInput",
+    "DeleteChapCredentialsOutput": "aws:DeleteChapCredentialsOutput",
+    "DescribeTapesOutput": "aws:DescribeTapesOutput",
+    "DescribeBandwidthRateLimitScheduleOutput": "aws:DescribeBandwidthRateLimitScheduleOutput",
+    "AutomaticTapeCreationRule": "aws:AutomaticTapeCreationRule",
+    "ListVolumesInput": "aws:ListVolumesInput",
+    "CreateTapesOutput": "aws:CreateTapesOutput",
+    "DescribeMaintenanceStartTimeInput": "aws:DescribeMaintenanceStartTimeInput",
+    "DescribeTapeRecoveryPointsInput": "aws:DescribeTapeRecoveryPointsInput",
+    "DescribeNFSFileSharesInput": "aws:DescribeNFSFileSharesInput",
+    "DescribeSnapshotScheduleInput": "aws:DescribeSnapshotScheduleInput",
+    "UpdateFileSystemAssociationInput": "aws:UpdateFileSystemAssociationInput",
+    "DeleteGatewayInput": "aws:DeleteGatewayInput",
+    "DisableGatewayInput": "aws:DisableGatewayInput",
+    "SetSMBGuestPasswordOutput": "aws:SetSMBGuestPasswordOutput",
+    "DescribeSMBSettingsOutput": "aws:DescribeSMBSettingsOutput",
+    "ListLocalDisksOutput": "aws:ListLocalDisksOutput",
+    "ListFileSharesInput": "aws:ListFileSharesInput",
+    "DescribeMaintenanceStartTimeOutput": "aws:DescribeMaintenanceStartTimeOutput",
+    "DeleteVolumeInput": "aws:DeleteVolumeInput",
+    "DescribeBandwidthRateLimitOutput": "aws:DescribeBandwidthRateLimitOutput",
+    "AddCacheOutput": "aws:AddCacheOutput",
+    "AssociateFileSystemOutput": "aws:AssociateFileSystemOutput",
+    "CreateCachediSCSIVolumeInput": "aws:CreateCachediSCSIVolumeInput",
+    "DeleteChapCredentialsInput": "aws:DeleteChapCredentialsInput",
+    "Tag": "aws:Tag",
+    "ListVolumesOutput": "aws:ListVolumesOutput",
+    "SetLocalConsolePasswordInput": "aws:SetLocalConsolePasswordInput",
+    "ListVolumeRecoveryPointsOutput": "aws:ListVolumeRecoveryPointsOutput",
+    "ActivateGatewayInput": "aws:ActivateGatewayInput",
+    "CancelArchivalOutput": "aws:CancelArchivalOutput",
+    "CreateTapePoolOutput": "aws:CreateTapePoolOutput",
+    "UpdateSMBSecurityStrategyOutput": "aws:UpdateSMBSecurityStrategyOutput",
+    "UpdateGatewaySoftwareNowInput": "aws:UpdateGatewaySoftwareNowInput",
+    "ResetCacheInput": "aws:ResetCacheInput",
+    "CreateTapeWithBarcodeOutput": "aws:CreateTapeWithBarcodeOutput",
+    "UpdateSMBFileShareVisibilityOutput": "aws:UpdateSMBFileShareVisibilityOutput",
+    "DescribeFileSystemAssociationsOutput": "aws:DescribeFileSystemAssociationsOutput",
+    "DescribeCachediSCSIVolumesOutput": "aws:DescribeCachediSCSIVolumesOutput",
+    "CreateSMBFileShareOutput": "aws:CreateSMBFileShareOutput",
+    "ListTapePoolsInput": "aws:ListTapePoolsInput",
+    "UpdateSMBFileShareInput": "aws:UpdateSMBFileShareInput",
+    "FileSystemAssociationStatusDetail": "aws:FileSystemAssociationStatusDetail",
+    "DescribeStorediSCSIVolumesOutput": "aws:DescribeStorediSCSIVolumesOutput",
+    "StartAvailabilityMonitorTestInput": "aws:StartAvailabilityMonitorTestInput",
+    "DescribeFileSystemAssociationsInput": "aws:DescribeFileSystemAssociationsInput",
+    "FileShareInfo": "aws:FileShareInfo",
+    "StartGatewayInput": "aws:StartGatewayInput",
+    "AutomaticTapeCreationPolicyInfo": "aws:AutomaticTapeCreationPolicyInfo",
+    "NotifyWhenUploadedOutput": "aws:NotifyWhenUploadedOutput",
+    "AddCacheInput": "aws:AddCacheInput",
+    "FileSystemAssociationSummary": "aws:FileSystemAssociationSummary",
+    "ShutdownGatewayOutput": "aws:ShutdownGatewayOutput",
+    "RetrieveTapeRecoveryPointOutput": "aws:RetrieveTapeRecoveryPointOutput",
+    "DeleteFileShareInput": "aws:DeleteFileShareInput",
+    "CreateTapePoolInput": "aws:CreateTapePoolInput",
+    "DescribeChapCredentialsOutput": "aws:DescribeChapCredentialsOutput",
+    "CancelArchivalInput": "aws:CancelArchivalInput",
+    "DescribeWorkingStorageOutput": "aws:DescribeWorkingStorageOutput",
+    "ListVolumeInitiatorsInput": "aws:ListVolumeInitiatorsInput",
+    "CreateSMBFileShareInput": "aws:CreateSMBFileShareInput",
+    "DescribeWorkingStorageInput": "aws:DescribeWorkingStorageInput",
+    "DescribeStorediSCSIVolumesInput": "aws:DescribeStorediSCSIVolumesInput",
+    "DeleteTapeInput": "aws:DeleteTapeInput",
+    "AddUploadBufferOutput": "aws:AddUploadBufferOutput",
+    "UpdateMaintenanceStartTimeOutput": "aws:UpdateMaintenanceStartTimeOutput",
+    "CreateSnapshotFromVolumeRecoveryPointOutput": "aws:CreateSnapshotFromVolumeRecoveryPointOutput",
+    "DetachVolumeOutput": "aws:DetachVolumeOutput",
+    "NFSFileShareDefaults": {
+      "@id": "aws:NFSFileShareDefaults",
+      "@type": "xsd:string"
     },
-
-    "FileShare": {
-      "@id": "sgw:API_CreateNFSFileShare.html",
-      "@context": {
-        "FileShareARN": {
-          "@id": "aws:arn",
-          "@type": "@id"
-        },
-        "FileShareId": {
-          "@id": "schema:identifier",
-          "@type": "xsd:string"
-        },
-        "FileShareStatus": {
-          "@id": "sgw:FileShareStatus",
-          "@type": "xsd:string"
-        },
-        "LocationARN": {
-          "@id": "sgw:LocationARN",
-          "@type": "@id"
-        }
-      }
+    "UpdateVTLDeviceTypeInput": "aws:UpdateVTLDeviceTypeInput",
+    "ListFileSystemAssociationsOutput": "aws:ListFileSystemAssociationsOutput",
+    "CacheAttributes": {
+      "@id": "aws:CacheAttributes",
+      "@type": "xsd:string"
+    },
+    "RefreshCacheOutput": "aws:RefreshCacheOutput",
+    "AddWorkingStorageOutput": "aws:AddWorkingStorageOutput",
+    "DeleteSnapshotScheduleInput": "aws:DeleteSnapshotScheduleInput",
+    "DescribeCachediSCSIVolumesInput": "aws:DescribeCachediSCSIVolumesInput",
+    "RefreshCacheInput": "aws:RefreshCacheInput",
+    "AssociateFileSystemInput": "aws:AssociateFileSystemInput",
+    "ChapInfo": "aws:ChapInfo",
+    "UpdateBandwidthRateLimitScheduleInput": "aws:UpdateBandwidthRateLimitScheduleInput",
+    "StartAvailabilityMonitorTestOutput": "aws:StartAvailabilityMonitorTestOutput",
+    "CreateSnapshotOutput": "aws:CreateSnapshotOutput",
+    "BandwidthRateLimitInterval": "aws:BandwidthRateLimitInterval",
+    "DescribeAvailabilityMonitorTestOutput": "aws:DescribeAvailabilityMonitorTestOutput",
+    "TapeArchive": "aws:TapeArchive",
+    "DescribeChapCredentialsInput": "aws:DescribeChapCredentialsInput",
+    "AttachVolumeInput": "aws:AttachVolumeInput",
+    "DescribeBandwidthRateLimitScheduleInput": "aws:DescribeBandwidthRateLimitScheduleInput",
+    "UpdateGatewaySoftwareNowOutput": "aws:UpdateGatewaySoftwareNowOutput",
+    "DescribeTapeRecoveryPointsOutput": "aws:DescribeTapeRecoveryPointsOutput",
+    "DescribeTapeArchivesOutput": "aws:DescribeTapeArchivesOutput",
+    "AddUploadBufferInput": "aws:AddUploadBufferInput",
+    "NotifyWhenUploadedInput": "aws:NotifyWhenUploadedInput",
+    "UpdateSMBFileShareOutput": "aws:UpdateSMBFileShareOutput",
+    "SMBLocalGroups": {
+      "@id": "aws:SMBLocalGroups",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationInfo": "aws:FileSystemAssociationInfo",
+    "SetLocalConsolePasswordOutput": "aws:SetLocalConsolePasswordOutput",
+    "DeviceiSCSIAttributes": {
+      "@id": "aws:DeviceiSCSIAttributes",
+      "@type": "xsd:string"
+    },
+    "DeleteTapePoolOutput": "aws:DeleteTapePoolOutput",
+    "DisassociateFileSystemInput": "aws:DisassociateFileSystemInput",
+    "ShutdownGatewayInput": "aws:ShutdownGatewayInput",
+    "DisassociateFileSystemOutput": "aws:DisassociateFileSystemOutput",
+    "AddTagsToResourceOutput": "aws:AddTagsToResourceOutput",
+    "VTLDevice": {
+      "@id": "aws:VTLDevice",
+      "@type": "xsd:string"
+    },
+    "DescribeBandwidthRateLimitInput": "aws:DescribeBandwidthRateLimitInput",
+    "JoinDomainInput": "aws:JoinDomainInput",
+    "ListVolumeRecoveryPointsInput": "aws:ListVolumeRecoveryPointsInput",
+    "UpdateChapCredentialsOutput": "aws:UpdateChapCredentialsOutput",
+    "CreateCachediSCSIVolumeOutput": "aws:CreateCachediSCSIVolumeOutput",
+    "AttachVolumeOutput": "aws:AttachVolumeOutput",
+    "UpdateAutomaticTapeCreationPolicyOutput": "aws:UpdateAutomaticTapeCreationPolicyOutput",
+    "UpdateSMBLocalGroupsOutput": "aws:UpdateSMBLocalGroupsOutput",
+    "NFSFileShareInfo": "aws:NFSFileShareInfo",
+    "CreateNFSFileShareOutput": "aws:CreateNFSFileShareOutput",
+    "CancelRetrievalOutput": "aws:CancelRetrievalOutput",
+    "DescribeSMBSettingsInput": "aws:DescribeSMBSettingsInput",
+    "DescribeGatewayInformationInput": "aws:DescribeGatewayInformationInput",
+    "VolumeRecoveryPointInfo": "aws:VolumeRecoveryPointInfo",
+    "DescribeCacheOutput": "aws:DescribeCacheOutput",
+    "ResetCacheOutput": "aws:ResetCacheOutput",
+    "Tape": "aws:Tape",
+    "UpdateNFSFileShareInput": "aws:UpdateNFSFileShareInput",
+    "CreateStorediSCSIVolumeOutput": "aws:CreateStorediSCSIVolumeOutput",
+    "DescribeTapeArchivesInput": "aws:DescribeTapeArchivesInput",
+    "DeleteFileShareOutput": "aws:DeleteFileShareOutput",
+    "VolumeiSCSIAttributes": {
+      "@id": "aws:VolumeiSCSIAttributes",
+      "@type": "xsd:string"
+    },
+    "DeleteBandwidthRateLimitInput": "aws:DeleteBandwidthRateLimitInput",
+    "DescribeNFSFileSharesOutput": "aws:DescribeNFSFileSharesOutput",
+    "ListLocalDisksInput": "aws:ListLocalDisksInput",
+    "DescribeGatewayInformationOutput": "aws:DescribeGatewayInformationOutput",
+    "ListVolumeInitiatorsOutput": "aws:ListVolumeInitiatorsOutput",
+    "GatewayInfo": "aws:GatewayInfo",
+    "ListTapesOutput": "aws:ListTapesOutput",
+    "UpdateGatewayInformationOutput": "aws:UpdateGatewayInformationOutput",
+    "RemoveTagsFromResourceOutput": "aws:RemoveTagsFromResourceOutput",
+    "DeleteAutomaticTapeCreationPolicyOutput": "aws:DeleteAutomaticTapeCreationPolicyOutput",
+    "UpdateSMBFileShareVisibilityInput": "aws:UpdateSMBFileShareVisibilityInput",
+    "ListAutomaticTapeCreationPoliciesInput": "aws:ListAutomaticTapeCreationPoliciesInput",
+    "ListFileSharesOutput": "aws:ListFileSharesOutput",
+    "ListGatewaysInput": "aws:ListGatewaysInput",
+    "UpdateFileSystemAssociationOutput": "aws:UpdateFileSystemAssociationOutput",
+    "SetSMBGuestPasswordInput": "aws:SetSMBGuestPasswordInput",
+    "UpdateChapCredentialsInput": "aws:UpdateChapCredentialsInput",
+    "CreateSnapshotInput": "aws:CreateSnapshotInput",
+    "UpdateVTLDeviceTypeOutput": "aws:UpdateVTLDeviceTypeOutput",
+    "ListTagsForResourceOutput": "aws:ListTagsForResourceOutput",
+    "ListAutomaticTapeCreationPoliciesOutput": "aws:ListAutomaticTapeCreationPoliciesOutput",
+    "DescribeSMBFileSharesInput": "aws:DescribeSMBFileSharesInput",
+    "UpdateSMBLocalGroupsInput": "aws:UpdateSMBLocalGroupsInput",
+    "CancelRetrievalInput": "aws:CancelRetrievalInput",
+    "Disk": "aws:Disk",
+    "TapeInfo": "aws:TapeInfo",
+    "CreateStorediSCSIVolumeInput": "aws:CreateStorediSCSIVolumeInput",
+    "DescribeTapesInput": "aws:DescribeTapesInput",
+    "UpdateBandwidthRateLimitOutput": "aws:UpdateBandwidthRateLimitOutput",
+    "DescribeAvailabilityMonitorTestInput": "aws:DescribeAvailabilityMonitorTestInput",
+    "UpdateGatewayInformationInput": "aws:UpdateGatewayInformationInput",
+    "ListTapesInput": "aws:ListTapesInput",
+    "StorediSCSIVolume": "aws:StorediSCSIVolume",
+    "ListGatewaysOutput": "aws:ListGatewaysOutput",
+    "ActivateGatewayOutput": "aws:ActivateGatewayOutput",
+    "UpdateBandwidthRateLimitInput": "aws:UpdateBandwidthRateLimitInput",
+    "RetrieveTapeArchiveOutput": "aws:RetrieveTapeArchiveOutput",
+    "RemoveTagsFromResourceInput": "aws:RemoveTagsFromResourceInput",
+    "ResourceARN": {
+      "@id": "aws:ResourceARN",
+      "@type": "xsd:string"
+    },
+    "Marker": {
+      "@id": "aws:Marker",
+      "@type": "xsd:string"
+    },
+    "Limit": {
+      "@id": "aws:Limit",
+      "@type": "xsd:string"
+    },
+    "TapeARN": {
+      "@id": "aws:TapeARN",
+      "@type": "xsd:string"
+    },
+    "GatewayARN": {
+      "@id": "aws:GatewayARN",
+      "@type": "xsd:string"
+    },
+    "AutomaticTapeCreationRules": {
+      "@id": "aws:AutomaticTapeCreationRules",
+      "@type": "xsd:string"
+    },
+    "VolumeARN": {
+      "@id": "aws:VolumeARN",
+      "@type": "xsd:string"
+    },
+    "ForceDetach": {
+      "@id": "aws:ForceDetach",
+      "@type": "xsd:string"
+    },
+    "FileShareARN": {
+      "@id": "aws:FileShareARN",
+      "@type": "xsd:string"
+    },
+    "FileShareId": {
+      "@id": "aws:FileShareId",
+      "@type": "xsd:string"
+    },
+    "FileShareStatus": {
+      "@id": "aws:FileShareStatus",
+      "@type": "xsd:string"
+    },
+    "KMSEncrypted": {
+      "@id": "aws:KMSEncrypted",
+      "@type": "xsd:string"
+    },
+    "KMSKey": {
+      "@id": "aws:KMSKey",
+      "@type": "xsd:string"
+    },
+    "Path": {
+      "@id": "aws:Path",
+      "@type": "xsd:string"
+    },
+    "Role": {
+      "@id": "aws:Role",
+      "@type": "xsd:string"
+    },
+    "LocationARN": {
+      "@id": "aws:LocationARN",
+      "@type": "xsd:string"
+    },
+    "DefaultStorageClass": {
+      "@id": "aws:DefaultStorageClass",
+      "@type": "xsd:string"
+    },
+    "ObjectACL": {
+      "@id": "aws:ObjectACL",
+      "@type": "xsd:string"
+    },
+    "ReadOnly": {
+      "@id": "aws:ReadOnly",
+      "@type": "xsd:string"
+    },
+    "GuessMIMETypeEnabled": {
+      "@id": "aws:GuessMIMETypeEnabled",
+      "@type": "xsd:string"
+    },
+    "RequesterPays": {
+      "@id": "aws:RequesterPays",
+      "@type": "xsd:string"
+    },
+    "SMBACLEnabled": {
+      "@id": "aws:SMBACLEnabled",
+      "@type": "xsd:string"
+    },
+    "AccessBasedEnumeration": {
+      "@id": "aws:AccessBasedEnumeration",
+      "@type": "xsd:string"
+    },
+    "AdminUserList": {
+      "@id": "aws:AdminUserList",
+      "@type": "xsd:string"
+    },
+    "ValidUserList": {
+      "@id": "aws:ValidUserList",
+      "@type": "xsd:string"
+    },
+    "InvalidUserList": {
+      "@id": "aws:InvalidUserList",
+      "@type": "xsd:string"
+    },
+    "AuditDestinationARN": {
+      "@id": "aws:AuditDestinationARN",
+      "@type": "xsd:string"
+    },
+    "Authentication": {
+      "@id": "aws:Authentication",
+      "@type": "xsd:string"
+    },
+    "CaseSensitivity": {
+      "@id": "aws:CaseSensitivity",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "aws:Tags",
+      "@type": "xsd:string"
+    },
+    "FileShareName": {
+      "@id": "aws:FileShareName",
+      "@type": "xsd:string"
+    },
+    "NotificationPolicy": {
+      "@id": "aws:NotificationPolicy",
+      "@type": "xsd:string"
+    },
+    "VPCEndpointDNSName": {
+      "@id": "aws:VPCEndpointDNSName",
+      "@type": "xsd:string"
+    },
+    "BucketRegion": {
+      "@id": "aws:BucketRegion",
+      "@type": "xsd:string"
+    },
+    "OplocksEnabled": {
+      "@id": "aws:OplocksEnabled",
+      "@type": "xsd:string"
+    },
+    "TapeSizeInBytes": {
+      "@id": "aws:TapeSizeInBytes",
+      "@type": "xsd:string"
+    },
+    "TapeBarcode": {
+      "@id": "aws:TapeBarcode",
+      "@type": "xsd:string"
+    },
+    "PoolId": {
+      "@id": "aws:PoolId",
+      "@type": "xsd:string"
+    },
+    "Worm": {
+      "@id": "aws:Worm",
+      "@type": "xsd:string"
+    },
+    "VTLDeviceARNs": {
+      "@id": "aws:VTLDeviceARNs",
+      "@type": "xsd:string"
+    },
+    "StartAt": {
+      "@id": "aws:StartAt",
+      "@type": "xsd:string"
+    },
+    "RecurrenceInHours": {
+      "@id": "aws:RecurrenceInHours",
+      "@type": "xsd:string"
+    },
+    "Description": "schema:description",
+    "Timezone": {
+      "@id": "aws:Timezone",
+      "@type": "xsd:string"
+    },
+    "PoolARN": {
+      "@id": "aws:PoolARN",
+      "@type": "xsd:string"
+    },
+    "GatewayId": {
+      "@id": "aws:GatewayId",
+      "@type": "xsd:string"
+    },
+    "GatewayName": {
+      "@id": "aws:GatewayName",
+      "@type": "xsd:string"
+    },
+    "GatewayTimezone": {
+      "@id": "aws:GatewayTimezone",
+      "@type": "xsd:string"
+    },
+    "GatewayType": {
+      "@id": "aws:GatewayType",
+      "@type": "xsd:string"
+    },
+    "GatewayState": {
+      "@id": "aws:GatewayState",
+      "@type": "xsd:string"
+    },
+    "GatewayOperationalState": {
+      "@id": "aws:GatewayOperationalState",
+      "@type": "xsd:string"
+    },
+    "Ec2InstanceId": {
+      "@id": "aws:Ec2InstanceId",
+      "@type": "xsd:string"
+    },
+    "Ec2InstanceRegion": {
+      "@id": "aws:Ec2InstanceRegion",
+      "@type": "xsd:string"
+    },
+    "GatewayNetworkInterfaces": {
+      "@id": "aws:GatewayNetworkInterfaces",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "LastSoftwareUpdate": {
+      "@id": "aws:LastSoftwareUpdate",
+      "@type": "xsd:string"
+    },
+    "NextUpdateAvailabilityDate": {
+      "@id": "aws:NextUpdateAvailabilityDate",
+      "@type": "xsd:string"
+    },
+    "SnapshotDescription": {
+      "@id": "aws:SnapshotDescription",
+      "@type": "xsd:string"
+    },
+    "SMBSecurityStrategy": {
+      "@id": "aws:SMBSecurityStrategy",
+      "@type": "xsd:string"
+    },
+    "PoolInfos": {
+      "@id": "aws:PoolInfos",
+      "@type": "xsd:string"
+    },
+    "Ipv4Address": {
+      "@id": "aws:Ipv4Address",
+      "@type": "xsd:string"
+    },
+    "MacAddress": {
+      "@id": "aws:MacAddress",
+      "@type": "xsd:string"
+    },
+    "Ipv6Address": {
+      "@id": "aws:Ipv6Address",
+      "@type": "xsd:string"
+    },
+    "VolumeId": {
+      "@id": "aws:VolumeId",
+      "@type": "xsd:string"
+    },
+    "VolumeType": {
+      "@id": "aws:VolumeType",
+      "@type": "xsd:string"
+    },
+    "VolumeStatus": {
+      "@id": "aws:VolumeStatus",
+      "@type": "xsd:string"
+    },
+    "VolumeAttachmentStatus": {
+      "@id": "aws:VolumeAttachmentStatus",
+      "@type": "xsd:string"
+    },
+    "VolumeSizeInBytes": {
+      "@id": "aws:VolumeSizeInBytes",
+      "@type": "xsd:string"
+    },
+    "VolumeProgress": {
+      "@id": "aws:VolumeProgress",
+      "@type": "xsd:string"
+    },
+    "SourceSnapshotId": {
+      "@id": "aws:SourceSnapshotId",
+      "@type": "xsd:string"
+    },
+    "CreatedDate": {
+      "@id": "aws:CreatedDate",
+      "@type": "xsd:string"
+    },
+    "VolumeUsedInBytes": {
+      "@id": "aws:VolumeUsedInBytes",
+      "@type": "xsd:string"
+    },
+    "TargetName": {
+      "@id": "aws:TargetName",
+      "@type": "xsd:string"
+    },
+    "IpAddresses": {
+      "@id": "aws:IpAddresses",
+      "@type": "xsd:string"
+    },
+    "SMBFileShareInfoList": {
+      "@id": "aws:SMBFileShareInfoList",
+      "@type": "xsd:string"
+    },
+    "ClientToken": {
+      "@id": "aws:ClientToken",
+      "@type": "xsd:string"
+    },
+    "ClientList": {
+      "@id": "aws:ClientList",
+      "@type": "xsd:string"
+    },
+    "Squash": {
+      "@id": "aws:Squash",
+      "@type": "xsd:string"
+    },
+    "HourOfDay": {
+      "@id": "aws:HourOfDay",
+      "@type": "xsd:string"
+    },
+    "MinuteOfHour": {
+      "@id": "aws:MinuteOfHour",
+      "@type": "xsd:string"
+    },
+    "DayOfWeek": {
+      "@id": "aws:DayOfWeek",
+      "@type": "xsd:string"
+    },
+    "DayOfMonth": {
+      "@id": "aws:DayOfMonth",
+      "@type": "xsd:string"
+    },
+    "VTLDevices": {
+      "@id": "aws:VTLDevices",
+      "@type": "xsd:string"
+    },
+    "DiskIds": {
+      "@id": "aws:DiskIds",
+      "@type": "xsd:string"
+    },
+    "TapeRecoveryPointTime": {
+      "@id": "aws:TapeRecoveryPointTime",
+      "@type": "xsd:string"
+    },
+    "TapeStatus": {
+      "@id": "aws:TapeStatus",
+      "@type": "xsd:string"
+    },
+    "NumTapesToCreate": {
+      "@id": "aws:NumTapesToCreate",
+      "@type": "xsd:string"
+    },
+    "TapeBarcodePrefix": {
+      "@id": "aws:TapeBarcodePrefix",
+      "@type": "xsd:string"
+    },
+    "UploadBufferUsedInBytes": {
+      "@id": "aws:UploadBufferUsedInBytes",
+      "@type": "xsd:string"
+    },
+    "UploadBufferAllocatedInBytes": {
+      "@id": "aws:UploadBufferAllocatedInBytes",
+      "@type": "xsd:string"
+    },
+    "BypassGovernanceRetention": {
+      "@id": "aws:BypassGovernanceRetention",
+      "@type": "xsd:string"
+    },
+    "ActiveDirectoryStatus": {
+      "@id": "aws:ActiveDirectoryStatus",
+      "@type": "xsd:string"
+    },
+    "PoolName": {
+      "@id": "aws:PoolName",
+      "@type": "xsd:string"
+    },
+    "StorageClass": {
+      "@id": "aws:StorageClass",
+      "@type": "xsd:string"
+    },
+    "RetentionLockType": {
+      "@id": "aws:RetentionLockType",
+      "@type": "xsd:string"
+    },
+    "RetentionLockTimeInDays": {
+      "@id": "aws:RetentionLockTimeInDays",
+      "@type": "xsd:string"
+    },
+    "PoolStatus": {
+      "@id": "aws:PoolStatus",
+      "@type": "xsd:string"
+    },
+    "TargetARN": {
+      "@id": "aws:TargetARN",
+      "@type": "xsd:string"
+    },
+    "InitiatorName": {
+      "@id": "aws:InitiatorName",
+      "@type": "xsd:string"
+    },
+    "Tapes": {
+      "@id": "aws:Tapes",
+      "@type": "xsd:string"
+    },
+    "BandwidthRateLimitIntervals": {
+      "@id": "aws:BandwidthRateLimitIntervals",
+      "@type": "xsd:string"
+    },
+    "MinimumNumTapes": {
+      "@id": "aws:MinimumNumTapes",
+      "@type": "xsd:string"
+    },
+    "TapeARNs": {
+      "@id": "aws:TapeARNs",
+      "@type": "xsd:string"
+    },
+    "FileShareARNList": {
+      "@id": "aws:FileShareARNList",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationARN": {
+      "@id": "aws:FileSystemAssociationARN",
+      "@type": "xsd:string"
+    },
+    "UserName": {
+      "@id": "aws:UserName",
+      "@type": "xsd:string"
+    },
+    "Password": {
+      "@id": "aws:Password",
+      "@type": "xsd:string"
+    },
+    "DomainName": {
+      "@id": "aws:DomainName",
+      "@type": "xsd:string"
+    },
+    "SMBGuestPasswordSet": {
+      "@id": "aws:SMBGuestPasswordSet",
+      "@type": "xsd:string"
+    },
+    "FileSharesVisible": {
+      "@id": "aws:FileSharesVisible",
+      "@type": "xsd:string"
+    },
+    "Disks": {
+      "@id": "aws:Disks",
+      "@type": "xsd:string"
+    },
+    "AverageUploadRateLimitInBitsPerSec": {
+      "@id": "aws:AverageUploadRateLimitInBitsPerSec",
+      "@type": "xsd:string"
+    },
+    "AverageDownloadRateLimitInBitsPerSec": {
+      "@id": "aws:AverageDownloadRateLimitInBitsPerSec",
+      "@type": "xsd:string"
+    },
+    "SnapshotId": {
+      "@id": "aws:SnapshotId",
+      "@type": "xsd:string"
+    },
+    "SourceVolumeARN": {
+      "@id": "aws:SourceVolumeARN",
+      "@type": "xsd:string"
+    },
+    "NetworkInterfaceId": {
+      "@id": "aws:NetworkInterfaceId",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "aws:Key",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "aws:Value",
+      "@type": "xsd:string"
+    },
+    "VolumeInfos": {
+      "@id": "aws:VolumeInfos",
+      "@type": "xsd:string"
+    },
+    "LocalConsolePassword": {
+      "@id": "aws:LocalConsolePassword",
+      "@type": "xsd:string"
+    },
+    "VolumeRecoveryPointInfos": {
+      "@id": "aws:VolumeRecoveryPointInfos",
+      "@type": "xsd:string"
+    },
+    "ActivationKey": {
+      "@id": "aws:ActivationKey",
+      "@type": "xsd:string"
+    },
+    "GatewayRegion": {
+      "@id": "aws:GatewayRegion",
+      "@type": "xsd:string"
+    },
+    "TapeDriveType": {
+      "@id": "aws:TapeDriveType",
+      "@type": "xsd:string"
+    },
+    "MediumChangerType": {
+      "@id": "aws:MediumChangerType",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationInfoList": {
+      "@id": "aws:FileSystemAssociationInfoList",
+      "@type": "xsd:string"
+    },
+    "CachediSCSIVolumes": {
+      "@id": "aws:CachediSCSIVolumes",
+      "@type": "xsd:string"
+    },
+    "PoolARNs": {
+      "@id": "aws:PoolARNs",
+      "@type": "xsd:string"
+    },
+    "ErrorCode": {
+      "@id": "aws:ErrorCode",
+      "@type": "xsd:string"
+    },
+    "StorediSCSIVolumes": {
+      "@id": "aws:StorediSCSIVolumes",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationARNList": {
+      "@id": "aws:FileSystemAssociationARNList",
+      "@type": "xsd:string"
+    },
+    "FileShareType": {
+      "@id": "aws:FileShareType",
+      "@type": "xsd:string"
+    },
+    "NotificationId": {
+      "@id": "aws:NotificationId",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationId": {
+      "@id": "aws:FileSystemAssociationId",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationStatus": {
+      "@id": "aws:FileSystemAssociationStatus",
+      "@type": "xsd:string"
+    },
+    "ForceDelete": {
+      "@id": "aws:ForceDelete",
+      "@type": "xsd:string"
+    },
+    "ChapCredentials": {
+      "@id": "aws:ChapCredentials",
+      "@type": "xsd:string"
+    },
+    "WorkingStorageUsedInBytes": {
+      "@id": "aws:WorkingStorageUsedInBytes",
+      "@type": "xsd:string"
+    },
+    "WorkingStorageAllocatedInBytes": {
+      "@id": "aws:WorkingStorageAllocatedInBytes",
+      "@type": "xsd:string"
+    },
+    "VolumeARNs": {
+      "@id": "aws:VolumeARNs",
+      "@type": "xsd:string"
+    },
+    "VolumeRecoveryPointTime": {
+      "@id": "aws:VolumeRecoveryPointTime",
+      "@type": "xsd:string"
+    },
+    "FileMode": {
+      "@id": "aws:FileMode",
+      "@type": "xsd:string"
+    },
+    "DirectoryMode": {
+      "@id": "aws:DirectoryMode",
+      "@type": "xsd:string"
+    },
+    "GroupId": {
+      "@id": "aws:GroupId",
+      "@type": "xsd:string"
+    },
+    "OwnerId": {
+      "@id": "aws:OwnerId",
+      "@type": "xsd:string"
+    },
+    "VTLDeviceARN": {
+      "@id": "aws:VTLDeviceARN",
+      "@type": "xsd:string"
+    },
+    "DeviceType": {
+      "@id": "aws:DeviceType",
+      "@type": "xsd:string"
+    },
+    "NextMarker": {
+      "@id": "aws:NextMarker",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationSummaryList": {
+      "@id": "aws:FileSystemAssociationSummaryList",
+      "@type": "xsd:string"
+    },
+    "CacheStaleTimeoutInSeconds": {
+      "@id": "aws:CacheStaleTimeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "FolderList": {
+      "@id": "aws:FolderList",
+      "@type": "xsd:string"
+    },
+    "Recursive": {
+      "@id": "aws:Recursive",
+      "@type": "xsd:string"
+    },
+    "SecretToAuthenticateInitiator": {
+      "@id": "aws:SecretToAuthenticateInitiator",
+      "@type": "xsd:string"
+    },
+    "SecretToAuthenticateTarget": {
+      "@id": "aws:SecretToAuthenticateTarget",
+      "@type": "xsd:string"
+    },
+    "StartHourOfDay": {
+      "@id": "aws:StartHourOfDay",
+      "@type": "xsd:string"
+    },
+    "StartMinuteOfHour": {
+      "@id": "aws:StartMinuteOfHour",
+      "@type": "xsd:string"
+    },
+    "EndHourOfDay": {
+      "@id": "aws:EndHourOfDay",
+      "@type": "xsd:string"
+    },
+    "EndMinuteOfHour": {
+      "@id": "aws:EndMinuteOfHour",
+      "@type": "xsd:string"
+    },
+    "DaysOfWeek": {
+      "@id": "aws:DaysOfWeek",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "aws:Status",
+      "@type": "xsd:string"
+    },
+    "StartTime": {
+      "@id": "aws:StartTime",
+      "@type": "xsd:string"
+    },
+    "TapeCreatedDate": {
+      "@id": "aws:TapeCreatedDate",
+      "@type": "xsd:string"
+    },
+    "CompletionTime": {
+      "@id": "aws:CompletionTime",
+      "@type": "xsd:string"
+    },
+    "RetrievedTo": {
+      "@id": "aws:RetrievedTo",
+      "@type": "xsd:string"
+    },
+    "TapeUsedInBytes": {
+      "@id": "aws:TapeUsedInBytes",
+      "@type": "xsd:string"
+    },
+    "RetentionStartDate": {
+      "@id": "aws:RetentionStartDate",
+      "@type": "xsd:string"
+    },
+    "PoolEntryDate": {
+      "@id": "aws:PoolEntryDate",
+      "@type": "xsd:string"
+    },
+    "DiskId": {
+      "@id": "aws:DiskId",
+      "@type": "xsd:string"
+    },
+    "TapeRecoveryPointInfos": {
+      "@id": "aws:TapeRecoveryPointInfos",
+      "@type": "xsd:string"
+    },
+    "TapeArchives": {
+      "@id": "aws:TapeArchives",
+      "@type": "xsd:string"
+    },
+    "GatewayAdmins": {
+      "@id": "aws:GatewayAdmins",
+      "@type": "xsd:string"
+    },
+    "FileSystemAssociationStatusDetails": {
+      "@id": "aws:FileSystemAssociationStatusDetails",
+      "@type": "xsd:string"
+    },
+    "NetworkInterfacePort": {
+      "@id": "aws:NetworkInterfacePort",
+      "@type": "xsd:string"
+    },
+    "ChapEnabled": {
+      "@id": "aws:ChapEnabled",
+      "@type": "xsd:string"
+    },
+    "VTLDeviceType": {
+      "@id": "aws:VTLDeviceType",
+      "@type": "xsd:string"
+    },
+    "VTLDeviceVendor": {
+      "@id": "aws:VTLDeviceVendor",
+      "@type": "xsd:string"
+    },
+    "VTLDeviceProductIdentifier": {
+      "@id": "aws:VTLDeviceProductIdentifier",
+      "@type": "xsd:string"
+    },
+    "OrganizationalUnit": {
+      "@id": "aws:OrganizationalUnit",
+      "@type": "xsd:string"
+    },
+    "DomainControllers": {
+      "@id": "aws:DomainControllers",
+      "@type": "xsd:string"
+    },
+    "TimeoutInSeconds": {
+      "@id": "aws:TimeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "VolumeUsageInBytes": {
+      "@id": "aws:VolumeUsageInBytes",
+      "@type": "xsd:string"
+    },
+    "CacheAllocatedInBytes": {
+      "@id": "aws:CacheAllocatedInBytes",
+      "@type": "xsd:string"
+    },
+    "CacheUsedPercentage": {
+      "@id": "aws:CacheUsedPercentage",
+      "@type": "xsd:string"
+    },
+    "CacheDirtyPercentage": {
+      "@id": "aws:CacheDirtyPercentage",
+      "@type": "xsd:string"
+    },
+    "CacheHitPercentage": {
+      "@id": "aws:CacheHitPercentage",
+      "@type": "xsd:string"
+    },
+    "CacheMissPercentage": {
+      "@id": "aws:CacheMissPercentage",
+      "@type": "xsd:string"
+    },
+    "Progress": {
+      "@id": "aws:Progress",
+      "@type": "xsd:string"
+    },
+    "LunNumber": {
+      "@id": "aws:LunNumber",
+      "@type": "xsd:string"
+    },
+    "BandwidthType": {
+      "@id": "aws:BandwidthType",
+      "@type": "xsd:string"
+    },
+    "NFSFileShareInfoList": {
+      "@id": "aws:NFSFileShareInfoList",
+      "@type": "xsd:string"
+    },
+    "VPCEndpoint": {
+      "@id": "aws:VPCEndpoint",
+      "@type": "xsd:string"
+    },
+    "CloudWatchLogGroupARN": {
+      "@id": "aws:CloudWatchLogGroupARN",
+      "@type": "xsd:string"
+    },
+    "HostEnvironment": {
+      "@id": "aws:HostEnvironment",
+      "@type": "xsd:string"
+    },
+    "EndpointType": {
+      "@id": "aws:EndpointType",
+      "@type": "xsd:string"
+    },
+    "SoftwareUpdatesEndDate": {
+      "@id": "aws:SoftwareUpdatesEndDate",
+      "@type": "xsd:string"
+    },
+    "DeprecationDate": {
+      "@id": "aws:DeprecationDate",
+      "@type": "xsd:string"
+    },
+    "GatewayCapacity": {
+      "@id": "aws:GatewayCapacity",
+      "@type": "xsd:string"
+    },
+    "SupportedGatewayCapacities": {
+      "@id": "aws:SupportedGatewayCapacities",
+      "@type": "xsd:string"
+    },
+    "HostEnvironmentId": {
+      "@id": "aws:HostEnvironmentId",
+      "@type": "xsd:string"
+    },
+    "Initiators": {
+      "@id": "aws:Initiators",
+      "@type": "xsd:string"
+    },
+    "TapeInfos": {
+      "@id": "aws:TapeInfos",
+      "@type": "xsd:string"
+    },
+    "FileShareInfoList": {
+      "@id": "aws:FileShareInfoList",
+      "@type": "xsd:string"
+    },
+    "AutomaticTapeCreationPolicyInfos": {
+      "@id": "aws:AutomaticTapeCreationPolicyInfos",
+      "@type": "xsd:string"
+    },
+    "DiskPath": {
+      "@id": "aws:DiskPath",
+      "@type": "xsd:string"
+    },
+    "DiskNode": {
+      "@id": "aws:DiskNode",
+      "@type": "xsd:string"
+    },
+    "DiskStatus": {
+      "@id": "aws:DiskStatus",
+      "@type": "xsd:string"
+    },
+    "DiskSizeInBytes": {
+      "@id": "aws:DiskSizeInBytes",
+      "@type": "xsd:string"
+    },
+    "DiskAllocationType": {
+      "@id": "aws:DiskAllocationType",
+      "@type": "xsd:string"
+    },
+    "DiskAllocationResource": {
+      "@id": "aws:DiskAllocationResource",
+      "@type": "xsd:string"
+    },
+    "DiskAttributeList": {
+      "@id": "aws:DiskAttributeList",
+      "@type": "xsd:string"
+    },
+    "PreserveExistingData": {
+      "@id": "aws:PreserveExistingData",
+      "@type": "xsd:string"
+    },
+    "VolumeDiskId": {
+      "@id": "aws:VolumeDiskId",
+      "@type": "xsd:string"
+    },
+    "PreservedExistingData": {
+      "@id": "aws:PreservedExistingData",
+      "@type": "xsd:string"
+    },
+    "Gateways": {
+      "@id": "aws:Gateways",
+      "@type": "xsd:string"
+    },
+    "TagKeys": {
+      "@id": "aws:TagKeys",
+      "@type": "xsd:string"
     }
   }
 }

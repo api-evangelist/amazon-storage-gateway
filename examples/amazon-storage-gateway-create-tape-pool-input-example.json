@@ -1,0 +1,7 @@
+{
+  "PoolName": "MyResource",
+  "StorageClass": "example-value",
+  "RetentionLockType": "example-value",
+  "RetentionLockTimeInDays": "example-value",
+  "Tags": "example-value"
+}

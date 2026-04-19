@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-create-tapes-output-structure.json",
+  "name": "CreateTapesOutput",
+  "description": "CreateTapeOutput",
+  "properties": {
+    "TapeARNs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARNs"
+        },
+        {
+          "description": "A list of unique Amazon Resource Names (ARNs) that represents the virtual tapes that were created."
+        }
+      ]
+    }
+  }
+}

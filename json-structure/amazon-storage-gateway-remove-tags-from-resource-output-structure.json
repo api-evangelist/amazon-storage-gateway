@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-remove-tags-from-resource-output-structure.json",
+  "name": "RemoveTagsFromResourceOutput",
+  "description": "RemoveTagsFromResourceOutput",
+  "properties": {
+    "ResourceARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the resource that the tags were removed from."
+        }
+      ]
+    }
+  }
+}

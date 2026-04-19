@@ -1,0 +1,5 @@
+{
+  "VolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "SnapshotDescription": "example-value",
+  "Tags": "example-value"
+}

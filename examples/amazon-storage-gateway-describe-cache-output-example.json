@@ -1,0 +1,9 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DiskIds": "example-value",
+  "CacheAllocatedInBytes": "example-value",
+  "CacheUsedPercentage": "example-value",
+  "CacheDirtyPercentage": "example-value",
+  "CacheHitPercentage": "example-value",
+  "CacheMissPercentage": "example-value"
+}

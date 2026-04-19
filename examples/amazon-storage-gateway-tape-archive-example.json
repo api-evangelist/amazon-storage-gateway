@@ -1,0 +1,15 @@
+{
+  "TapeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TapeBarcode": "example-value",
+  "TapeCreatedDate": "example-value",
+  "TapeSizeInBytes": "example-value",
+  "CompletionTime": "example-value",
+  "RetrievedTo": "example-value",
+  "TapeStatus": "Active",
+  "TapeUsedInBytes": "example-value",
+  "KMSKey": "example-value",
+  "PoolId": "example-value",
+  "Worm": "example-value",
+  "RetentionStartDate": "example-value",
+  "PoolEntryDate": "example-value"
+}

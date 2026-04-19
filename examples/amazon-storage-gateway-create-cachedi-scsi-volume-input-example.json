@@ -1,0 +1,12 @@
+{
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "VolumeSizeInBytes": "example-value",
+  "SnapshotId": "example-value",
+  "TargetName": "MyResource",
+  "SourceVolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "NetworkInterfaceId": "example-value",
+  "ClientToken": "example-value",
+  "KMSEncrypted": "example-value",
+  "KMSKey": "example-value",
+  "Tags": "example-value"
+}

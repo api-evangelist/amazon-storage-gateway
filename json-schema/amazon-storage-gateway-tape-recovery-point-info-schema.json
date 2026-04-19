@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-tape-recovery-point-info-schema.json",
+  "title": "TapeRecoveryPointInfo",
+  "description": "Describes a recovery point.",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the virtual tape."
+        }
+      ]
+    },
+    "TapeRecoveryPointTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "<p>The time when the point-in-time view of the virtual tape was replicated for later recovery.</p> <p>The default timestamp format of the tape recovery point time is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.</p>"
+        }
+      ]
+    },
+    "TapeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeSize"
+        },
+        {
+          "description": "The size, in bytes, of the virtual tapes to recover."
+        }
+      ]
+    },
+    "TapeStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeRecoveryPointStatus"
+        },
+        {
+          "description": "The status of the virtual tapes."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-disk-schema.json",
+  "title": "Disk",
+  "description": "Represents a gateway's local disk.",
+  "type": "object",
+  "properties": {
+    "DiskId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiskId"
+        },
+        {
+          "description": "The unique device ID or other distinguishing data that identifies a local disk."
+        }
+      ]
+    },
+    "DiskPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The path of a local disk in the gateway virtual machine (VM)."
+        }
+      ]
+    },
+    "DiskNode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The device node of a local disk as assigned by the virtualization environment."
+        }
+      ]
+    },
+    "DiskStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "A value that represents the status of a local disk."
+        }
+      ]
+    },
+    "DiskSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The local disk size in bytes."
+        }
+      ]
+    },
+    "DiskAllocationType": {
+      "$ref": "#/components/schemas/DiskAllocationType"
+    },
+    "DiskAllocationResource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The iSCSI qualified name (IQN) that is defined for a disk. This field is not included in the response if the local disk is not defined as an iSCSI target. The format of this field is <i>targetIqn::LUNNumber::region-volumeId</i>."
+        }
+      ]
+    },
+    "DiskAttributeList": {
+      "$ref": "#/components/schemas/DiskAttributeList"
+    }
+  }
+}

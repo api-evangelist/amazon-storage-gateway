@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-tape-info-schema.json",
+  "title": "TapeInfo",
+  "description": "Describes a virtual tape.",
+  "type": "object",
+  "properties": {
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of a virtual tape."
+        }
+      ]
+    },
+    "TapeBarcode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeBarcode"
+        },
+        {
+          "description": "The barcode that identifies a specific virtual tape."
+        }
+      ]
+    },
+    "TapeSizeInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeSize"
+        },
+        {
+          "description": "The size, in bytes, of a virtual tape."
+        }
+      ]
+    },
+    "TapeStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeStatus"
+        },
+        {
+          "description": "The status of the tape."
+        }
+      ]
+    },
+    "GatewayARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region."
+        }
+      ]
+    },
+    "PoolId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PoolId"
+        },
+        {
+          "description": "The ID of the pool that you want to add your tape to for archiving. The tape in this pool is archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool."
+        }
+      ]
+    },
+    "RetentionStartDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "The date that the tape became subject to tape retention lock."
+        }
+      ]
+    },
+    "PoolEntryDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Time"
+        },
+        {
+          "description": "The date that the tape entered the custom tape pool with tape retention lock enabled."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-active-directory-status-structure.json",
+  "name": "ActiveDirectoryStatus",
+  "description": "ActiveDirectoryStatus schema from Amazon Storage Gateway API",
+  "enum": [
+    "ACCESS_DENIED",
+    "DETACHED",
+    "JOINED",
+    "JOINING",
+    "NETWORK_ERROR",
+    "TIMEOUT",
+    "UNKNOWN_ERROR"
+  ]
+}

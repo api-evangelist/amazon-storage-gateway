@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-update-file-system-association-input-schema.json",
+  "title": "UpdateFileSystemAssociationInput",
+  "description": "UpdateFileSystemAssociationInput schema from Amazon Storage Gateway API",
+  "type": "object",
+  "properties": {
+    "FileSystemAssociationARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the file system association that you want to update."
+        }
+      ]
+    },
+    "UserName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DomainUserName"
+        },
+        {
+          "description": "The user name of the user credential that has permission to access the root share D$ of the Amazon FSx file system. The user account must belong to the Amazon FSx delegated admin user group."
+        }
+      ]
+    },
+    "Password": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DomainUserPassword"
+        },
+        {
+          "description": "The password of the user credential."
+        }
+      ]
+    },
+    "AuditDestinationARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AuditDestinationARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the storage used for the audit logs."
+        }
+      ]
+    },
+    "CacheAttributes": {
+      "$ref": "#/components/schemas/CacheAttributes"
+    }
+  },
+  "required": [
+    "FileSystemAssociationARN"
+  ]
+}

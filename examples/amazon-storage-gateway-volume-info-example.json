@@ -1,0 +1,9 @@
+{
+  "VolumeARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "VolumeId": "example-value",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "GatewayId": "example-value",
+  "VolumeType": "example-value",
+  "VolumeSizeInBytes": "example-value",
+  "VolumeAttachmentStatus": "Active"
+}

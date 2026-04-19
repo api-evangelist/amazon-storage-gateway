@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-file-system-association-summary-schema.json",
+  "title": "FileSystemAssociationSummary",
+  "description": "Gets the summary returned by <code>ListFileSystemAssociation</code>, which is a summary of a created file system association.",
+  "type": "object",
+  "properties": {
+    "FileSystemAssociationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationId"
+        },
+        {
+          "description": "The ID of the file system association."
+        }
+      ]
+    },
+    "FileSystemAssociationARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the file system association."
+        }
+      ]
+    },
+    "FileSystemAssociationStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemAssociationStatus"
+        },
+        {
+          "description": "The status of the file share. Valid Values: <code>AVAILABLE</code> | <code>CREATING</code> | <code>DELETING</code> | <code>FORCE_DELETING</code> | <code>UPDATING</code> | <code>ERROR</code> "
+        }
+      ]
+    },
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  }
+}

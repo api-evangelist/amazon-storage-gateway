@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-delete-bandwidth-rate-limit-input-schema.json",
+  "title": "DeleteBandwidthRateLimitInput",
+  "description": "<p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>DeleteBandwidthRateLimitInput$BandwidthType</a> </p> </li> </ul>",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "BandwidthType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BandwidthType"
+        },
+        {
+          "description": "<p>One of the BandwidthType values that indicates the gateway bandwidth rate limit to delete.</p> <p>Valid Values: <code>UPLOAD</code> | <code>DOWNLOAD</code> | <code>ALL</code> </p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "BandwidthType"
+  ]
+}

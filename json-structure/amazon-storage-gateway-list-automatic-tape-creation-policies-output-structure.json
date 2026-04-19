@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-list-automatic-tape-creation-policies-output-structure.json",
+  "name": "ListAutomaticTapeCreationPoliciesOutput",
+  "description": "ListAutomaticTapeCreationPoliciesOutput schema from Amazon Storage Gateway API",
+  "properties": {
+    "AutomaticTapeCreationPolicyInfos": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AutomaticTapeCreationPolicyInfos"
+        },
+        {
+          "description": "Gets a listing of information about the gateway's automatic tape creation policies, including the automatic tape creation rules and the gateway that is using the policies."
+        }
+      ]
+    }
+  }
+}

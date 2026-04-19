@@ -1,0 +1,5 @@
+{
+  "FileShareARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FolderList": "example-value",
+  "Recursive": "example-value"
+}

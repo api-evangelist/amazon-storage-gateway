@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-update-smb-file-share-visibility-input-structure.json",
+  "name": "UpdateSMBFileShareVisibilityInput",
+  "description": "UpdateSMBFileShareVisibilityInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "FileSharesVisible": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "The shares on this gateway appear when listing shares."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "FileSharesVisible"
+  ]
+}

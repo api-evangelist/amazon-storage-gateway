@@ -1,0 +1,6 @@
+{
+  "TargetARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "NetworkInterfaceId": "example-value",
+  "NetworkInterfacePort": "example-value",
+  "ChapEnabled": "example-value"
+}

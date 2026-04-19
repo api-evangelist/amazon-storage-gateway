@@ -1,0 +1,11 @@
+{
+  "UserName": "MyResource",
+  "Password": "example-value",
+  "ClientToken": "example-value",
+  "GatewayARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "LocationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "Tags": "example-value",
+  "AuditDestinationARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "CacheAttributes": "example-value",
+  "EndpointNetworkConfiguration": "example-value"
+}

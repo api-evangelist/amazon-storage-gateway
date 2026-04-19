@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-gateway-capacity-structure.json",
+  "name": "GatewayCapacity",
+  "description": "GatewayCapacity schema from Amazon Storage Gateway API",
+  "enum": [
+    "Small",
+    "Medium",
+    "Large"
+  ]
+}

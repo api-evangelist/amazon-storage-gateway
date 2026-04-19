@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-cancel-archival-input-structure.json",
+  "name": "CancelArchivalInput",
+  "description": "CancelArchivalInput",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "TapeARN": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TapeARN"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the virtual tape you want to cancel archiving for."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GatewayARN",
+    "TapeARN"
+  ]
+}

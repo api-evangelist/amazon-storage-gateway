@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-refresh-cache-output-schema.json",
+  "title": "RefreshCacheOutput",
+  "description": "RefreshCacheOutput",
+  "type": "object",
+  "properties": {
+    "FileShareARN": {
+      "$ref": "#/components/schemas/FileShareARN"
+    },
+    "NotificationId": {
+      "$ref": "#/components/schemas/NotificationId"
+    }
+  }
+}

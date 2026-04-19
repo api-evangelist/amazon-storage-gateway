@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-structure/amazon-storage-gateway-delete-automatic-tape-creation-policy-input-structure.json",
+  "name": "DeleteAutomaticTapeCreationPolicyInput",
+  "description": "DeleteAutomaticTapeCreationPolicyInput schema from Amazon Storage Gateway API",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    }
+  },
+  "required": [
+    "GatewayARN"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-storage-gateway/refs/heads/main/json-schema/amazon-storage-gateway-describe-working-storage-output-schema.json",
+  "title": "DescribeWorkingStorageOutput",
+  "description": "A JSON object containing the following fields:",
+  "type": "object",
+  "properties": {
+    "GatewayARN": {
+      "$ref": "#/components/schemas/GatewayARN"
+    },
+    "DiskIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiskIds"
+        },
+        {
+          "description": "An array of the gateway's local disk IDs that are configured as working storage. Each local disk ID is specified as a string (minimum length of 1 and maximum length of 300). If no local disks are configured as working storage, then the DiskIds array is empty."
+        }
+      ]
+    },
+    "WorkingStorageUsedInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The total working storage in bytes in use by the gateway. If no working storage is configured for the gateway, this field returns 0."
+        }
+      ]
+    },
+    "WorkingStorageAllocatedInBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/long"
+        },
+        {
+          "description": "The total working storage in bytes allocated for the gateway. If no working storage is configured for the gateway, this field returns 0."
+        }
+      ]
+    }
+  }
+}
