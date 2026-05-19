@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 'Amazon Storage Gateway REST API — #CreateNFSFileShare'
+  description: 'Amazon Storage Gateway REST API — #CreateNFSFileShare. 1 operations. Lead operation: Amazon Storage Gateway
+    Create NFS File Share. Self-contained Naftiko capability covering one Amazon Storage Gateway business surface.'
+  tags:
+  - Amazon Storage Gateway
+  - '#CreateNFSFileShare'
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_STORAGE_GATEWAY_API_KEY: AMAZON_STORAGE_GATEWAY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-storage-gateway-createnfsfileshare
+    baseUri: https://storagegateway.{region}.amazonaws.com
+    description: 'Amazon Storage Gateway REST API — #CreateNFSFileShare business capability. Self-contained, no shared references.'
+    resources:
+    - name: '#CreateNFSFileShare'
+      path: /#CreateNFSFileShare
+      operations:
+      - name: createnfsfileshare
+        method: POST
+        description: Amazon Storage Gateway Create NFS File Share
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_STORAGE_GATEWAY_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-storage-gateway-createnfsfileshare-rest
+    port: 8080
+    description: 'REST adapter for Amazon Storage Gateway REST API — #CreateNFSFileShare. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.'
+    resources:
+    - path: /v1/createnfsfileshare
+      name: createnfsfileshare
+      description: 'REST surface for #CreateNFSFileShare.'
+      operations:
+      - method: POST
+        name: createnfsfileshare
+        description: Amazon Storage Gateway Create NFS File Share
+        call: amazon-storage-gateway-createnfsfileshare.createnfsfileshare
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-storage-gateway-createnfsfileshare-mcp
+    port: 9090
+    transport: http
+    description: 'MCP adapter for Amazon Storage Gateway REST API — #CreateNFSFileShare. One tool per consumed operation,
+      routed inline through this capability''s consumes block.'
+    tools:
+    - name: amazon-storage-gateway-create-nfs
+      description: Amazon Storage Gateway Create NFS File Share
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-storage-gateway-createnfsfileshare.createnfsfileshare
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

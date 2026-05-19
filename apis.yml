@@ -1,13 +1,15 @@
 name: Amazon Storage Gateway
-description: AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage. It seamlessly connects on-premises environments to AWS cloud 
-  storage, providing low-latency data access with local caching.
+description: AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited
+  cloud storage. It seamlessly connects on-premises environments to AWS cloud storage, providing low-latency data access with
+  local caching.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/storagegateway/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: Amazon Storage Gateway REST API
-  description: RESTful API for AWS Storage Gateway enabling management of gateways, volumes, tapes, file shares, and cached storage for hybrid cloud storage architectures.
+  description: RESTful API for AWS Storage Gateway enabling management of gateways, volumes, tapes, file shares, and cached
+    storage for hybrid cloud storage architectures.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
@@ -27,6 +29,18 @@ apis:
     url: https://aws.amazon.com/storagegateway/pricing/
   - type: FAQ
     url: https://aws.amazon.com/storagegateway/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway-createnfsfileshare.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway-describegatewayinformation.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway-listgateways.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway-listvolumes.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway-general.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-storage-gateway.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/storagegateway/
@@ -56,8 +70,6 @@ common:
   url: rules/amazon-storage-gateway-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-storage-gateway-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-storage-gateway.yaml
 - type: Features
   data:
   - name: File Gateway
@@ -95,14 +107,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
