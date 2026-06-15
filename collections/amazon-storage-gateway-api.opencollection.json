@@ -1,0 +1,133 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Storage Gateway REST API",
+    "version": "2013-06-30"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Default",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway Activate Gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Activates the gateway you previously deployed on your host."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#ListGateways",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway List Gateways",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#ListGateways",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists gateways owned by an AWS account in an AWS Region."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#DescribeGatewayInformation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway Describe Gateway Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#DescribeGatewayInformation",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#CreateNFSFileShare",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway Create NFS File Share",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#CreateNFSFileShare",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a Network File System (NFS) file share on an existing S3 File Gateway."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#ListVolumes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway List Volumes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#ListVolumes",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists the iSCSI stored volumes of a gateway."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
