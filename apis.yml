@@ -32,6 +32,14 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/storagegateway/faqs/
 common:
+  - type: TrustCenter
+    url: security/amazon-storage-gateway-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-storage-gateway-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-storage-gateway-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-storage-gateway-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/storagegateway/
   - type: Documentation
