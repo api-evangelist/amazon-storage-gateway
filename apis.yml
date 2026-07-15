@@ -32,6 +32,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/storagegateway/faqs/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-storage-gateway-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-storage-gateway-trust-center.yml
   - type: VulnerabilityDisclosure

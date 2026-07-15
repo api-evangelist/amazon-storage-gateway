@@ -1,0 +1,1535 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/amazon-storage-gateway-api-openapi.yml, openapi/amazon-storage-gateway.yaml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 95
+  by_action_class:
+    acting: 95
+  by_consequence:
+    write: 92
+    safety-critical: 3
+  human_in_the_loop_required: 3
+operations:
+- path: /
+  method: post
+  operationId: activateGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#ListGateways
+  method: post
+  operationId: listGateways
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#DescribeGatewayInformation
+  method: post
+  operationId: describeGatewayInformation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#CreateNFSFileShare
+  method: post
+  operationId: createNFSFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#ListVolumes
+  method: post
+  operationId: listVolumes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ActivateGateway
+  method: post
+  operationId: ActivateGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AddCache
+  method: post
+  operationId: AddCache
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AddTagsToResource
+  method: post
+  operationId: AddTagsToResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AddUploadBuffer
+  method: post
+  operationId: AddUploadBuffer
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AddWorkingStorage
+  method: post
+  operationId: AddWorkingStorage
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AssignTapePool
+  method: post
+  operationId: AssignTapePool
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AssociateFileSystem
+  method: post
+  operationId: AssociateFileSystem
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.AttachVolume
+  method: post
+  operationId: AttachVolume
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CancelArchival
+  method: post
+  operationId: CancelArchival
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CancelRetrieval
+  method: post
+  operationId: CancelRetrieval
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateCachediSCSIVolume
+  method: post
+  operationId: CreateCachediSCSIVolume
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateNFSFileShare
+  method: post
+  operationId: CreateNFSFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateSMBFileShare
+  method: post
+  operationId: CreateSMBFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateSnapshot
+  method: post
+  operationId: CreateSnapshot
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateSnapshotFromVolumeRecoveryPoint
+  method: post
+  operationId: CreateSnapshotFromVolumeRecoveryPoint
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateStorediSCSIVolume
+  method: post
+  operationId: CreateStorediSCSIVolume
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateTapePool
+  method: post
+  operationId: CreateTapePool
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateTapeWithBarcode
+  method: post
+  operationId: CreateTapeWithBarcode
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.CreateTapes
+  method: post
+  operationId: CreateTapes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteAutomaticTapeCreationPolicy
+  method: post
+  operationId: DeleteAutomaticTapeCreationPolicy
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteBandwidthRateLimit
+  method: post
+  operationId: DeleteBandwidthRateLimit
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteChapCredentials
+  method: post
+  operationId: DeleteChapCredentials
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteFileShare
+  method: post
+  operationId: DeleteFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteGateway
+  method: post
+  operationId: DeleteGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteSnapshotSchedule
+  method: post
+  operationId: DeleteSnapshotSchedule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteTape
+  method: post
+  operationId: DeleteTape
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteTapeArchive
+  method: post
+  operationId: DeleteTapeArchive
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteTapePool
+  method: post
+  operationId: DeleteTapePool
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DeleteVolume
+  method: post
+  operationId: DeleteVolume
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeAvailabilityMonitorTest
+  method: post
+  operationId: DescribeAvailabilityMonitorTest
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimit
+  method: post
+  operationId: DescribeBandwidthRateLimit
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule
+  method: post
+  operationId: DescribeBandwidthRateLimitSchedule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeCache
+  method: post
+  operationId: DescribeCache
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes
+  method: post
+  operationId: DescribeCachediSCSIVolumes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeChapCredentials
+  method: post
+  operationId: DescribeChapCredentials
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeFileSystemAssociations
+  method: post
+  operationId: DescribeFileSystemAssociations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeGatewayInformation
+  method: post
+  operationId: DescribeGatewayInformation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeMaintenanceStartTime
+  method: post
+  operationId: DescribeMaintenanceStartTime
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeNFSFileShares
+  method: post
+  operationId: DescribeNFSFileShares
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeSMBFileShares
+  method: post
+  operationId: DescribeSMBFileShares
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeSMBSettings
+  method: post
+  operationId: DescribeSMBSettings
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeSnapshotSchedule
+  method: post
+  operationId: DescribeSnapshotSchedule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeStorediSCSIVolumes
+  method: post
+  operationId: DescribeStorediSCSIVolumes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives
+  method: post
+  operationId: DescribeTapeArchives
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeTapeRecoveryPoints
+  method: post
+  operationId: DescribeTapeRecoveryPoints
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeTapes
+  method: post
+  operationId: DescribeTapes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeUploadBuffer
+  method: post
+  operationId: DescribeUploadBuffer
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeVTLDevices
+  method: post
+  operationId: DescribeVTLDevices
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DescribeWorkingStorage
+  method: post
+  operationId: DescribeWorkingStorage
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DetachVolume
+  method: post
+  operationId: DetachVolume
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DisableGateway
+  method: post
+  operationId: DisableGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: safety-critical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
+    escalation:
+      human-in-the-loop: required
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.DisassociateFileSystem
+  method: post
+  operationId: DisassociateFileSystem
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.JoinDomain
+  method: post
+  operationId: JoinDomain
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListAutomaticTapeCreationPolicies
+  method: post
+  operationId: ListAutomaticTapeCreationPolicies
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListFileShares
+  method: post
+  operationId: ListFileShares
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListFileSystemAssociations
+  method: post
+  operationId: ListFileSystemAssociations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListGateways
+  method: post
+  operationId: ListGateways
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListLocalDisks
+  method: post
+  operationId: ListLocalDisks
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListTagsForResource
+  method: post
+  operationId: ListTagsForResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListTapePools
+  method: post
+  operationId: ListTapePools
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListTapes
+  method: post
+  operationId: ListTapes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListVolumeInitiators
+  method: post
+  operationId: ListVolumeInitiators
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListVolumeRecoveryPoints
+  method: post
+  operationId: ListVolumeRecoveryPoints
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ListVolumes
+  method: post
+  operationId: ListVolumes
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.NotifyWhenUploaded
+  method: post
+  operationId: NotifyWhenUploaded
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.RefreshCache
+  method: post
+  operationId: RefreshCache
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.RemoveTagsFromResource
+  method: post
+  operationId: RemoveTagsFromResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ResetCache
+  method: post
+  operationId: ResetCache
+  x-agentic-access:
+    action-class: acting
+    consequence: safety-critical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
+    escalation:
+      human-in-the-loop: required
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.RetrieveTapeArchive
+  method: post
+  operationId: RetrieveTapeArchive
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.RetrieveTapeRecoveryPoint
+  method: post
+  operationId: RetrieveTapeRecoveryPoint
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.SetLocalConsolePassword
+  method: post
+  operationId: SetLocalConsolePassword
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.SetSMBGuestPassword
+  method: post
+  operationId: SetSMBGuestPassword
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.ShutdownGateway
+  method: post
+  operationId: ShutdownGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: safety-critical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
+    escalation:
+      human-in-the-loop: required
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.StartAvailabilityMonitorTest
+  method: post
+  operationId: StartAvailabilityMonitorTest
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.StartGateway
+  method: post
+  operationId: StartGateway
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateAutomaticTapeCreationPolicy
+  method: post
+  operationId: UpdateAutomaticTapeCreationPolicy
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimit
+  method: post
+  operationId: UpdateBandwidthRateLimit
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimitSchedule
+  method: post
+  operationId: UpdateBandwidthRateLimitSchedule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateChapCredentials
+  method: post
+  operationId: UpdateChapCredentials
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateFileSystemAssociation
+  method: post
+  operationId: UpdateFileSystemAssociation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateGatewayInformation
+  method: post
+  operationId: UpdateGatewayInformation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateGatewaySoftwareNow
+  method: post
+  operationId: UpdateGatewaySoftwareNow
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateMaintenanceStartTime
+  method: post
+  operationId: UpdateMaintenanceStartTime
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare
+  method: post
+  operationId: UpdateNFSFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShare
+  method: post
+  operationId: UpdateSMBFileShare
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShareVisibility
+  method: post
+  operationId: UpdateSMBFileShareVisibility
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateSMBLocalGroups
+  method: post
+  operationId: UpdateSMBLocalGroups
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateSMBSecurityStrategy
+  method: post
+  operationId: UpdateSMBSecurityStrategy
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateSnapshotSchedule
+  method: post
+  operationId: UpdateSnapshotSchedule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StorageGateway_20130630.UpdateVTLDeviceType
+  method: post
+  operationId: UpdateVTLDeviceType
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
