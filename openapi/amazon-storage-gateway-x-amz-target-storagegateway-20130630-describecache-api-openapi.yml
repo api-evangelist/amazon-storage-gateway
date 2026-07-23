@@ -1,0 +1,207 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeCache API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeCache'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeCache:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeCache
+      description: <p>Returns information about the cache of a gateway. This operation is only supported in the cached volume, tape, and file gateway types.</p> <p>The response includes disk IDs that are configured as cache, and it includes the amount of cache allocated and used.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeCacheOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeCacheInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeCache
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeCache'
+components:
+  schemas:
+    InternalServerError: {}
+    DescribeCacheOutput:
+      type: object
+      example:
+        CacheAllocatedInBytes: 2199023255552
+        CacheDirtyPercentage: 0.07
+        CacheHitPercentage: 99.68
+        CacheMissPercentage: 0.32
+        CacheUsedPercentage: 0.07
+        DiskIds:
+        - pci-0000:03:00.0-scsi-0:0:0:0
+        - pci-0000:04:00.0-scsi-0:1:0:0
+        GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        DiskIds:
+          allOf:
+          - $ref: '#/components/schemas/DiskIds'
+          - description: An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the <a>ListLocalDisks</a> API.
+        CacheAllocatedInBytes:
+          allOf:
+          - $ref: '#/components/schemas/long'
+          - description: The amount of cache in bytes allocated to a gateway.
+        CacheUsedPercentage:
+          allOf:
+          - $ref: '#/components/schemas/double'
+          - description: Percent use of the gateway's cache storage. This metric applies only to the gateway-cached volume setup. The sample is taken at the end of the reporting period.
+        CacheDirtyPercentage:
+          allOf:
+          - $ref: '#/components/schemas/double'
+          - description: The file share's contribution to the overall percentage of the gateway's cache that has not been persisted to Amazon Web Services. The sample is taken at the end of the reporting period.
+        CacheHitPercentage:
+          allOf:
+          - $ref: '#/components/schemas/double'
+          - description: Percent of application read operations from the file shares that are served from cache. The sample is taken at the end of the reporting period.
+        CacheMissPercentage:
+          allOf:
+          - $ref: '#/components/schemas/double'
+          - description: Percent of application read operations from the file shares that are not served from cache. The sample is taken at the end of the reporting period.
+    long:
+      type: integer
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    double:
+      type: number
+      format: double
+    InvalidGatewayRequestException: {}
+    DiskId:
+      type: string
+      minLength: 1
+      maxLength: 300
+    DescribeCacheInput:
+      type: object
+      required:
+      - GatewayARN
+      title: DescribeCacheInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+    DiskIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/DiskId'
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

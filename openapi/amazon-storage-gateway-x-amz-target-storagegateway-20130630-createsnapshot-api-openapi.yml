@@ -1,0 +1,222 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.CreateSnapshot API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.CreateSnapshot'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.CreateSnapshot:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateSnapshot
+      description: <p>Initiates a snapshot of a volume.</p> <p>Storage Gateway provides the ability to back up point-in-time snapshots of your data to Amazon Simple Storage (Amazon S3) for durable off-site recovery, and also import the data to an Amazon Elastic Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2). You can take snapshots of your gateway volume on a scheduled or ad hoc basis. This API enables you to take an ad hoc snapshot. For more information, see <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing a snapshot schedule</a>.</p> <p>In the <code>CreateSnapshot</code> request, you identify the volume by providing its Amazon Resource Name (ARN). You must also provide description for the snapshot. When Storage Gateway takes the snapshot of specified volume, the snapshot and description appears in the Storage Gateway console. In response, Storage Gateway returns you a snapshot ID. You can use this snapshot ID to check the snapshot progress or later use it when you want to create a volume from a snapshot. This operation is only supported in stored and cached volume gateway type.</p> <note> <p>To list or delete a snapshot, you must use the Amazon EC2 API. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a> or <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a> in the <i>Amazon Elastic Compute Cloud API Reference</i>.</p> </note> <important> <p>Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a> page.</p> </important>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateSnapshotOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+        '482':
+          description: ServiceUnavailableError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceUnavailableError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSnapshotInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.CreateSnapshot
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.CreateSnapshot'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    VolumeARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: Tag key. The key can't start with aws:.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: Value of the tag key.
+      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
+    CreateSnapshotOutput:
+      type: object
+      example:
+        SnapshotId: snap-78e22663
+        VolumeARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABB
+      properties:
+        VolumeARN:
+          allOf:
+          - $ref: '#/components/schemas/VolumeARN'
+          - description: The Amazon Resource Name (ARN) of the volume of which the snapshot was taken.
+        SnapshotId:
+          allOf:
+          - $ref: '#/components/schemas/SnapshotId'
+          - description: The snapshot ID that is used to refer to the snapshot in future operations such as describing snapshots (Amazon Elastic Compute Cloud API <code>DescribeSnapshots</code>) or creating a volume from a snapshot (<a>CreateStorediSCSIVolume</a>).
+      description: 'A JSON object containing the following fields:'
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    TagValue:
+      type: string
+      maxLength: 256
+    CreateSnapshotInput:
+      type: object
+      required:
+      - VolumeARN
+      - SnapshotDescription
+      title: CreateSnapshotInput
+      properties:
+        VolumeARN:
+          allOf:
+          - $ref: '#/components/schemas/VolumeARN'
+          - description: The Amazon Resource Name (ARN) of the volume. Use the <a>ListVolumes</a> operation to return a list of gateway volumes.
+        SnapshotDescription:
+          allOf:
+          - $ref: '#/components/schemas/SnapshotDescription'
+          - description: Textual description of the snapshot that appears in the Amazon EC2 console, Elastic Block Store snapshots panel in the <b>Description</b> field, and in the Storage Gateway snapshot <b>Details</b> pane, <b>Description</b> field.
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/Tags'
+          - description: '<p>A list of up to 50 tags that can be assigned to a snapshot. Each tag is a key-value pair.</p> <note> <p>Valid characters for key and value are letters, spaces, and numbers representable in UTF-8 format, and the following special characters: + - = . _ : / @. The maximum length of a tag''s key is 128 characters, and the maximum length for a tag''s value is 256.</p> </note>'
+      description: <p>A JSON object containing one or more of the following fields:</p> <ul> <li> <p> <a>CreateSnapshotInput$SnapshotDescription</a> </p> </li> <li> <p> <a>CreateSnapshotInput$VolumeARN</a> </p> </li> </ul>
+    SnapshotId:
+      type: string
+      pattern: \Asnap-([0-9A-Fa-f]{8}|[0-9A-Fa-f]{17})\z
+    ServiceUnavailableError: {}
+    Tags:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    InternalServerError: {}
+    SnapshotDescription:
+      type: string
+      minLength: 1
+      maxLength: 255
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

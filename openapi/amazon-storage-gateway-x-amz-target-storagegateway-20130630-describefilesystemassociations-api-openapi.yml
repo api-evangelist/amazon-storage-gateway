@@ -1,0 +1,295 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeFileSystemAssociations:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeFileSystemAssociations
+      description: Gets the file system association information. This operation is only supported for FSx File Gateways.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeFileSystemAssociationsOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeFileSystemAssociationsInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeFileSystemAssociations
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    CacheAttributes:
+      type: object
+      properties:
+        CacheStaleTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/CacheStaleTimeoutInSeconds'
+          - description: <p>Refreshes a file share's cache by using Time To Live (TTL). TTL is the length of time since the last refresh after which access to the directory would cause the file gateway to first refresh that directory's contents from the Amazon S3 bucket or Amazon FSx file system. The TTL duration is in seconds.</p> <p>Valid Values:0, 300 to 2,592,000 seconds (5 minutes to 30 days)</p>
+      description: The refresh cache information for the file share or FSx file systems.
+    AuditDestinationARN:
+      type: string
+      maxLength: 1024
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    FileSystemLocationARN:
+      type: string
+      minLength: 8
+      maxLength: 512
+    InvalidGatewayRequestException: {}
+    IPV4Address:
+      type: string
+      pattern: ^((25[0-5]|(2[0-4]|1[0-9]|[1-9]|)[0-9])(\.(?!$)|$)){4}
+      minLength: 7
+      maxLength: 15
+    CacheStaleTimeoutInSeconds:
+      type: integer
+    EndpointNetworkConfiguration:
+      type: object
+      properties:
+        IpAddresses:
+          allOf:
+          - $ref: '#/components/schemas/IpAddressList'
+          - description: <p>A list of gateway IP addresses on which the associated Amazon FSx file system is available.</p> <note> <p>If multiple file systems are associated with this gateway, this field is required.</p> </note>
+      description: Specifies network configuration information for the gateway associated with the Amazon FSx file system.
+    FileSystemAssociationSyncErrorCode:
+      type: string
+    FileSystemAssociationStatusDetail:
+      type: object
+      properties:
+        ErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationSyncErrorCode'
+          - description: The error code for a given file system association status.
+      description: Detailed information on file system association status.
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: Tag key. The key can't start with aws:.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: Value of the tag key.
+      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
+    FileSystemAssociationStatusDetails:
+      type: array
+      items:
+        $ref: '#/components/schemas/FileSystemAssociationStatusDetail'
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    TagValue:
+      type: string
+      maxLength: 256
+    DescribeFileSystemAssociationsInput:
+      type: object
+      required:
+      - FileSystemAssociationARNList
+      title: DescribeFileSystemAssociationsInput
+      properties:
+        FileSystemAssociationARNList:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationARNList'
+          - description: An array containing the Amazon Resource Name (ARN) of each file system association to be described.
+    FileSystemAssociationStatus:
+      type: string
+      minLength: 3
+      maxLength: 50
+    IpAddressList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IPV4Address'
+      minItems: 0
+      maxItems: 1
+    FileSystemAssociationARNList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FileSystemAssociationARN'
+      minItems: 1
+      maxItems: 10
+    FileSystemAssociationARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    Tags:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    InternalServerError: {}
+    FileSystemAssociationInfoList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FileSystemAssociationInfo'
+    DescribeFileSystemAssociationsOutput:
+      type: object
+      properties:
+        FileSystemAssociationInfoList:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationInfoList'
+          - description: 'An array containing the <code>FileSystemAssociationInfo</code> data type of each file system association to be described. '
+    FileSystemAssociationInfo:
+      type: object
+      properties:
+        FileSystemAssociationARN:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationARN'
+          - description: The Amazon Resource Name (ARN) of the file system association.
+        LocationARN:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemLocationARN'
+          - description: The ARN of the backend Amazon FSx file system used for storing file data. For information, see <a href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_FileSystem.html">FileSystem</a> in the <i>Amazon FSx API Reference</i>.
+        FileSystemAssociationStatus:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationStatus'
+          - description: 'The status of the file system association. Valid Values: <code>AVAILABLE</code> | <code>CREATING</code> | <code>DELETING</code> | <code>FORCE_DELETING</code> | <code>UPDATING</code> | <code>ERROR</code> '
+        AuditDestinationARN:
+          allOf:
+          - $ref: '#/components/schemas/AuditDestinationARN'
+          - description: The Amazon Resource Name (ARN) of the storage used for the audit logs.
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/Tags'
+          - description: A list of up to 50 tags assigned to the SMB file share, sorted alphabetically by key name. Each tag is a key-value pair.
+        CacheAttributes:
+          $ref: '#/components/schemas/CacheAttributes'
+        EndpointNetworkConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EndpointNetworkConfiguration'
+          - description: <p>Specifies network configuration information for the gateway associated with the Amazon FSx file system.</p> <note> <p>If multiple file systems are associated with this gateway, this parameter's <code>IpAddresses</code> field is required.</p> </note>
+        FileSystemAssociationStatusDetails:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationStatusDetails'
+          - description: An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file system association status.
+      description: Describes the object returned by <code>DescribeFileSystemAssociations</code> that describes a created file system association.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

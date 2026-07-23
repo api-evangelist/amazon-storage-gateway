@@ -1,0 +1,317 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeCachediSCSIVolumes
+      description: <p>Returns a description of the gateway volumes specified in the request. This operation is only supported in the cached volume gateway types.</p> <p>The list of gateway volumes in the request must be from one gateway. In the response, Storage Gateway returns volume information sorted by volume Amazon Resource Name (ARN).</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeCachediSCSIVolumesOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeCachediSCSIVolumesInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeCachediSCSIVolumes
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes'
+components:
+  schemas:
+    integer:
+      type: integer
+    CachediSCSIVolume:
+      type: object
+      properties:
+        VolumeARN:
+          allOf:
+          - $ref: '#/components/schemas/VolumeARN'
+          - description: The Amazon Resource Name (ARN) of the storage volume.
+        VolumeId:
+          allOf:
+          - $ref: '#/components/schemas/VolumeId'
+          - description: The unique identifier of the volume, e.g., vol-AE4B946D.
+        VolumeType:
+          allOf:
+          - $ref: '#/components/schemas/VolumeType'
+          - description: One of the VolumeType enumeration values that describes the type of the volume.
+        VolumeStatus:
+          allOf:
+          - $ref: '#/components/schemas/VolumeStatus'
+          - description: One of the VolumeStatus values that indicates the state of the storage volume.
+        VolumeAttachmentStatus:
+          allOf:
+          - $ref: '#/components/schemas/VolumeAttachmentStatus'
+          - description: A value that indicates whether a storage volume is attached to or detached from a gateway. For more information, see <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#attach-detach-volume">Moving your volumes to a different gateway</a>.
+        VolumeSizeInBytes:
+          allOf:
+          - $ref: '#/components/schemas/long'
+          - description: The size, in bytes, of the volume capacity.
+        VolumeProgress:
+          allOf:
+          - $ref: '#/components/schemas/DoubleObject'
+          - description: Represents the percentage complete if the volume is restoring or bootstrapping that represents the percent of data transferred. This field does not appear in the response if the cached volume is not restoring or bootstrapping.
+        SourceSnapshotId:
+          allOf:
+          - $ref: '#/components/schemas/SnapshotId'
+          - description: If the cached volume was created from a snapshot, this field contains the snapshot ID used, e.g., snap-78e22663. Otherwise, this field is not included.
+        VolumeiSCSIAttributes:
+          allOf:
+          - $ref: '#/components/schemas/VolumeiSCSIAttributes'
+          - description: An <a>VolumeiSCSIAttributes</a> object that represents a collection of iSCSI attributes for one stored volume.
+        CreatedDate:
+          allOf:
+          - $ref: '#/components/schemas/CreatedDate'
+          - description: The date the volume was created. Volumes created prior to March 28, 2017 don’t have this timestamp.
+        VolumeUsedInBytes:
+          allOf:
+          - $ref: '#/components/schemas/VolumeUsedInBytes'
+          - description: <p>The size of the data stored on the volume in bytes. This value is calculated based on the number of blocks that are touched, instead of the actual amount of data written. This value can be useful for sequential write patterns but less accurate for random write patterns. <code>VolumeUsedInBytes</code> is different from the compressed size of the volume, which is the value that is used to calculate your bill.</p> <note> <p>This value is not available for volumes created prior to May 13, 2015, until you store data on the volume.</p> <p>If you use a delete tool that overwrites the data on your volume with random data, your usage will not be reduced. This is because the random data is not compressible. If you want to reduce the amount of billed storage on your volume, we recommend overwriting your files with zeros to compress the data to a negligible amount of actual storage.</p> </note>
+        KMSKey:
+          $ref: '#/components/schemas/KMSKey'
+        TargetName:
+          allOf:
+          - $ref: '#/components/schemas/TargetName'
+          - description: <p>The name of the iSCSI target used by an initiator to connect to a volume and used as a suffix for the target ARN. For example, specifying <code>TargetName</code> as <i>myvolume</i> results in the target ARN of <code>arn:aws:storagegateway:us-east-2:111122223333:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:myvolume</code>. The target name must be unique across all volumes on a gateway.</p> <p>If you don't specify a value, Storage Gateway uses the value that was previously used for this volume as the new target name.</p>
+      description: Describes an iSCSI cached volume.
+    VolumeARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    VolumeStatus:
+      type: string
+      minLength: 3
+      maxLength: 50
+    InvalidGatewayRequestException: {}
+    VolumeId:
+      type: string
+      minLength: 12
+      maxLength: 30
+    VolumeUsedInBytes:
+      type: integer
+    DoubleObject:
+      type: number
+      format: double
+    KMSKey:
+      type: string
+      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
+      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
+      minLength: 7
+      maxLength: 2048
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    DescribeCachediSCSIVolumesOutput:
+      type: object
+      example:
+        CachediSCSIVolumes:
+        - VolumeARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABB
+          VolumeId: vol-1122AABB
+          VolumeSizeInBytes: 1099511627776
+          VolumeStatus: AVAILABLE
+          VolumeType: CACHED iSCSI
+          VolumeiSCSIAttributes:
+            ChapEnabled: true
+            LunNumber: 1
+            NetworkInterfaceId: 10.243.43.207
+            NetworkInterfacePort: 3260
+            TargetARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:myvolume
+      properties:
+        CachediSCSIVolumes:
+          allOf:
+          - $ref: '#/components/schemas/CachediSCSIVolumes'
+          - description: An array of objects where each object contains metadata about one cached volume.
+      description: 'A JSON object containing the following fields:'
+    long:
+      type: integer
+    DescribeCachediSCSIVolumesInput:
+      type: object
+      required:
+      - VolumeARNs
+      title: DescribeCachediSCSIVolumesInput
+      properties:
+        VolumeARNs:
+          allOf:
+          - $ref: '#/components/schemas/VolumeARNs'
+          - description: An array of strings where each string represents the Amazon Resource Name (ARN) of a cached volume. All of the specified cached volumes must be from the same gateway. Use <a>ListVolumes</a> to get volume ARNs for a gateway.
+    SnapshotId:
+      type: string
+      pattern: \Asnap-([0-9A-Fa-f]{8}|[0-9A-Fa-f]{17})\z
+    NetworkInterfaceId:
+      type: string
+      pattern: \A(25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}\z
+    TargetName:
+      type: string
+      pattern: ^[-\.;a-z0-9]+$
+      minLength: 1
+      maxLength: 200
+    CreatedDate:
+      type: string
+      format: date-time
+    VolumeiSCSIAttributes:
+      type: object
+      properties:
+        TargetARN:
+          allOf:
+          - $ref: '#/components/schemas/TargetARN'
+          - description: The Amazon Resource Name (ARN) of the volume target.
+        NetworkInterfaceId:
+          allOf:
+          - $ref: '#/components/schemas/NetworkInterfaceId'
+          - description: The network interface identifier.
+        NetworkInterfacePort:
+          allOf:
+          - $ref: '#/components/schemas/integer'
+          - description: The port used to communicate with iSCSI targets.
+        LunNumber:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: The logical disk number.
+        ChapEnabled:
+          allOf:
+          - $ref: '#/components/schemas/boolean'
+          - description: Indicates whether mutual CHAP is enabled for the iSCSI target.
+      description: Lists iSCSI information about a volume.
+    TargetARN:
+      type: string
+      minLength: 50
+      maxLength: 800
+    InternalServerError: {}
+    VolumeType:
+      type: string
+      minLength: 3
+      maxLength: 100
+    VolumeAttachmentStatus:
+      type: string
+      minLength: 3
+      maxLength: 50
+    boolean:
+      type: boolean
+    CachediSCSIVolumes:
+      type: array
+      items:
+        $ref: '#/components/schemas/CachediSCSIVolume'
+    VolumeARNs:
+      type: array
+      items:
+        $ref: '#/components/schemas/VolumeARN'
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

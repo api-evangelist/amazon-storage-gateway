@@ -1,0 +1,368 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeGatewayInformation API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeGatewayInformation'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeGatewayInformation:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeGatewayInformation
+      description: Returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the gateway is running or not). To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in your request.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeGatewayInformationOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeGatewayInformationInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeGatewayInformation
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeGatewayInformation'
+components:
+  schemas:
+    LastSoftwareUpdate:
+      type: string
+      minLength: 1
+      maxLength: 25
+    GatewayType:
+      type: string
+      minLength: 2
+      maxLength: 20
+    SoftwareUpdatesEndDate:
+      type: string
+      minLength: 1
+      maxLength: 25
+    CloudWatchLogGroupARN:
+      type: string
+      maxLength: 562
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    GatewayState:
+      type: string
+      minLength: 2
+      maxLength: 25
+    InvalidGatewayRequestException: {}
+    HostEnvironment:
+      type: string
+      enum:
+      - VMWARE
+      - HYPER-V
+      - EC2
+      - KVM
+      - OTHER
+      - SNOWBALL
+    GatewayCapacity:
+      type: string
+      enum:
+      - Small
+      - Medium
+      - Large
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: Tag key. The key can't start with aws:.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: Value of the tag key.
+      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
+    HostEnvironmentId:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+      - GatewayARN
+      title: DescribeGatewayInformationInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+      description: A JSON object containing the ID of the gateway.
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    SupportedGatewayCapacities:
+      type: array
+      items:
+        $ref: '#/components/schemas/GatewayCapacity'
+    GatewayTimezone:
+      type: string
+      minLength: 3
+      maxLength: 10
+    TagValue:
+      type: string
+      maxLength: 256
+    NextUpdateAvailabilityDate:
+      type: string
+      minLength: 1
+      maxLength: 25
+    GatewayNetworkInterfaces:
+      type: array
+      items:
+        $ref: '#/components/schemas/NetworkInterface'
+    NetworkInterface:
+      type: object
+      properties:
+        Ipv4Address:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The Internet Protocol version 4 (IPv4) address of the interface.
+        MacAddress:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: <p>The Media Access Control (MAC) address of the interface.</p> <note> <p>This is currently unsupported and will not be returned in output.</p> </note>
+        Ipv6Address:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The Internet Protocol version 6 (IPv6) address of the interface. <i>Currently not supported</i>.
+      description: Describes a gateway's network interface.
+    Ec2InstanceId:
+      type: string
+    string:
+      type: string
+    Tags:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    InternalServerError: {}
+    Ec2InstanceRegion:
+      type: string
+    DescribeGatewayInformationOutput:
+      type: object
+      example:
+        GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B
+        GatewayId: sgw-AABB1122
+        GatewayName: My_Gateway
+        GatewayNetworkInterfaces:
+        - Ipv4Address: 10.35.69.216
+        GatewayState: STATE_RUNNING
+        GatewayTimezone: GMT-8:00
+        GatewayType: STORED
+        LastSoftwareUpdate: '2016-01-02T16:00:00'
+        NextUpdateAvailabilityDate: '2017-01-02T16:00:00'
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        GatewayId:
+          allOf:
+          - $ref: '#/components/schemas/GatewayId'
+          - description: The unique identifier assigned to your gateway during activation. This ID becomes part of the gateway Amazon Resource Name (ARN), which you use as input for other operations.
+        GatewayName:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The name you configured for your gateway.
+        GatewayTimezone:
+          allOf:
+          - $ref: '#/components/schemas/GatewayTimezone'
+          - description: A value that indicates the time zone configured for the gateway.
+        GatewayState:
+          allOf:
+          - $ref: '#/components/schemas/GatewayState'
+          - description: A value that indicates the operating state of the gateway.
+        GatewayNetworkInterfaces:
+          allOf:
+          - $ref: '#/components/schemas/GatewayNetworkInterfaces'
+          - description: A <a>NetworkInterface</a> array that contains descriptions of the gateway network interfaces.
+        GatewayType:
+          allOf:
+          - $ref: '#/components/schemas/GatewayType'
+          - description: The type of the gateway.
+        NextUpdateAvailabilityDate:
+          allOf:
+          - $ref: '#/components/schemas/NextUpdateAvailabilityDate'
+          - description: The date on which an update to the gateway is available. This date is in the time zone of the gateway. If the gateway is not available for an update this field is not returned in the response.
+        LastSoftwareUpdate:
+          allOf:
+          - $ref: '#/components/schemas/LastSoftwareUpdate'
+          - description: The date on which the last software update was applied to the gateway. If the gateway has never been updated, this field does not return a value in the response. This only only exist and returns once it have been chosen and set by the SGW service, based on the OS version of the gateway VM
+        Ec2InstanceId:
+          allOf:
+          - $ref: '#/components/schemas/Ec2InstanceId'
+          - description: The ID of the Amazon EC2 instance that was used to launch the gateway.
+        Ec2InstanceRegion:
+          allOf:
+          - $ref: '#/components/schemas/Ec2InstanceRegion'
+          - description: The Amazon Web Services Region where the Amazon EC2 instance is located.
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/Tags'
+          - description: A list of up to 50 tags assigned to the gateway, sorted alphabetically by key name. Each tag is a key-value pair. For a gateway with more than 10 tags assigned, you can view all tags using the <code>ListTagsForResource</code> API operation.
+        VPCEndpoint:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The configuration settings for the virtual private cloud (VPC) endpoint for your gateway.
+        CloudWatchLogGroupARN:
+          allOf:
+          - $ref: '#/components/schemas/CloudWatchLogGroupARN'
+          - description: The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway. This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS version of the gateway VM
+        HostEnvironment:
+          allOf:
+          - $ref: '#/components/schemas/HostEnvironment'
+          - description: The type of hardware or software platform on which the gateway is running.
+        EndpointType:
+          allOf:
+          - $ref: '#/components/schemas/EndpointType'
+          - description: '<p>The type of endpoint for your gateway.</p> <p>Valid Values: <code>STANDARD</code> | <code>FIPS</code> </p>'
+        SoftwareUpdatesEndDate:
+          allOf:
+          - $ref: '#/components/schemas/SoftwareUpdatesEndDate'
+          - description: Date after which this gateway will not receive software updates for new features.
+        DeprecationDate:
+          allOf:
+          - $ref: '#/components/schemas/DeprecationDate'
+          - description: Date after which this gateway will not receive software updates for new features and bug fixes.
+        GatewayCapacity:
+          allOf:
+          - $ref: '#/components/schemas/GatewayCapacity'
+          - description: Specifies the size of the gateway's metadata cache.
+        SupportedGatewayCapacities:
+          allOf:
+          - $ref: '#/components/schemas/SupportedGatewayCapacities'
+          - description: A list of the metadata cache sizes that the gateway can support based on its current hardware specifications.
+        HostEnvironmentId:
+          allOf:
+          - $ref: '#/components/schemas/HostEnvironmentId'
+          - description: A unique identifier for the specific instance of the host platform running the gateway. This value is only available for certain host environments, and its format depends on the host environment type.
+      description: 'A JSON object containing the following fields:'
+    GatewayId:
+      type: string
+      minLength: 12
+      maxLength: 30
+    DeprecationDate:
+      type: string
+      minLength: 1
+      maxLength: 25
+    EndpointType:
+      type: string
+      minLength: 4
+      maxLength: 8
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

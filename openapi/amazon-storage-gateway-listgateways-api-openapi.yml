@@ -1,0 +1,99 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #ListGateways API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#ListGateways'
+paths:
+  /#ListGateways:
+    post:
+      summary: Amazon Storage Gateway List Gateways
+      description: Lists gateways owned by an AWS account in an AWS Region.
+      operationId: listGateways
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListGatewaysInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListGatewaysOutput'
+      x-amz-target: StorageGateway_20130630.ListGateways
+      tags:
+      - '#ListGateways'
+components:
+  schemas:
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
+    GatewayInfo:
+      type: object
+      properties:
+        GatewayId:
+          type: string
+        GatewayARN:
+          type: string
+        GatewayType:
+          type: string
+        GatewayOperationalState:
+          type: string
+        GatewayName:
+          type: string
+    ListGatewaysInput:
+      type: object
+      properties:
+        Marker:
+          type: string
+        Limit:
+          type: integer
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

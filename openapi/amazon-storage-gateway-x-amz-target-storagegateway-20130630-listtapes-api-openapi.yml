@@ -1,0 +1,258 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ListTapes API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.ListTapes'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.ListTapes:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListTapes
+      description: <p>Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS). You specify the tapes to list by specifying one or more tape Amazon Resource Names (ARNs). If you don't specify a tape ARN, the operation lists all virtual tapes in both your VTL and VTS.</p> <p>This operation supports pagination. By default, the operation returns a maximum of up to 100 tapes. You can optionally specify the <code>Limit</code> parameter in the body to limit the number of tapes in the response. If the number of tapes returned in the response is truncated, the response includes a <code>Marker</code> element that you can use in your subsequent request to retrieve the next set of tapes. This operation is only supported in the tape gateway type.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListTapesOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListTapesInput'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: Marker
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.ListTapes
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.ListTapes'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    PoolId:
+      type: string
+      minLength: 1
+      maxLength: 100
+    TapeInfos:
+      type: array
+      description: An array of <a>TapeInfo</a> objects, where each object describes a single tape. If there are no tapes in the tape library or VTS, then the <code>TapeInfos</code> is an empty array.
+      items:
+        $ref: '#/components/schemas/TapeInfo'
+    Marker:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    TapeStatus:
+      type: string
+    ListTapesOutput:
+      type: object
+      properties:
+        TapeInfos:
+          $ref: '#/components/schemas/TapeInfos'
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: A string that indicates the position at which to begin returning the next list of tapes. Use the marker in your next request to continue pagination of tapes. If there are no more tapes to list, this element does not appear in the response body.
+      description: <p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>ListTapesOutput$Marker</a> </p> </li> <li> <p> <a>ListTapesOutput$VolumeInfos</a> </p> </li> </ul>
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    TapeARN:
+      type: string
+      pattern: ^arn:(aws|aws-cn|aws-us-gov):storagegateway:[a-z\-0-9]+:[0-9]+:tape\/[0-9A-Z]{5,16}$
+      minLength: 50
+      maxLength: 500
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    TapeSize:
+      type: integer
+    TapeBarcode:
+      type: string
+      pattern: ^[A-Z0-9]*$
+      minLength: 5
+      maxLength: 16
+    TapeARNs:
+      type: array
+      description: The Amazon Resource Name (ARN) of each of the tapes you want to list. If you don't specify a tape ARN, the response lists all tapes in both your VTL and VTS.
+      items:
+        $ref: '#/components/schemas/TapeARN'
+    ListTapesInput:
+      type: object
+      title: ListTapesInput
+      properties:
+        TapeARNs:
+          $ref: '#/components/schemas/TapeARNs'
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: A string that indicates the position at which to begin the returned list of tapes.
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: An optional number limit for the tapes in the list returned by this call.
+      description: <p>A JSON object that contains one or more of the following fields:</p> <ul> <li> <p> <a>ListTapesInput$Limit</a> </p> </li> <li> <p> <a>ListTapesInput$Marker</a> </p> </li> <li> <p> <a>ListTapesInput$TapeARNs</a> </p> </li> </ul>
+    TapeInfo:
+      type: object
+      properties:
+        TapeARN:
+          allOf:
+          - $ref: '#/components/schemas/TapeARN'
+          - description: The Amazon Resource Name (ARN) of a virtual tape.
+        TapeBarcode:
+          allOf:
+          - $ref: '#/components/schemas/TapeBarcode'
+          - description: The barcode that identifies a specific virtual tape.
+        TapeSizeInBytes:
+          allOf:
+          - $ref: '#/components/schemas/TapeSize'
+          - description: The size, in bytes, of a virtual tape.
+        TapeStatus:
+          allOf:
+          - $ref: '#/components/schemas/TapeStatus'
+          - description: The status of the tape.
+        GatewayARN:
+          allOf:
+          - $ref: '#/components/schemas/GatewayARN'
+          - description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+        PoolId:
+          allOf:
+          - $ref: '#/components/schemas/PoolId'
+          - description: The ID of the pool that you want to add your tape to for archiving. The tape in this pool is archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool.
+        RetentionStartDate:
+          allOf:
+          - $ref: '#/components/schemas/Time'
+          - description: The date that the tape became subject to tape retention lock.
+        PoolEntryDate:
+          allOf:
+          - $ref: '#/components/schemas/Time'
+          - description: The date that the tape entered the custom tape pool with tape retention lock enabled.
+      description: Describes a virtual tape.
+    InternalServerError: {}
+    Time:
+      type: string
+      format: date-time
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

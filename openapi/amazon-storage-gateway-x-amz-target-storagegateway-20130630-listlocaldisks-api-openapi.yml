@@ -1,0 +1,241 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ListLocalDisks API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.ListLocalDisks'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.ListLocalDisks:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListLocalDisks
+      description: <p>Returns a list of the gateway's local disks. To specify which gateway to describe, you use the Amazon Resource Name (ARN) of the gateway in the body of the request.</p> <p>The request returns a list of all disks, specifying which are configured as working storage, cache storage, or stored volume or not configured at all. The response includes a <code>DiskStatus</code> field. This field can have a value of present (the disk is available to use), missing (the disk is no longer connected to the gateway), or mismatch (the disk node is occupied by a disk that has incorrect metadata or the disk content is corrupted).</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListLocalDisksOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListLocalDisksInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.ListLocalDisks
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.ListLocalDisks'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ListLocalDisksInput:
+      type: object
+      required:
+      - GatewayARN
+      title: ListLocalDisksInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+      description: A JSON object containing the Amazon Resource Name (ARN) of the gateway.
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    long:
+      type: integer
+    Disk:
+      type: object
+      properties:
+        DiskId:
+          allOf:
+          - $ref: '#/components/schemas/DiskId'
+          - description: The unique device ID or other distinguishing data that identifies a local disk.
+        DiskPath:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The path of a local disk in the gateway virtual machine (VM).
+        DiskNode:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The device node of a local disk as assigned by the virtualization environment.
+        DiskStatus:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: A value that represents the status of a local disk.
+        DiskSizeInBytes:
+          allOf:
+          - $ref: '#/components/schemas/long'
+          - description: The local disk size in bytes.
+        DiskAllocationType:
+          $ref: '#/components/schemas/DiskAllocationType'
+        DiskAllocationResource:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The iSCSI qualified name (IQN) that is defined for a disk. This field is not included in the response if the local disk is not defined as an iSCSI target. The format of this field is <i>targetIqn::LUNNumber::region-volumeId</i>.
+        DiskAttributeList:
+          $ref: '#/components/schemas/DiskAttributeList'
+      description: Represents a gateway's local disk.
+    DiskAttributeList:
+      type: array
+      description: A list of values that represents attributes of a local disk.
+      items:
+        $ref: '#/components/schemas/DiskAttribute'
+      minItems: 0
+      maxItems: 10
+    Disks:
+      type: array
+      items:
+        $ref: '#/components/schemas/Disk'
+    string:
+      type: string
+    DiskAttribute:
+      type: string
+      minLength: 1
+      maxLength: 64
+    InternalServerError: {}
+    ListLocalDisksOutput:
+      type: object
+      example:
+        Disks:
+        - DiskAllocationType: CACHE_STORAGE
+          DiskId: pci-0000:03:00.0-scsi-0:0:0:0
+          DiskNode: SCSI(0:0)
+          DiskPath: /dev/sda
+          DiskSizeInBytes: 1099511627776
+          DiskStatus: missing
+        - DiskAllocationResource: ''
+          DiskAllocationType: UPLOAD_BUFFER
+          DiskId: pci-0000:03:00.0-scsi-0:0:1:0
+          DiskNode: SCSI(0:1)
+          DiskPath: /dev/sdb
+          DiskSizeInBytes: 1099511627776
+          DiskStatus: present
+        GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        Disks:
+          allOf:
+          - $ref: '#/components/schemas/Disks'
+          - description: <p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>ListLocalDisksOutput$Disks</a> </p> </li> </ul>
+    DiskAllocationType:
+      type: string
+      description: '<p>One of the <code>DiskAllocationType</code> enumeration values that identifies how a local disk is used.</p> <p>Valid Values: <code>UPLOAD_BUFFER</code> | <code>CACHE_STORAGE</code> </p>'
+      minLength: 3
+      maxLength: 100
+    DiskId:
+      type: string
+      minLength: 1
+      maxLength: 300
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

@@ -1,0 +1,267 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ListVolumes API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.ListVolumes'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.ListVolumes:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListVolumes
+      description: <p>Lists the iSCSI stored volumes of a gateway. Results are sorted by volume ARN. The response includes only the volume ARNs. If you want additional volume information, use the <a>DescribeStorediSCSIVolumes</a> or the <a>DescribeCachediSCSIVolumes</a> API.</p> <p>The operation supports pagination. By default, the operation returns a maximum of up to 100 volumes. You can optionally specify the <code>Limit</code> field in the body to limit the number of volumes in the response. If the number of volumes returned in the response is truncated, the response includes a Marker field. You can use this Marker value in your subsequent request to retrieve the next set of volumes. This operation is only supported in the cached volume and stored volume gateway types.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListVolumesOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListVolumesInput'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: Marker
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.ListVolumes
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.ListVolumes'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    VolumeARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    Marker:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    ListVolumesOutput:
+      type: object
+      example:
+        GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B
+        Marker: '1'
+        VolumeInfos:
+        - GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B
+          GatewayId: sgw-12A3456B
+          VolumeARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABB
+          VolumeId: vol-1122AABB
+          VolumeSizeInBytes: 107374182400
+          VolumeType: STORED
+        - GatewayARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-13B4567C
+          GatewayId: sgw-gw-13B4567C
+          VolumeARN: arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-13B4567C/volume/vol-3344CCDD
+          VolumeId: vol-1122AABB
+          VolumeSizeInBytes: 107374182400
+          VolumeType: STORED
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: Use the marker in your next request to continue pagination of iSCSI volumes. If there are no more volumes to list, this field does not appear in the response body.
+        VolumeInfos:
+          allOf:
+          - $ref: '#/components/schemas/VolumeInfos'
+          - description: An array of <a>VolumeInfo</a> objects, where each object describes an iSCSI volume. If no volumes are defined for the gateway, then <code>VolumeInfos</code> is an empty array "[]".
+      description: <p>A JSON object containing the following fields:</p> <ul> <li> <p> <a>ListVolumesOutput$Marker</a> </p> </li> <li> <p> <a>ListVolumesOutput$VolumeInfos</a> </p> </li> </ul>
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    VolumeId:
+      type: string
+      minLength: 12
+      maxLength: 30
+    VolumeInfo:
+      type: object
+      properties:
+        VolumeARN:
+          allOf:
+          - $ref: '#/components/schemas/VolumeARN'
+          - description: '<p>The Amazon Resource Name (ARN) for the storage volume. For example, the following is a valid ARN:</p> <p> <code>arn:aws:storagegateway:us-east-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABB</code> </p> <p>Valid Values: 50 to 500 lowercase letters, numbers, periods (.), and hyphens (-).</p>'
+        VolumeId:
+          allOf:
+          - $ref: '#/components/schemas/VolumeId'
+          - description: '<p>The unique identifier assigned to the volume. This ID becomes part of the volume Amazon Resource Name (ARN), which you use as input for other operations.</p> <p>Valid Values: 50 to 500 lowercase letters, numbers, periods (.), and hyphens (-).</p>'
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        GatewayId:
+          allOf:
+          - $ref: '#/components/schemas/GatewayId'
+          - description: '<p>The unique identifier assigned to your gateway during activation. This ID becomes part of the gateway Amazon Resource Name (ARN), which you use as input for other operations.</p> <p>Valid Values: 50 to 500 lowercase letters, numbers, periods (.), and hyphens (-).</p>'
+        VolumeType:
+          allOf:
+          - $ref: '#/components/schemas/VolumeType'
+          - description: One of the VolumeType enumeration values describing the type of the volume.
+        VolumeSizeInBytes:
+          allOf:
+          - $ref: '#/components/schemas/long'
+          - description: '<p>The size of the volume in bytes.</p> <p>Valid Values: 50 to 500 lowercase letters, numbers, periods (.), and hyphens (-).</p>'
+        VolumeAttachmentStatus:
+          allOf:
+          - $ref: '#/components/schemas/VolumeAttachmentStatus'
+          - description: One of the VolumeStatus values that indicates the state of the storage volume.
+      description: Describes a storage volume object.
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    long:
+      type: integer
+    ListVolumesInput:
+      type: object
+      title: ListVolumesInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: A string that indicates the position at which to begin the returned list of volumes. Obtain the marker from the response of a previous List iSCSI Volumes request.
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: Specifies that the list of volumes returned be limited to the specified number of items.
+      description: <p>A JSON object that contains one or more of the following fields:</p> <ul> <li> <p> <a>ListVolumesInput$Limit</a> </p> </li> <li> <p> <a>ListVolumesInput$Marker</a> </p> </li> </ul>
+    InternalServerError: {}
+    VolumeType:
+      type: string
+      minLength: 3
+      maxLength: 100
+    VolumeAttachmentStatus:
+      type: string
+      minLength: 3
+      maxLength: 50
+    VolumeInfos:
+      type: array
+      items:
+        $ref: '#/components/schemas/VolumeInfo'
+    GatewayId:
+      type: string
+      minLength: 12
+      maxLength: 30
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

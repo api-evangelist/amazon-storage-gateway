@@ -1,0 +1,240 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.JoinDomain API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.JoinDomain'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.JoinDomain:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: JoinDomain
+      description: Adds a file gateway to an Active Directory domain. This operation is only supported for file gateways that support the SMB file protocol.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JoinDomainOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JoinDomainInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.JoinDomain
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.JoinDomain'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    Host:
+      type: string
+      pattern: ^(([a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9\-]*[A-Za-z0-9])(:(\d+))?$
+      minLength: 6
+      maxLength: 1024
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    OrganizationalUnit:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    Hosts:
+      type: array
+      items:
+        $ref: '#/components/schemas/Host'
+    DomainName:
+      type: string
+      pattern: ^([a-zA-Z0-9]+[\\.-])+([a-zA-Z0-9])+$
+      minLength: 1
+      maxLength: 1024
+    TimeoutInSeconds:
+      type: integer
+      minimum: 0
+      maximum: 3600
+    JoinDomainInput:
+      type: object
+      required:
+      - GatewayARN
+      - DomainName
+      - UserName
+      - Password
+      title: JoinDomainInput
+      properties:
+        GatewayARN:
+          allOf:
+          - $ref: '#/components/schemas/GatewayARN'
+          - description: The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/DomainName'
+          - description: The name of the domain that you want the gateway to join.
+        OrganizationalUnit:
+          allOf:
+          - $ref: '#/components/schemas/OrganizationalUnit'
+          - description: The organizational unit (OU) is a container in an Active Directory that can hold users, groups, computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
+        DomainControllers:
+          allOf:
+          - $ref: '#/components/schemas/Hosts'
+          - description: List of IPv4 addresses, NetBIOS names, or host names of your domain server. If you need to specify the port number include it after the colon (“:”). For example, <code>mydc.mydomain.com:389</code>.
+        TimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: Specifies the time in seconds, in which the <code>JoinDomain</code> operation must complete. The default is 20 seconds.
+        UserName:
+          allOf:
+          - $ref: '#/components/schemas/DomainUserName'
+          - description: Sets the user name of user who has permission to add the gateway to the Active Directory domain. The domain user account should be enabled to join computers to the domain. For example, you can use the domain administrator account or an account with delegated permissions to join computers to the domain.
+        Password:
+          allOf:
+          - $ref: '#/components/schemas/DomainUserPassword'
+          - description: Sets the password of the user who has permission to add the gateway to the Active Directory domain.
+      description: JoinDomainInput
+    ActiveDirectoryStatus:
+      type: string
+      enum:
+      - ACCESS_DENIED
+      - DETACHED
+      - JOINED
+      - JOINING
+      - NETWORK_ERROR
+      - TIMEOUT
+      - UNKNOWN_ERROR
+    InternalServerError: {}
+    DomainUserPassword:
+      type: string
+      pattern: ^[ -~]+$
+      minLength: 1
+      maxLength: 1024
+      format: password
+    DomainUserName:
+      type: string
+      pattern: ^\w[\w\.\- ]*$
+      minLength: 1
+      maxLength: 1024
+    JoinDomainOutput:
+      type: object
+      properties:
+        GatewayARN:
+          allOf:
+          - $ref: '#/components/schemas/GatewayARN'
+          - description: The unique Amazon Resource Name (ARN) of the gateway that joined the domain.
+        ActiveDirectoryStatus:
+          allOf:
+          - $ref: '#/components/schemas/ActiveDirectoryStatus'
+          - description: '<p>Indicates the status of the gateway as a member of the Active Directory domain.</p> <ul> <li> <p> <code>ACCESS_DENIED</code>: Indicates that the <code>JoinDomain</code> operation failed due to an authentication error.</p> </li> <li> <p> <code>DETACHED</code>: Indicates that gateway is not joined to a domain.</p> </li> <li> <p> <code>JOINED</code>: Indicates that the gateway has successfully joined a domain.</p> </li> <li> <p> <code>JOINING</code>: Indicates that a <code>JoinDomain</code> operation is in progress.</p> </li> <li> <p> <code>NETWORK_ERROR</code>: Indicates that <code>JoinDomain</code> operation failed due to a network or connectivity error.</p> </li> <li> <p> <code>TIMEOUT</code>: Indicates that the <code>JoinDomain</code> operation failed because the operation didn''t complete within the allotted time.</p> </li> <li> <p> <code>UNKNOWN_ERROR</code>: Indicates that the <code>JoinDomain</code> operation failed due to another type of error.</p> </li> </ul>'
+      description: JoinDomainOutput
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

@@ -1,0 +1,305 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeVTLDevices API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeVTLDevices'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeVTLDevices:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeVTLDevices
+      description: <p>Returns a description of virtual tape library (VTL) devices for the specified tape gateway. In the response, Storage Gateway returns VTL device information.</p> <p>This operation is only supported in the tape gateway type.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeVTLDevicesOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeVTLDevicesInput'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: Marker
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeVTLDevices
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeVTLDevices'
+components:
+  schemas:
+    integer:
+      type: integer
+    Marker:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    VTLDeviceType:
+      type: string
+    DeviceiSCSIAttributes:
+      type: object
+      properties:
+        TargetARN:
+          allOf:
+          - $ref: '#/components/schemas/TargetARN'
+          - description: Specifies the unique Amazon Resource Name (ARN) that encodes the iSCSI qualified name(iqn) of a tape drive or media changer target.
+        NetworkInterfaceId:
+          allOf:
+          - $ref: '#/components/schemas/NetworkInterfaceId'
+          - description: The network interface identifier of the VTL device.
+        NetworkInterfacePort:
+          allOf:
+          - $ref: '#/components/schemas/integer'
+          - description: The port used to communicate with iSCSI VTL device targets.
+        ChapEnabled:
+          allOf:
+          - $ref: '#/components/schemas/boolean'
+          - description: Indicates whether mutual CHAP is enabled for the iSCSI target.
+      description: Lists iSCSI information about a VTL device.
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    DescribeVTLDevicesOutput:
+      type: object
+      example:
+        GatewayARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B
+        Marker: '1'
+        VTLDevices:
+        - DeviceiSCSIAttributes:
+            ChapEnabled: false
+            NetworkInterfaceId: 10.243.43.207
+            NetworkInterfacePort: 3260
+            TargetARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:sgw-1fad4876-mediachanger
+          VTLDeviceARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/device/AMZN_SGW-1FAD4876_MEDIACHANGER_00001
+          VTLDeviceProductIdentifier: L700
+          VTLDeviceType: Medium Changer
+          VTLDeviceVendor: STK
+        - DeviceiSCSIAttributes:
+            ChapEnabled: false
+            NetworkInterfaceId: 10.243.43.209
+            NetworkInterfacePort: 3260
+            TargetARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:sgw-1fad4876-tapedrive-01
+          VTLDeviceARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/device/AMZN_SGW-1FAD4876_TAPEDRIVE_00001
+          VTLDeviceProductIdentifier: ULT3580-TD5
+          VTLDeviceType: Tape Drive
+          VTLDeviceVendor: IBM
+        - DeviceiSCSIAttributes:
+            ChapEnabled: false
+            NetworkInterfaceId: 10.243.43.209
+            NetworkInterfacePort: 3260
+            TargetARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:sgw-1fad4876-tapedrive-02
+          VTLDeviceARN: arn:aws:storagegateway:us-east-1:999999999999:gateway/sgw-12A3456B/device/AMZN_SGW-1FAD4876_TAPEDRIVE_00002
+          VTLDeviceProductIdentifier: ULT3580-TD5
+          VTLDeviceType: Tape Drive
+          VTLDeviceVendor: IBM
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        VTLDevices:
+          allOf:
+          - $ref: '#/components/schemas/VTLDevices'
+          - description: An array of VTL device objects composed of the Amazon Resource Name (ARN) of the VTL devices.
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: An opaque string that indicates the position at which the VTL devices that were fetched for description ended. Use the marker in your next request to fetch the next set of VTL devices in the list. If there are no more VTL devices to describe, this field does not appear in the response.
+      description: DescribeVTLDevicesOutput
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    VTLDevices:
+      type: array
+      items:
+        $ref: '#/components/schemas/VTLDevice'
+    VTLDeviceARNs:
+      type: array
+      items:
+        $ref: '#/components/schemas/VTLDeviceARN'
+    VTLDevice:
+      type: object
+      properties:
+        VTLDeviceARN:
+          allOf:
+          - $ref: '#/components/schemas/VTLDeviceARN'
+          - description: Specifies the unique Amazon Resource Name (ARN) of the device (tape drive or media changer).
+        VTLDeviceType:
+          allOf:
+          - $ref: '#/components/schemas/VTLDeviceType'
+          - description: Specifies the type of device that the VTL device emulates.
+        VTLDeviceVendor:
+          allOf:
+          - $ref: '#/components/schemas/VTLDeviceVendor'
+          - description: Specifies the vendor of the device that the VTL device object emulates.
+        VTLDeviceProductIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/VTLDeviceProductIdentifier'
+          - description: Specifies the model number of device that the VTL device emulates.
+        DeviceiSCSIAttributes:
+          allOf:
+          - $ref: '#/components/schemas/DeviceiSCSIAttributes'
+          - description: A list of iSCSI information about a VTL device.
+      description: Represents a device object associated with a tape gateway.
+    NetworkInterfaceId:
+      type: string
+      pattern: \A(25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}\z
+    VTLDeviceVendor:
+      type: string
+    DescribeVTLDevicesInput:
+      type: object
+      required:
+      - GatewayARN
+      title: DescribeVTLDevicesInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        VTLDeviceARNs:
+          allOf:
+          - $ref: '#/components/schemas/VTLDeviceARNs'
+          - description: <p>An array of strings, where each string represents the Amazon Resource Name (ARN) of a VTL device.</p> <note> <p>All of the specified VTL devices must be from the same gateway. If no VTL devices are specified, the result will contain all devices on the specified gateway.</p> </note>
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: An opaque string that indicates the position at which to begin describing the VTL devices.
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: Specifies that the number of VTL devices described be limited to the specified number.
+      description: DescribeVTLDevicesInput
+    TargetARN:
+      type: string
+      minLength: 50
+      maxLength: 800
+    InternalServerError: {}
+    boolean:
+      type: boolean
+    VTLDeviceProductIdentifier:
+      type: string
+    VTLDeviceARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

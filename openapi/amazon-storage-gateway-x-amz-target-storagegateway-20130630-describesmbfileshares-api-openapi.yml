@@ -1,0 +1,411 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeSMBFileShares API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.DescribeSMBFileShares'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.DescribeSMBFileShares:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeSMBFileShares
+      description: Gets a description for one or more Server Message Block (SMB) file shares from a S3 File Gateway. This operation is only supported for S3 File Gateways.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeSMBFileSharesOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeSMBFileSharesInput'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.DescribeSMBFileShares
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.DescribeSMBFileShares'
+components:
+  schemas:
+    FileShareId:
+      type: string
+      description: The ID of the file share.
+      minLength: 12
+      maxLength: 30
+    FileShareName:
+      type: string
+      minLength: 1
+      maxLength: 255
+    UserList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserListUser'
+      minItems: 0
+      maxItems: 100
+    CacheAttributes:
+      type: object
+      properties:
+        CacheStaleTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/CacheStaleTimeoutInSeconds'
+          - description: <p>Refreshes a file share's cache by using Time To Live (TTL). TTL is the length of time since the last refresh after which access to the directory would cause the file gateway to first refresh that directory's contents from the Amazon S3 bucket or Amazon FSx file system. The TTL duration is in seconds.</p> <p>Valid Values:0, 300 to 2,592,000 seconds (5 minutes to 30 days)</p>
+      description: The refresh cache information for the file share or FSx file systems.
+    FileShareARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the file share.
+      minLength: 50
+      maxLength: 500
+    AuditDestinationARN:
+      type: string
+      maxLength: 1024
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    NotificationPolicy:
+      type: string
+      pattern: ^\{[\w\s:\{\}\[\]"]*}$
+      minLength: 2
+      maxLength: 100
+    UserListUser:
+      type: string
+      minLength: 1
+      maxLength: 64
+    CacheStaleTimeoutInSeconds:
+      type: integer
+    FileShareARNList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FileShareARN'
+      minItems: 1
+      maxItems: 10
+    RegionId:
+      type: string
+      minLength: 1
+      maxLength: 25
+    ObjectACL:
+      type: string
+      enum:
+      - private
+      - public-read
+      - public-read-write
+      - authenticated-read
+      - bucket-owner-read
+      - bucket-owner-full-control
+      - aws-exec-read
+      description: A value that sets the access control list (ACL) permission for objects in the S3 bucket that an S3 File Gateway puts objects into. The default value is <code>private</code>.
+    LocationARN:
+      type: string
+      description: <p>A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note> <p>You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following examples.</p> <p>Bucket ARN:</p> <p> <code>arn:aws:s3:::my-bucket/prefix/</code> </p> <p>Access point ARN:</p> <p> <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code> </p> <p>If you specify an access point, the bucket policy must be configured to delegate access control to the access point. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control">Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Access point alias:</p> <p> <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code> </p> </note>
+      minLength: 16
+      maxLength: 1400
+    KMSKey:
+      type: string
+      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
+      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
+      minLength: 7
+      maxLength: 2048
+    SMBFileShareInfoList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SMBFileShareInfo'
+    StorageClass:
+      type: string
+      description: <p/>
+      minLength: 5
+      maxLength: 50
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: Tag key. The key can't start with aws:.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: Value of the tag key.
+      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
+    Boolean:
+      type: boolean
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    TagValue:
+      type: string
+      maxLength: 256
+    FileShareStatus:
+      type: string
+      description: '<p>The status of the file share.</p> <p>Valid Values: <code>CREATING</code> | <code>UPDATING</code> | <code>AVAILABLE</code> | <code>DELETING</code> </p>'
+      minLength: 3
+      maxLength: 50
+    DescribeSMBFileSharesInput:
+      type: object
+      required:
+      - FileShareARNList
+      title: DescribeSMBFileSharesInput
+      properties:
+        FileShareARNList:
+          allOf:
+          - $ref: '#/components/schemas/FileShareARNList'
+          - description: An array containing the Amazon Resource Name (ARN) of each file share to be described.
+      description: DescribeSMBFileSharesInput
+    Tags:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    SMBFileShareInfo:
+      type: object
+      properties:
+        FileShareARN:
+          $ref: '#/components/schemas/FileShareARN'
+        FileShareId:
+          $ref: '#/components/schemas/FileShareId'
+        FileShareStatus:
+          $ref: '#/components/schemas/FileShareStatus'
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        KMSEncrypted:
+          allOf:
+          - $ref: '#/components/schemas/boolean'
+          - description: '<p>Set to <code>true</code> to use Amazon S3 server-side encryption with your own KMS key, or <code>false</code> to use a key managed by Amazon S3. Optional.</p> <p>Valid Values: <code>true</code> | <code>false</code> </p>'
+        KMSKey:
+          $ref: '#/components/schemas/KMSKey'
+        Path:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The file share path used by the SMB client to identify the mount point.
+        Role:
+          $ref: '#/components/schemas/Role'
+        LocationARN:
+          $ref: '#/components/schemas/LocationARN'
+        DefaultStorageClass:
+          allOf:
+          - $ref: '#/components/schemas/StorageClass'
+          - description: '<p>The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default value is <code>S3_STANDARD</code>. Optional.</p> <p>Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code> | <code>S3_ONEZONE_IA</code> </p>'
+        ObjectACL:
+          $ref: '#/components/schemas/ObjectACL'
+        ReadOnly:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: '<p>A value that sets the write status of a file share. Set this value to <code>true</code> to set the write status to read-only, otherwise set to <code>false</code>.</p> <p>Valid Values: <code>true</code> | <code>false</code> </p>'
+        GuessMIMETypeEnabled:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: '<p>A value that enables guessing of the MIME type for uploaded objects based on file extensions. Set this value to <code>true</code> to enable MIME type guessing, otherwise set to <code>false</code>. The default value is <code>true</code>.</p> <p>Valid Values: <code>true</code> | <code>false</code> </p>'
+        RequesterPays:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: '<p>A value that sets who pays the cost of the request and the cost associated with data download from the S3 bucket. If this value is set to <code>true</code>, the requester pays the costs; otherwise, the S3 bucket owner pays. However, the S3 bucket owner always pays the cost of storing data.</p> <note> <p> <code>RequesterPays</code> is a configuration for the S3 bucket that backs the file share, so make sure that the configuration on the file share is the same as the S3 bucket configuration.</p> </note> <p>Valid Values: <code>true</code> | <code>false</code> </p>'
+        SMBACLEnabled:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: <p>If this value is set to <code>true</code>, it indicates that access control list (ACL) is enabled on the SMB file share. If it is set to <code>false</code>, it indicates that file and directory permissions are mapped to the POSIX permission.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/smb-acl.html">Using Microsoft Windows ACLs to control access to an SMB file share</a> in the <i>Storage Gateway User Guide</i>.</p>
+        AccessBasedEnumeration:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Indicates whether <code>AccessBasedEnumeration</code> is enabled.
+        AdminUserList:
+          allOf:
+          - $ref: '#/components/schemas/UserList'
+          - description: 'A list of users or groups in the Active Directory that have administrator rights to the file share. A group must be prefixed with the @ character. Acceptable formats include: <code>DOMAIN\User1</code>, <code>user1</code>, <code>@group1</code>, and <code>@DOMAIN\group1</code>. Can only be set if Authentication is set to <code>ActiveDirectory</code>.'
+        ValidUserList:
+          allOf:
+          - $ref: '#/components/schemas/UserList'
+          - description: 'A list of users or groups in the Active Directory that are allowed to access the file share. A group must be prefixed with the @ character. Acceptable formats include: <code>DOMAIN\User1</code>, <code>user1</code>, <code>@group1</code>, and <code>@DOMAIN\group1</code>. Can only be set if Authentication is set to <code>ActiveDirectory</code>.'
+        InvalidUserList:
+          allOf:
+          - $ref: '#/components/schemas/UserList'
+          - description: 'A list of users or groups in the Active Directory that are not allowed to access the file share. A group must be prefixed with the @ character. Acceptable formats include: <code>DOMAIN\User1</code>, <code>user1</code>, <code>@group1</code>, and <code>@DOMAIN\group1</code>. Can only be set if Authentication is set to <code>ActiveDirectory</code>.'
+        AuditDestinationARN:
+          allOf:
+          - $ref: '#/components/schemas/AuditDestinationARN'
+          - description: The Amazon Resource Name (ARN) of the storage used for audit logs.
+        Authentication:
+          $ref: '#/components/schemas/Authentication'
+        CaseSensitivity:
+          allOf:
+          - $ref: '#/components/schemas/CaseSensitivity'
+          - description: The case of an object name in an Amazon S3 bucket. For <code>ClientSpecified</code>, the client determines the case sensitivity. For <code>CaseSensitive</code>, the gateway determines the case sensitivity. The default value is <code>ClientSpecified</code>.
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/Tags'
+          - description: A list of up to 50 tags assigned to the SMB file share, sorted alphabetically by key name. Each tag is a key-value pair. For a gateway with more than 10 tags assigned, you can view all tags using the <code>ListTagsForResource</code> API operation.
+        FileShareName:
+          allOf:
+          - $ref: '#/components/schemas/FileShareName'
+          - description: <p>The name of the file share. Optional.</p> <note> <p> <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access point or access point alias is used.</p> </note>
+        CacheAttributes:
+          allOf:
+          - $ref: '#/components/schemas/CacheAttributes'
+          - description: Refresh cache information for the file share.
+        NotificationPolicy:
+          allOf:
+          - $ref: '#/components/schemas/NotificationPolicy'
+          - description: '<p>The notification policy of the file share. <code>SettlingTimeInSeconds</code> controls the number of seconds to wait after the last point in time a client wrote to a file before generating an <code>ObjectUploaded</code> notification. Because clients can make many small writes to files, it''s best to set this parameter for as long as possible to avoid generating multiple notifications for the same file in a small time period.</p> <note> <p> <code>SettlingTimeInSeconds</code> has no effect on the timing of the object uploading to Amazon S3, only the timing of the notification.</p> </note> <p>The following example sets <code>NotificationPolicy</code> on with <code>SettlingTimeInSeconds</code> set to 60.</p> <p> <code>{\"Upload\": {\"SettlingTimeInSeconds\": 60}}</code> </p> <p>The following example sets <code>NotificationPolicy</code> off.</p> <p> <code>{}</code> </p>'
+        VPCEndpointDNSName:
+          allOf:
+          - $ref: '#/components/schemas/DNSHostName'
+          - description: <p>Specifies the DNS name for the VPC endpoint that the SMB file share uses to connect to Amazon S3.</p> <note> <p>This parameter is required for SMB file shares that connect to Amazon S3 through a VPC endpoint, a VPC access point, or an access point alias that points to a VPC access point.</p> </note>
+        BucketRegion:
+          allOf:
+          - $ref: '#/components/schemas/RegionId'
+          - description: <p>Specifies the Region of the S3 bucket where the SMB file share stores files.</p> <note> <p>This parameter is required for SMB file shares that connect to Amazon S3 through a VPC endpoint, a VPC access point, or an access point alias that points to a VPC access point.</p> </note>
+        OplocksEnabled:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: '<p>Specifies whether opportunistic locking is enabled for the SMB file share.</p> <note> <p>Enabling opportunistic locking on case-sensitive shares is not recommended for workloads that involve access to files with the same name in different case.</p> </note> <p>Valid Values: <code>true</code> | <code>false</code> </p>'
+      description: The Windows file permissions and ownership information assigned, by default, to native S3 objects when S3 File Gateway discovers them in S3 buckets. This operation is only supported for S3 File Gateways.
+    Authentication:
+      type: string
+      description: '<p>The authentication method of the file share. The default is <code>ActiveDirectory</code>.</p> <p>Valid Values: <code>ActiveDirectory</code> | <code>GuestAccess</code> </p>'
+      minLength: 5
+      maxLength: 15
+    Path:
+      type: string
+      description: The file share path used by the NFS client to identify the mount point.
+    InternalServerError: {}
+    boolean:
+      type: boolean
+    DescribeSMBFileSharesOutput:
+      type: object
+      properties:
+        SMBFileShareInfoList:
+          allOf:
+          - $ref: '#/components/schemas/SMBFileShareInfoList'
+          - description: An array containing a description for each requested file share.
+      description: DescribeSMBFileSharesOutput
+    Role:
+      type: string
+      pattern: ^arn:(aws|aws-cn|aws-us-gov):iam::([0-9]+):role/(\S+)$
+      description: The ARN of the IAM role that an S3 File Gateway assumes when it accesses the underlying storage.
+      minLength: 20
+      maxLength: 2048
+    DNSHostName:
+      type: string
+      pattern: ^(([a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9\-]*[A-Za-z0-9])$
+      minLength: 1
+      maxLength: 255
+    CaseSensitivity:
+      type: string
+      enum:
+      - ClientSpecified
+      - CaseSensitive
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

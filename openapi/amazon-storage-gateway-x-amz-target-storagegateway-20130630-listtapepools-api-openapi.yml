@@ -1,0 +1,253 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ListTapePools API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.ListTapePools'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.ListTapePools:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListTapePools
+      description: <p>Lists custom tape pools. You specify custom tape pools to list by specifying one or more custom tape pool Amazon Resource Names (ARNs). If you don't specify a custom tape pool ARN, the operation lists all custom tape pools.</p> <p>This operation supports pagination. You can optionally specify the <code>Limit</code> parameter in the body to limit the number of tape pools in the response. If the number of tape pools returned in the response is truncated, the response includes a <code>Marker</code> element that you can use in your subsequent request to retrieve the next set of tape pools.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListTapePoolsOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListTapePoolsInput'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: Marker
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.ListTapePools
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.ListTapePools'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    Marker:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    RetentionLockType:
+      type: string
+      enum:
+      - COMPLIANCE
+      - GOVERNANCE
+      - NONE
+    PoolARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    ListTapePoolsOutput:
+      type: object
+      properties:
+        PoolInfos:
+          allOf:
+          - $ref: '#/components/schemas/PoolInfos'
+          - description: 'An array of <code>PoolInfo</code> objects, where each object describes a single custom tape pool. If there are no custom tape pools, the <code>PoolInfos</code> is an empty array. '
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: 'A string that indicates the position at which to begin the returned list of tape pools. Use the marker in your next request to continue pagination of tape pools. If there are no more tape pools to list, this element does not appear in the response body. '
+    PoolInfos:
+      type: array
+      items:
+        $ref: '#/components/schemas/PoolInfo'
+    TapeStorageClass:
+      type: string
+      enum:
+      - DEEP_ARCHIVE
+      - GLACIER
+    PoolStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - DELETED
+    PoolInfo:
+      type: object
+      properties:
+        PoolARN:
+          allOf:
+          - $ref: '#/components/schemas/PoolARN'
+          - description: The Amazon Resource Name (ARN) of the custom tape pool. Use the <a>ListTapePools</a> operation to return a list of custom tape pools for your account and Amazon Web Services Region.
+        PoolName:
+          allOf:
+          - $ref: '#/components/schemas/PoolName'
+          - description: The name of the custom tape pool. <code>PoolName</code> can use all ASCII characters, except '/' and '\'.
+        StorageClass:
+          allOf:
+          - $ref: '#/components/schemas/TapeStorageClass'
+          - description: The storage class that is associated with the custom pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool.
+        RetentionLockType:
+          allOf:
+          - $ref: '#/components/schemas/RetentionLockType'
+          - description: Tape retention lock type, which can be configured in two modes. When configured in governance mode, Amazon Web Services accounts with specific IAM permissions are authorized to remove the tape retention lock from archived virtual tapes. When configured in compliance mode, the tape retention lock cannot be removed by any user, including the root Amazon Web Services account.
+        RetentionLockTimeInDays:
+          allOf:
+          - $ref: '#/components/schemas/RetentionLockTimeInDays'
+          - description: Tape retention lock time is set in days. Tape retention lock can be enabled for up to 100 years (36,500 days).
+        PoolStatus:
+          allOf:
+          - $ref: '#/components/schemas/PoolStatus'
+          - description: Status of the custom tape pool. Pool can be <code>ACTIVE</code> or <code>DELETED</code>.
+      description: Describes a custom tape pool.
+    ListTapePoolsInput:
+      type: object
+      title: ListTapePoolsInput
+      properties:
+        PoolARNs:
+          allOf:
+          - $ref: '#/components/schemas/PoolARNs'
+          - description: 'The Amazon Resource Name (ARN) of each of the custom tape pools you want to list. If you don''t specify a custom tape pool ARN, the response lists all custom tape pools. '
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: A string that indicates the position at which to begin the returned list of tape pools.
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: An optional number limit for the tape pools in the list returned by this call.
+    RetentionLockTimeInDays:
+      type: integer
+      minimum: 0
+      maximum: 36500
+    InternalServerError: {}
+    PoolName:
+      type: string
+      pattern: ^[ -\.0-\[\]-~]*[!-\.0-\[\]-~][ -\.0-\[\]-~]*$
+      minLength: 1
+      maxLength: 100
+    PoolARNs:
+      type: array
+      items:
+        $ref: '#/components/schemas/PoolARN'
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html

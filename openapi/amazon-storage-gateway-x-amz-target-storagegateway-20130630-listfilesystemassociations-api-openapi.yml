@@ -1,0 +1,229 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ListFileSystemAssociations API'
+  description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
+  version: '2013-06-30'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://storagegateway.{region}.amazonaws.com
+  description: Amazon Storage Gateway regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+security:
+- sigv4: []
+tags:
+- name: '#X Amz Target=StorageGateway 20130630.ListFileSystemAssociations'
+paths:
+  /#X-Amz-Target=StorageGateway_20130630.ListFileSystemAssociations:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListFileSystemAssociations
+      description: Gets a list of <code>FileSystemAssociationSummary</code> objects. Each object contains a summary of a file system association. This operation is only supported for FSx File Gateways.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListFileSystemAssociationsOutput'
+        '480':
+          description: InvalidGatewayRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidGatewayRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListFileSystemAssociationsInput'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: Marker
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StorageGateway_20130630.ListFileSystemAssociations
+      tags:
+      - '#X Amz Target=StorageGateway 20130630.ListFileSystemAssociations'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    Marker:
+      type: string
+      minLength: 1
+      maxLength: 1000
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    InvalidGatewayRequestException: {}
+    FileSystemAssociationSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FileSystemAssociationSummary'
+    PositiveIntObject:
+      type: integer
+      minimum: 1
+    FileSystemAssociationStatus:
+      type: string
+      minLength: 3
+      maxLength: 50
+    FileSystemAssociationId:
+      type: string
+      minLength: 10
+      maxLength: 30
+    FileSystemAssociationSummary:
+      type: object
+      properties:
+        FileSystemAssociationId:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationId'
+          - description: The ID of the file system association.
+        FileSystemAssociationARN:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationARN'
+          - description: The Amazon Resource Name (ARN) of the file system association.
+        FileSystemAssociationStatus:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationStatus'
+          - description: 'The status of the file share. Valid Values: <code>AVAILABLE</code> | <code>CREATING</code> | <code>DELETING</code> | <code>FORCE_DELETING</code> | <code>UPDATING</code> | <code>ERROR</code> '
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+      description: Gets the summary returned by <code>ListFileSystemAssociation</code>, which is a summary of a created file system association.
+    FileSystemAssociationARN:
+      type: string
+      minLength: 50
+      maxLength: 500
+    InternalServerError: {}
+    ListFileSystemAssociationsOutput:
+      type: object
+      properties:
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: If the request includes <code>Marker</code>, the response returns that value in this field.
+        NextMarker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: If a value is present, there are more file system associations to return. In a subsequent request, use <code>NextMarker</code> as the value for <code>Marker</code> to retrieve the next set of file system associations.
+        FileSystemAssociationSummaryList:
+          allOf:
+          - $ref: '#/components/schemas/FileSystemAssociationSummaryList'
+          - description: An array of information about the Amazon FSx gateway's file system associations.
+    ListFileSystemAssociationsInput:
+      type: object
+      title: ListFileSystemAssociationsInput
+      properties:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: The maximum number of file system associations to return in the response. If present, <code>Limit</code> must be an integer with a value greater than zero. Optional.
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: Opaque pagination token returned from a previous <code>ListFileSystemAssociations</code> operation. If present, <code>Marker</code> specifies where to continue the list from after a previous call to <code>ListFileSystemAssociations</code>. Optional.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: Amazon Storage Gateway API Reference
+  url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
