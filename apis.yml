@@ -3,35 +3,2129 @@ description: >-
   AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud
   storage. It seamlessly connects on-premises environments to AWS cloud storage, providing low-latency data access with
   local caching.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/storagegateway/
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: Amazon Storage Gateway REST API
-    description: >-
-      RESTful API for AWS Storage Gateway enabling management of gateways, volumes, tapes, file shares, and cached
-      storage for hybrid cloud storage architectures.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/storagegateway/
-    baseURL: https://storagegateway.amazonaws.com
-    tags:
-      - AWS
-      - Gateway
-      - Hybrid Cloud
-      - Storage
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
-      - type: OpenAPI
-        url: openapi/amazon-storage-gateway.yaml
-      - type: GettingStarted
-        url: https://aws.amazon.com/storagegateway/
-      - type: Pricing
-        url: https://aws.amazon.com/storagegateway/pricing/
-      - type: FAQ
-        url: https://aws.amazon.com/storagegateway/faqs/
+- aid: amazon-storage-gateway:amazon-storage-gateway-amazon-storage-gateway-rest-api-api
+  name: Amazon Storage Gateway Amazon Storage Gateway REST API API
+  description: >-
+    The Amazon Storage Gateway REST API API from Amazon Storage Gateway — 1 operation(s) for amazon storage
+    gateway rest api.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - Amazon Storage Gateway REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: amazon-storage-gateway:amazon-storage-gateway-createnfsfileshare-api
+  name: 'Amazon Storage Gateway #CreateNFSFileShare API'
+  description: >-
+    The #CreateNFSFileShare API from Amazon Storage Gateway — 1 operation(s) for #createnfsfileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#CreateNFSFileShare'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-createnfsfileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: amazon-storage-gateway:amazon-storage-gateway-describegatewayinformation-api
+  name: 'Amazon Storage Gateway #DescribeGatewayInformation API'
+  description: >-
+    The #DescribeGatewayInformation API from Amazon Storage Gateway — 1 operation(s) for #describegatewayinformation.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#DescribeGatewayInformation'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-describegatewayinformation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: amazon-storage-gateway:amazon-storage-gateway-listgateways-api
+  name: 'Amazon Storage Gateway #ListGateways API'
+  description: 'The #ListGateways API from Amazon Storage Gateway — 1 operation(s) for #listgateways.'
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#ListGateways'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-listgateways-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: amazon-storage-gateway:amazon-storage-gateway-listvolumes-api
+  name: 'Amazon Storage Gateway #ListVolumes API'
+  description: 'The #ListVolumes API from Amazon Storage Gateway — 1 operation(s) for #listvolumes.'
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#ListVolumes'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-listvolumes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-activategateway-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ActivateGateway API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ActivateGateway API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.activategateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ActivateGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-activategateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-addcache-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AddCache API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AddCache API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.addcache.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AddCache'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-addcache-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-addtagstoresource-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AddTagsToResource API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AddTagsToResource API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.addtagstoresource.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AddTagsToResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-addtagstoresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-adduploadbuffer-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AddUploadBuffer API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AddUploadBuffer API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.adduploadbuffer.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AddUploadBuffer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-adduploadbuffer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-addworkingstorage-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AddWorkingStorage API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AddWorkingStorage API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.addworkingstorage.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AddWorkingStorage'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-addworkingstorage-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-assigntapepool-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AssignTapePool API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AssignTapePool API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.assigntapepool.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AssignTapePool'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-assigntapepool-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-associatefilesystem-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AssociateFileSystem API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AssociateFileSystem API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.associatefilesystem.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AssociateFileSystem'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-associatefilesystem-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-attachvolume-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.AttachVolume API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.AttachVolume API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.attachvolume.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.AttachVolume'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-attachvolume-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelarchival-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CancelArchival API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CancelArchival API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.cancelarchival.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CancelArchival'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelarchival-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelretrieval-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CancelRetrieval API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CancelRetrieval API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.cancelretrieval.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CancelRetrieval'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelretrieval-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createcachediscsivolume-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateCachediSCSIVolume API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateCachediSCSIVolume API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.createcachediscsivolume.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateCachediSCSIVolume'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createcachediscsivolume-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createnfsfileshare-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateNFSFileShare API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateNFSFileShare API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.createnfsfileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateNFSFileShare'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createnfsfileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsmbfileshare-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateSMBFileShare API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateSMBFileShare API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.createsmbfileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateSMBFileShare'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsmbfileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshot-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateSnapshot API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateSnapshot API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.createsnapshot.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateSnapshot'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshotfromvolumerecoverypoint-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateSnapshotFromVolumeRecoveryPoint
+    API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateSnapshotFromVolumeRecoveryPoint API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.createsnapshotfromvolumerecoverypoint.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateSnapshotFromVolumeRecoveryPoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshotfromvolumerecoverypoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createstorediscsivolume-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateStorediSCSIVolume API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateStorediSCSIVolume API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.createstorediscsivolume.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateStorediSCSIVolume'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createstorediscsivolume-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapepool-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateTapePool API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateTapePool API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.createtapepool.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateTapePool'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapepool-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapes-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateTapes API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateTapes API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.createtapes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateTapes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapewithbarcode-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.CreateTapeWithBarcode API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.CreateTapeWithBarcode API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.createtapewithbarcode.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.CreateTapeWithBarcode'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapewithbarcode-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deleteautomatictapecreationpolicy-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteAutomaticTapeCreationPolicy API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteAutomaticTapeCreationPolicy API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.deleteautomatictapecreationpolicy.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteAutomaticTapeCreationPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deleteautomatictapecreationpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletebandwidthratelimit-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteBandwidthRateLimit API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteBandwidthRateLimit API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.deletebandwidthratelimit.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteBandwidthRateLimit'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletebandwidthratelimit-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletechapcredentials-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteChapCredentials API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteChapCredentials API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.deletechapcredentials.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteChapCredentials'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletechapcredentials-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletefileshare-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteFileShare API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteFileShare API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletefileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteFileShare'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletefileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletegateway-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteGateway API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteGateway API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletegateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletegateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletesnapshotschedule-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteSnapshotSchedule API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteSnapshotSchedule API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.deletesnapshotschedule.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteSnapshotSchedule'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletesnapshotschedule-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetape-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteTape API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteTape API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletetape.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteTape'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetape-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapearchive-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteTapeArchive API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteTapeArchive API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletetapearchive.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteTapeArchive'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapearchive-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapepool-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteTapePool API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteTapePool API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletetapepool.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteTapePool'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapepool-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletevolume-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DeleteVolume API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DeleteVolume API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.deletevolume.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DeleteVolume'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletevolume-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeavailabilitymonitortest-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeAvailabilityMonitorTest API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeAvailabilityMonitorTest API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.describeavailabilitymonitortest.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeAvailabilityMonitorTest'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeavailabilitymonitortest-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimit-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimit API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimit API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describebandwidthratelimit.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimit'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimit-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimitschedule-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.describebandwidthratelimitschedule.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimitschedule-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecache-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeCache API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeCache API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.describecache.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeCache'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecache-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecachediscsivolumes-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describecachediscsivolumes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecachediscsivolumes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describechapcredentials-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeChapCredentials API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeChapCredentials API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describechapcredentials.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeChapCredentials'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describechapcredentials-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describefilesystemassociations-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describefilesystemassociations.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describefilesystemassociations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describegatewayinformation-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeGatewayInformation API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeGatewayInformation API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describegatewayinformation.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeGatewayInformation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describegatewayinformation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describemaintenancestarttime-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeMaintenanceStartTime API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeMaintenanceStartTime API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describemaintenancestarttime.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeMaintenanceStartTime'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describemaintenancestarttime-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describenfsfileshares-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeNFSFileShares API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeNFSFileShares API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.describenfsfileshares.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeNFSFileShares'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describenfsfileshares-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbfileshares-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeSMBFileShares API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeSMBFileShares API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.describesmbfileshares.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeSMBFileShares'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbfileshares-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbsettings-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeSMBSettings API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeSMBSettings API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.describesmbsettings.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeSMBSettings'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbsettings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesnapshotschedule-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeSnapshotSchedule API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeSnapshotSchedule API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describesnapshotschedule.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeSnapshotSchedule'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesnapshotschedule-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describestorediscsivolumes-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeStorediSCSIVolumes API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeStorediSCSIVolumes API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describestorediscsivolumes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeStorediSCSIVolumes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describestorediscsivolumes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapearchives-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeTapeArchives API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeTapeArchives API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.describetapearchives.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeTapeArchives'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapearchives-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetaperecoverypoints-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeTapeRecoveryPoints API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeTapeRecoveryPoints API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.describetaperecoverypoints.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeTapeRecoveryPoints'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetaperecoverypoints-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapes-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeTapes API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeTapes API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.describetapes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeTapes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeuploadbuffer-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeUploadBuffer API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeUploadBuffer API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.describeuploadbuffer.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeUploadBuffer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeuploadbuffer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describevtldevices-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeVTLDevices API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeVTLDevices API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.describevtldevices.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeVTLDevices'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describevtldevices-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeworkingstorage-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeWorkingStorage API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DescribeWorkingStorage API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.describeworkingstorage.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DescribeWorkingStorage'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeworkingstorage-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-detachvolume-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DetachVolume API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DetachVolume API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.detachvolume.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DetachVolume'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-detachvolume-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-disablegateway-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DisableGateway API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DisableGateway API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.disablegateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DisableGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-disablegateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-disassociatefilesystem-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.DisassociateFileSystem API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.DisassociateFileSystem API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.disassociatefilesystem.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.DisassociateFileSystem'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-disassociatefilesystem-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-joindomain-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.JoinDomain API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.JoinDomain API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.joindomain.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.JoinDomain'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-joindomain-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listautomatictapecreationpolicies-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListAutomaticTapeCreationPolicies API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListAutomaticTapeCreationPolicies API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.listautomatictapecreationpolicies.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListAutomaticTapeCreationPolicies'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listautomatictapecreationpolicies-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfileshares-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListFileShares API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListFileShares API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listfileshares.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListFileShares'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfileshares-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfilesystemassociations-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListFileSystemAssociations API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListFileSystemAssociations API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.listfilesystemassociations.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListFileSystemAssociations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfilesystemassociations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listgateways-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListGateways API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListGateways API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listgateways.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListGateways'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listgateways-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listlocaldisks-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListLocalDisks API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListLocalDisks API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listlocaldisks.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListLocalDisks'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listlocaldisks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtagsforresource-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListTagsForResource API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListTagsForResource API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.listtagsforresource.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListTagsForResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtagsforresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtapepools-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListTapePools API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListTapePools API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listtapepools.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListTapePools'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtapepools-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtapes-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListTapes API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListTapes API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listtapes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListTapes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtapes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumeinitiators-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListVolumeInitiators API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListVolumeInitiators API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.listvolumeinitiators.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListVolumeInitiators'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumeinitiators-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumerecoverypoints-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListVolumeRecoveryPoints API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListVolumeRecoveryPoints API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.listvolumerecoverypoints.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListVolumeRecoveryPoints'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumerecoverypoints-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumes-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ListVolumes API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ListVolumes API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.listvolumes.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ListVolumes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-notifywhenuploaded-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.NotifyWhenUploaded API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.NotifyWhenUploaded API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.notifywhenuploaded.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.NotifyWhenUploaded'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-notifywhenuploaded-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-refreshcache-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.RefreshCache API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.RefreshCache API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.refreshcache.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.RefreshCache'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-refreshcache-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-removetagsfromresource-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.RemoveTagsFromResource API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.RemoveTagsFromResource API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.removetagsfromresource.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.RemoveTagsFromResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-removetagsfromresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-resetcache-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ResetCache API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ResetCache API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.resetcache.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ResetCache'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-resetcache-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-retrievetapearchive-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.RetrieveTapeArchive API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.RetrieveTapeArchive API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.retrievetapearchive.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.RetrieveTapeArchive'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-retrievetapearchive-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-retrievetaperecoverypoint-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.RetrieveTapeRecoveryPoint API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.RetrieveTapeRecoveryPoint API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.retrievetaperecoverypoint.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.RetrieveTapeRecoveryPoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-retrievetaperecoverypoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-setlocalconsolepassword-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.SetLocalConsolePassword API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.SetLocalConsolePassword API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.setlocalconsolepassword.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.SetLocalConsolePassword'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-setlocalconsolepassword-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-setsmbguestpassword-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.SetSMBGuestPassword API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.SetSMBGuestPassword API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.setsmbguestpassword.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.SetSMBGuestPassword'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-setsmbguestpassword-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-shutdowngateway-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.ShutdownGateway API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.ShutdownGateway API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.shutdowngateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.ShutdownGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-shutdowngateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-startavailabilitymonitortest-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.StartAvailabilityMonitorTest API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.StartAvailabilityMonitorTest API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.startavailabilitymonitortest.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.StartAvailabilityMonitorTest'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-startavailabilitymonitortest-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-startgateway-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.StartGateway API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.StartGateway API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.startgateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.StartGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-startgateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updateautomatictapecreationpolicy-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateAutomaticTapeCreationPolicy API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateAutomaticTapeCreationPolicy API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.updateautomatictapecreationpolicy.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateAutomaticTapeCreationPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updateautomatictapecreationpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimit-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimit API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimit API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updatebandwidthratelimit.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimit'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimit-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimitschedule-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule API from Amazon Storage
+    Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.updatebandwidthratelimitschedule.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimitschedule-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatechapcredentials-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateChapCredentials API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateChapCredentials API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.updatechapcredentials.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateChapCredentials'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatechapcredentials-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatefilesystemassociation-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateFileSystemAssociation API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateFileSystemAssociation API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updatefilesystemassociation.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateFileSystemAssociation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatefilesystemassociation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updategatewayinformation-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateGatewayInformation API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateGatewayInformation API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updategatewayinformation.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateGatewayInformation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updategatewayinformation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updategatewaysoftwarenow-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateGatewaySoftwareNow API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateGatewaySoftwareNow API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updategatewaysoftwarenow.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateGatewaySoftwareNow'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updategatewaysoftwarenow-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatemaintenancestarttime-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateMaintenanceStartTime API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateMaintenanceStartTime API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updatemaintenancestarttime.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateMaintenanceStartTime'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatemaintenancestarttime-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatenfsfileshare-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateNFSFileShare API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateNFSFileShare API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.updatenfsfileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateNFSFileShare'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatenfsfileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfileshare-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateSMBFileShare API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateSMBFileShare API from Amazon Storage Gateway — 1 operation(s)
+    for #x amz target=storagegateway 20130630.updatesmbfileshare.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateSMBFileShare'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfileshare-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfilesharevisibility-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateSMBFileShareVisibility API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateSMBFileShareVisibility API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updatesmbfilesharevisibility.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateSMBFileShareVisibility'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfilesharevisibility-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmblocalgroups-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateSMBLocalGroups API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateSMBLocalGroups API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.updatesmblocalgroups.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateSMBLocalGroups'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmblocalgroups-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbsecuritystrategy-api
+  name: >-
+    Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateSMBSecurityStrategy API
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateSMBSecurityStrategy API from Amazon Storage Gateway
+    — 1 operation(s) for #x amz target=storagegateway 20130630.updatesmbsecuritystrategy.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateSMBSecurityStrategy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbsecuritystrategy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesnapshotschedule-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateSnapshotSchedule API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateSnapshotSchedule API from Amazon Storage Gateway —
+    1 operation(s) for #x amz target=storagegateway 20130630.updatesnapshotschedule.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateSnapshotSchedule'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesnapshotschedule-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+- aid: >-
+    amazon-storage-gateway:amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatevtldevicetype-api
+  name: 'Amazon Storage Gateway #X Amz Target=StorageGateway 20130630.UpdateVTLDeviceType API'
+  description: >-
+    The #X Amz Target=StorageGateway 20130630.UpdateVTLDeviceType API from Amazon Storage Gateway — 1
+    operation(s) for #x amz target=storagegateway 20130630.updatevtldevicetype.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - '#X Amz Target=StorageGateway 20130630.UpdateVTLDeviceType'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatevtldevicetype-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-storage-gateway/overview
   - type: AgenticAccess
     url: agentic-access/amazon-storage-gateway-agentic-access.yml
   - type: TrustCenter
