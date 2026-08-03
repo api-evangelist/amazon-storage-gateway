@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "1434f5ce-5807-4ab8-9a4c-78a92eb164c8",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.CreateTapes API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:31.000Z",
+    "updatedAt": "2026-07-28T00:56:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1434f5ce-5807-4ab8-9a4c-78a92eb164c8"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.CreateTapes",
+      "item": [
+        {
+          "name": "Create Tapes",
+          "id": "16a9f07b-41b7-46b3-b542-e4e3d7c00f2b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.CreateTapes"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"GatewayARN\": \"<string>\",\n  \"TapeSizeInBytes\": \"<integer>\",\n  \"ClientToken\": \"<string>\",\n  \"NumTapesToCreate\": \"<integer>\",\n  \"TapeBarcodePrefix\": \"EK\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"alias/Q\",\n  \"PoolId\": \"<string>\",\n  \"Worm\": \"<boolean>\",\n  \"Tags\": [\n    {\n      \"Key\": \"/L{-L_@@N@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"/-pp\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.CreateTapes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.CreateTapes"
+            },
+            "description": "<p>Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes. This operation is only supported in the tape gateway type.</p> <note> <p>Cache storage must be allocated to the gateway before you can create virtual tapes. Use the <a>AddCache</a> operation to add cache storage to a gateway.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "1562befc-88e6-45f7-9998-d4b3f1ccffde",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.CreateTapes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\",\n  \"TapeSizeInBytes\": \"<integer>\",\n  \"ClientToken\": \"<string>\",\n  \"NumTapesToCreate\": \"<integer>\",\n  \"TapeBarcodePrefix\": \"EK\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"alias/Q\",\n  \"PoolId\": \"<string>\",\n  \"Worm\": \"<boolean>\",\n  \"Tags\": [\n    {\n      \"Key\": \"/L{-L_@@N@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"/-pp\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.CreateTapes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.CreateTapes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TapeARNs\": [\n    \"arn:aws-cn:storagegateway:gf568:104618:tape/4IBCOCQFT1\",\n    \"arn:aws:storagegateway:ewcf5qlnbw:560:tape/D9OT8LQC\"\n  ]\n}",
+              "createdAt": "2026-07-28T00:56:31.000Z",
+              "updatedAt": "2026-07-28T00:56:31.000Z",
+              "uid": "35240-1562befc-88e6-45f7-9998-d4b3f1ccffde"
+            },
+            {
+              "id": "11eaf3a0-e3ec-4140-ba11-4c1aa395dbab",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.CreateTapes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\",\n  \"TapeSizeInBytes\": \"<integer>\",\n  \"ClientToken\": \"<string>\",\n  \"NumTapesToCreate\": \"<integer>\",\n  \"TapeBarcodePrefix\": \"EK\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"alias/Q\",\n  \"PoolId\": \"<string>\",\n  \"Worm\": \"<boolean>\",\n  \"Tags\": [\n    {\n      \"Key\": \"/L{-L_@@N@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"/-pp\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.CreateTapes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.CreateTapes"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:31.000Z",
+              "updatedAt": "2026-07-28T00:56:31.000Z",
+              "uid": "35240-11eaf3a0-e3ec-4140-ba11-4c1aa395dbab"
+            },
+            {
+              "id": "7ba22f98-e2f9-489c-9f7a-a2732ecbadb2",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.CreateTapes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\",\n  \"TapeSizeInBytes\": \"<integer>\",\n  \"ClientToken\": \"<string>\",\n  \"NumTapesToCreate\": \"<integer>\",\n  \"TapeBarcodePrefix\": \"EK\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"alias/Q\",\n  \"PoolId\": \"<string>\",\n  \"Worm\": \"<boolean>\",\n  \"Tags\": [\n    {\n      \"Key\": \"/L{-L_@@N@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"/-pp\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.CreateTapes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.CreateTapes"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:31.000Z",
+              "updatedAt": "2026-07-28T00:56:31.000Z",
+              "uid": "35240-7ba22f98-e2f9-489c-9f7a-a2732ecbadb2"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:31.000Z",
+          "updatedAt": "2026-07-28T00:56:31.000Z",
+          "uid": "35240-16a9f07b-41b7-46b3-b542-e4e3d7c00f2b"
+        }
+      ],
+      "id": "45c53ca0-78fe-4fa2-8aac-bcdc015e5f71",
+      "createdAt": "2026-07-28T00:56:31.000Z",
+      "updatedAt": "2026-07-28T00:56:31.000Z",
+      "uid": "35240-45c53ca0-78fe-4fa2-8aac-bcdc015e5f71"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

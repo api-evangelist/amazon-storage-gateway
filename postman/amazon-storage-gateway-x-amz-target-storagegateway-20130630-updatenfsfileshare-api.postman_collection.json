@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "24133fc5-b32a-40dc-909f-f446370b399b",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.UpdateNFSFileShare API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:58:44.000Z",
+    "updatedAt": "2026-07-28T00:58:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-24133fc5-b32a-40dc-909f-f446370b399b"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare",
+      "item": [
+        {
+          "name": "Update NFS File Share",
+          "id": "a060a3c8-42e3-4ff9-b471-d7c7477bc717",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.UpdateNFSFileShare"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"FileShareARN\": \"<string>\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"arn:aws:kms:75q:8651:alias/xTMmg+11p\",\n  \"NFSFileShareDefaults\": {\n    \"FileMode\": \"0441\",\n    \"DirectoryMode\": \"6125\",\n    \"GroupId\": \"<integer>\",\n    \"OwnerId\": \"<integer>\"\n  },\n  \"DefaultStorageClass\": \"<string>\",\n  \"ObjectACL\": \"aws-exec-read\",\n  \"ClientList\": [\n    \"3.2.4.255/31\"\n  ],\n  \"Squash\": \"<string>\",\n  \"ReadOnly\": \"<boolean>\",\n  \"GuessMIMETypeEnabled\": \"<boolean>\",\n  \"RequesterPays\": \"<boolean>\",\n  \"FileShareName\": \"<string>\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": \"<integer>\"\n  },\n  \"NotificationPolicy\": \"{Iu\u205f\u20039\u2029q}\",\n  \"AuditDestinationARN\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare"
+            },
+            "description": "<p>Updates a Network File System (NFS) file share. This operation is only supported in S3 File Gateways.</p> <note> <p>To leave a file share field unchanged, set the corresponding input field to null.</p> </note> <p>Updates the following file share settings:</p> <ul> <li> <p>Default storage class for your S3 bucket</p> </li> <li> <p>Metadata defaults for your S3 bucket</p> </li> <li> <p>Allowed NFS clients for your file share</p> </li> <li> <p>Squash settings</p> </li> <li> <p>Write status of your file share</p> </li> </ul>"
+          },
+          "response": [
+            {
+              "id": "10040c5e-736c-48c1-a7e1-cc81967d592e",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.UpdateNFSFileShare"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"<string>\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"arn:aws:kms:75q:8651:alias/xTMmg+11p\",\n  \"NFSFileShareDefaults\": {\n    \"FileMode\": \"0441\",\n    \"DirectoryMode\": \"6125\",\n    \"GroupId\": \"<integer>\",\n    \"OwnerId\": \"<integer>\"\n  },\n  \"DefaultStorageClass\": \"<string>\",\n  \"ObjectACL\": \"aws-exec-read\",\n  \"ClientList\": [\n    \"3.2.4.255/31\"\n  ],\n  \"Squash\": \"<string>\",\n  \"ReadOnly\": \"<boolean>\",\n  \"GuessMIMETypeEnabled\": \"<boolean>\",\n  \"RequesterPays\": \"<boolean>\",\n  \"FileShareName\": \"<string>\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": \"<integer>\"\n  },\n  \"NotificationPolicy\": \"{Iu\u205f\u20039\u2029q}\",\n  \"AuditDestinationARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"FileShareARN\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:58:45.000Z",
+              "updatedAt": "2026-07-28T00:58:45.000Z",
+              "uid": "35240-10040c5e-736c-48c1-a7e1-cc81967d592e"
+            },
+            {
+              "id": "46d37967-d4c6-42ae-995d-4824f08f33c0",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.UpdateNFSFileShare"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"<string>\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"arn:aws:kms:75q:8651:alias/xTMmg+11p\",\n  \"NFSFileShareDefaults\": {\n    \"FileMode\": \"0441\",\n    \"DirectoryMode\": \"6125\",\n    \"GroupId\": \"<integer>\",\n    \"OwnerId\": \"<integer>\"\n  },\n  \"DefaultStorageClass\": \"<string>\",\n  \"ObjectACL\": \"aws-exec-read\",\n  \"ClientList\": [\n    \"3.2.4.255/31\"\n  ],\n  \"Squash\": \"<string>\",\n  \"ReadOnly\": \"<boolean>\",\n  \"GuessMIMETypeEnabled\": \"<boolean>\",\n  \"RequesterPays\": \"<boolean>\",\n  \"FileShareName\": \"<string>\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": \"<integer>\"\n  },\n  \"NotificationPolicy\": \"{Iu\u205f\u20039\u2029q}\",\n  \"AuditDestinationARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:58:45.000Z",
+              "updatedAt": "2026-07-28T00:58:45.000Z",
+              "uid": "35240-46d37967-d4c6-42ae-995d-4824f08f33c0"
+            },
+            {
+              "id": "5ae8c787-227e-4709-a90c-725dd57cfd90",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.UpdateNFSFileShare"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"<string>\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"arn:aws:kms:75q:8651:alias/xTMmg+11p\",\n  \"NFSFileShareDefaults\": {\n    \"FileMode\": \"0441\",\n    \"DirectoryMode\": \"6125\",\n    \"GroupId\": \"<integer>\",\n    \"OwnerId\": \"<integer>\"\n  },\n  \"DefaultStorageClass\": \"<string>\",\n  \"ObjectACL\": \"aws-exec-read\",\n  \"ClientList\": [\n    \"3.2.4.255/31\"\n  ],\n  \"Squash\": \"<string>\",\n  \"ReadOnly\": \"<boolean>\",\n  \"GuessMIMETypeEnabled\": \"<boolean>\",\n  \"RequesterPays\": \"<boolean>\",\n  \"FileShareName\": \"<string>\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": \"<integer>\"\n  },\n  \"NotificationPolicy\": \"{Iu\u205f\u20039\u2029q}\",\n  \"AuditDestinationARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateNFSFileShare"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:58:45.000Z",
+              "updatedAt": "2026-07-28T00:58:45.000Z",
+              "uid": "35240-5ae8c787-227e-4709-a90c-725dd57cfd90"
+            }
+          ],
+          "createdAt": "2026-07-28T00:58:45.000Z",
+          "updatedAt": "2026-07-28T00:58:45.000Z",
+          "uid": "35240-a060a3c8-42e3-4ff9-b471-d7c7477bc717"
+        }
+      ],
+      "id": "d5dc235f-16ae-48e5-b0e3-dc894e14fc42",
+      "createdAt": "2026-07-28T00:58:45.000Z",
+      "updatedAt": "2026-07-28T00:58:45.000Z",
+      "uid": "35240-d5dc235f-16ae-48e5-b0e3-dc894e14fc42"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

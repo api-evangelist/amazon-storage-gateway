@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "4a31e508-8f27-431b-8fa8-6020cc8e45ba",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.ActivateGateway API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:28.000Z",
+    "updatedAt": "2026-07-28T00:55:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-4a31e508-8f27-431b-8fa8-6020cc8e45ba"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.ActivateGateway",
+      "item": [
+        {
+          "name": "Activate Gateway",
+          "id": "b4d118fd-4421-4dfd-a836-97bd9ec08e51",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.ActivateGateway"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ActivationKey\": \"<string>\",\n  \"GatewayName\": \"!lCH<M!0QGIN@s.fe>\",\n  \"GatewayTimezone\": \"<string>\",\n  \"GatewayRegion\": \"<string>\",\n  \"GatewayType\": \"<string>\",\n  \"TapeDriveType\": \"<string>\",\n  \"MediumChangerType\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"N@=.p+/-p@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"L_-L@\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.ActivateGateway",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.ActivateGateway"
+            },
+            "description": "<p>Activates the gateway you previously deployed on your host. In the activation process, you specify information such as the Amazon Web Services Region that you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the gateway snapshot schedule window, an activation key, and a name for your gateway. The activation process also associates your gateway with your account. For more information, see <a>UpdateGatewayInformation</a>.</p> <note> <p>You must turn on the gateway VM before you can activate your gateway.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "77bad6a2-2026-4703-b4c8-e492da139b79",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.ActivateGateway"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ActivationKey\": \"<string>\",\n  \"GatewayName\": \"!lCH<M!0QGIN@s.fe>\",\n  \"GatewayTimezone\": \"<string>\",\n  \"GatewayRegion\": \"<string>\",\n  \"GatewayType\": \"<string>\",\n  \"TapeDriveType\": \"<string>\",\n  \"MediumChangerType\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"N@=.p+/-p@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"L_-L@\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.ActivateGateway",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.ActivateGateway"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"GatewayARN\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:55:28.000Z",
+              "updatedAt": "2026-07-28T00:55:28.000Z",
+              "uid": "35240-77bad6a2-2026-4703-b4c8-e492da139b79"
+            },
+            {
+              "id": "d5d38c03-aee4-4b83-bf52-1eb51a3a43fd",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.ActivateGateway"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ActivationKey\": \"<string>\",\n  \"GatewayName\": \"!lCH<M!0QGIN@s.fe>\",\n  \"GatewayTimezone\": \"<string>\",\n  \"GatewayRegion\": \"<string>\",\n  \"GatewayType\": \"<string>\",\n  \"TapeDriveType\": \"<string>\",\n  \"MediumChangerType\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"N@=.p+/-p@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"L_-L@\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.ActivateGateway",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.ActivateGateway"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:55:28.000Z",
+              "updatedAt": "2026-07-28T00:55:28.000Z",
+              "uid": "35240-d5d38c03-aee4-4b83-bf52-1eb51a3a43fd"
+            },
+            {
+              "id": "6941987b-c051-4b2b-afd3-3802b05ee1b7",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.ActivateGateway"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ActivationKey\": \"<string>\",\n  \"GatewayName\": \"!lCH<M!0QGIN@s.fe>\",\n  \"GatewayTimezone\": \"<string>\",\n  \"GatewayRegion\": \"<string>\",\n  \"GatewayType\": \"<string>\",\n  \"TapeDriveType\": \"<string>\",\n  \"MediumChangerType\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"N@=.p+/-p@\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"L_-L@\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.ActivateGateway",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.ActivateGateway"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:55:28.000Z",
+              "updatedAt": "2026-07-28T00:55:28.000Z",
+              "uid": "35240-6941987b-c051-4b2b-afd3-3802b05ee1b7"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:28.000Z",
+          "updatedAt": "2026-07-28T00:55:28.000Z",
+          "uid": "35240-b4d118fd-4421-4dfd-a836-97bd9ec08e51"
+        }
+      ],
+      "id": "f09d4403-626a-4301-af7e-325ab9d25905",
+      "createdAt": "2026-07-28T00:55:28.000Z",
+      "updatedAt": "2026-07-28T00:55:28.000Z",
+      "uid": "35240-f09d4403-626a-4301-af7e-325ab9d25905"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

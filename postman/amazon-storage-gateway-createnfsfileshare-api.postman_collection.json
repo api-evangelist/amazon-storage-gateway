@@ -1,0 +1,131 @@
+{
+  "info": {
+    "_postman_id": "21b93ce8-b780-407b-bb91-cac11b7292d2",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #CreateNFSFileShare API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:24.000Z",
+    "updatedAt": "2026-07-28T00:55:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-21b93ce8-b780-407b-bb91-cac11b7292d2"
+  },
+  "item": [
+    {
+      "name": "#CreateNFSFileShare",
+      "item": [
+        {
+          "name": "Amazon Storage Gateway Create NFS File Share",
+          "id": "2d88178b-a108-488e-b055-9f7fc441deea",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ClientToken\": \"<string>\",\n  \"GatewayARN\": \"<string>\",\n  \"Role\": \"<string>\",\n  \"LocationARN\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#CreateNFSFileShare",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "CreateNFSFileShare"
+            },
+            "description": "Creates a Network File System (NFS) file share on an existing S3 File Gateway."
+          },
+          "response": [
+            {
+              "id": "f8bd186b-ebbf-4d91-810c-9a96ed5c2418",
+              "name": "Successful response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ClientToken\": \"<string>\",\n  \"GatewayARN\": \"<string>\",\n  \"Role\": \"<string>\",\n  \"LocationARN\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#CreateNFSFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateNFSFileShare"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:55:25.000Z",
+              "updatedAt": "2026-07-28T00:55:25.000Z",
+              "uid": "35240-f8bd186b-ebbf-4d91-810c-9a96ed5c2418"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:25.000Z",
+          "updatedAt": "2026-07-28T00:55:25.000Z",
+          "uid": "35240-2d88178b-a108-488e-b055-9f7fc441deea"
+        }
+      ],
+      "id": "093e4a97-cb22-42b1-8deb-970fd9844ded",
+      "createdAt": "2026-07-28T00:55:25.000Z",
+      "updatedAt": "2026-07-28T00:55:25.000Z",
+      "uid": "35240-093e4a97-cb22-42b1-8deb-970fd9844ded"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

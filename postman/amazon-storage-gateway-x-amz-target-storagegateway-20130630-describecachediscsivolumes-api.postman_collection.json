@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "02ea86f4-b1df-47c2-bf24-e63cdcaffe2e",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:53.000Z",
+    "updatedAt": "2026-07-28T00:56:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-02ea86f4-b1df-47c2-bf24-e63cdcaffe2e"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes",
+      "item": [
+        {
+          "name": "Describe Cachedi SCSI Volumes",
+          "id": "c3c1e7b4-2169-48d7-9e3c-1f2526a20edc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.DescribeCachediSCSIVolumes"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"VolumeARNs\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes"
+            },
+            "description": "<p>Returns a description of the gateway volumes specified in the request. This operation is only supported in the cached volume gateway types.</p> <p>The list of gateway volumes in the request must be from one gateway. In the response, Storage Gateway returns volume information sorted by volume Amazon Resource Name (ARN).</p>"
+          },
+          "response": [
+            {
+              "id": "ca46b7a6-90e7-4165-bb50-6fd05e30a88a",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"VolumeARNs\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"CachediSCSIVolumes\": [\n    {\n      \"VolumeARN\": \"<string>\",\n      \"VolumeId\": \"<string>\",\n      \"VolumeType\": \"<string>\",\n      \"VolumeStatus\": \"<string>\",\n      \"VolumeAttachmentStatus\": \"<string>\",\n      \"VolumeSizeInBytes\": \"<integer>\",\n      \"VolumeProgress\": \"<double>\",\n      \"SourceSnapshotId\": \"Asnap-c8C753bez\",\n      \"VolumeiSCSIAttributes\": {\n        \"TargetARN\": \"<string>\",\n        \"NetworkInterfaceId\": \"A234.16.217.031z\",\n        \"NetworkInterfacePort\": \"<integer>\",\n        \"LunNumber\": \"<integer>\",\n        \"ChapEnabled\": \"<boolean>\"\n      },\n      \"CreatedDate\": \"<dateTime>\",\n      \"VolumeUsedInBytes\": \"<integer>\",\n      \"KMSKey\": \"alias/p7m>?A:_0\",\n      \"TargetName\": \"ynr76s78\"\n    },\n    {\n      \"VolumeARN\": \"<string>\",\n      \"VolumeId\": \"<string>\",\n      \"VolumeType\": \"<string>\",\n      \"VolumeStatus\": \"<string>\",\n      \"VolumeAttachmentStatus\": \"<string>\",\n      \"VolumeSizeInBytes\": \"<integer>\",\n      \"VolumeProgress\": \"<double>\",\n      \"SourceSnapshotId\": \"Asnap-44CAFEbE3A898A87fz\",\n      \"VolumeiSCSIAttributes\": {\n        \"TargetARN\": \"<string>\",\n        \"NetworkInterfaceId\": \"A01.205.0.209z\",\n        \"NetworkInterfacePort\": \"<integer>\",\n        \"LunNumber\": \"<integer>\",\n        \"ChapEnabled\": \"<boolean>\"\n      },\n      \"CreatedDate\": \"<dateTime>\",\n      \"VolumeUsedInBytes\": \"<integer>\",\n      \"KMSKey\": \"arn:aws-cn:kms:JHgsEm7swOa:93:key/zpVv]?oqi|\",\n      \"TargetName\": \"1izp24;\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T00:56:53.000Z",
+              "updatedAt": "2026-07-28T00:56:53.000Z",
+              "uid": "35240-ca46b7a6-90e7-4165-bb50-6fd05e30a88a"
+            },
+            {
+              "id": "3bcda043-a089-42da-8821-de6cf64091f9",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"VolumeARNs\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:53.000Z",
+              "updatedAt": "2026-07-28T00:56:53.000Z",
+              "uid": "35240-3bcda043-a089-42da-8821-de6cf64091f9"
+            },
+            {
+              "id": "67f85ece-5dab-4348-9a33-1c6318cd4da9",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"VolumeARNs\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeCachediSCSIVolumes"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:53.000Z",
+              "updatedAt": "2026-07-28T00:56:53.000Z",
+              "uid": "35240-67f85ece-5dab-4348-9a33-1c6318cd4da9"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:53.000Z",
+          "updatedAt": "2026-07-28T00:56:53.000Z",
+          "uid": "35240-c3c1e7b4-2169-48d7-9e3c-1f2526a20edc"
+        }
+      ],
+      "id": "d41d4c2f-e3ba-4065-920c-8301ce62817b",
+      "createdAt": "2026-07-28T00:56:53.000Z",
+      "updatedAt": "2026-07-28T00:56:53.000Z",
+      "uid": "35240-d41d4c2f-e3ba-4065-920c-8301ce62817b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

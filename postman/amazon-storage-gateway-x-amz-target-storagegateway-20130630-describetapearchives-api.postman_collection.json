@@ -1,0 +1,446 @@
+{
+  "info": {
+    "_postman_id": "cc5a9bc8-9179-4640-a488-fdfbe510d99b",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeTapeArchives API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:57:23.000Z",
+    "updatedAt": "2026-07-28T00:57:23.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-cc5a9bc8-9179-4640-a488-fdfbe510d99b"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives",
+      "item": [
+        {
+          "name": "Describe Tape Archives",
+          "id": "e8538fe2-55bf-44e2-9386-fbe526eced9c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.DescribeTapeArchives"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TapeARNs\": [\n    \"arn:aws:storagegateway:jpc90:20702035:tape/YIOBEOarn:aws:storagegateway:jpc90:20702035:tape/YIOBEO\",\n    \"arn:aws:storagegateway:bxqy4z0se1:3:tape/UTK5E6QUDPRDQJU\"\n  ],\n  \"Marker\": \"<string>\",\n  \"Limit\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?Limit=<string>&Marker=<string>#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "Limit",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "Marker",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives"
+            },
+            "description": "<p>Returns a description of specified virtual tapes in the virtual tape shelf (VTS). This operation is only supported in the tape gateway type.</p> <p>If a specific <code>TapeARN</code> is not specified, Storage Gateway returns a description of all virtual tapes found in the VTS associated with your account.</p>"
+          },
+          "response": [
+            {
+              "id": "ff3cfba8-4887-401d-a7e8-c67cb91a2709",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeTapeArchives"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TapeARNs\": [\n    \"arn:aws:storagegateway:jpc90:20702035:tape/YIOBEOarn:aws:storagegateway:jpc90:20702035:tape/YIOBEO\",\n    \"arn:aws:storagegateway:bxqy4z0se1:3:tape/UTK5E6QUDPRDQJU\"\n  ],\n  \"Marker\": \"<string>\",\n  \"Limit\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Limit=<string>&Marker=<string>#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "Limit",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "Marker",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TapeArchives\": [\n    {\n      \"TapeARN\": \"arn:aws-cn:storagegateway:oi:9136253:tape/HI7JMEEUHPFMF\",\n      \"TapeBarcode\": \"7L9PNVM\",\n      \"TapeCreatedDate\": \"<dateTime>\",\n      \"TapeSizeInBytes\": \"<integer>\",\n      \"CompletionTime\": \"<dateTime>\",\n      \"RetrievedTo\": \"<string>\",\n      \"TapeStatus\": \"<string>\",\n      \"TapeUsedInBytes\": \"<integer>\",\n      \"KMSKey\": \"alias/#oU16\",\n      \"PoolId\": \"<string>\",\n      \"Worm\": \"<boolean>\",\n      \"RetentionStartDate\": \"<dateTime>\",\n      \"PoolEntryDate\": \"<dateTime>\"\n    },\n    {\n      \"TapeARN\": \"arn:aws-cn:storagegateway:km7pz6nwqxd:826267:tape/OUZ8UEYB1J4CLDU3\",\n      \"TapeBarcode\": \"D278DOA9LK\",\n      \"TapeCreatedDate\": \"<dateTime>\",\n      \"TapeSizeInBytes\": \"<integer>\",\n      \"CompletionTime\": \"<dateTime>\",\n      \"RetrievedTo\": \"<string>\",\n      \"TapeStatus\": \"<string>\",\n      \"TapeUsedInBytes\": \"<integer>\",\n      \"KMSKey\": \"arn:aws-cn:kms:qocd:84702703:key/^d@-L[M~0W\",\n      \"PoolId\": \"<string>\",\n      \"Worm\": \"<boolean>\",\n      \"RetentionStartDate\": \"<dateTime>\",\n      \"PoolEntryDate\": \"<dateTime>\"\n    }\n  ],\n  \"Marker\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:57:23.000Z",
+              "updatedAt": "2026-07-28T00:57:23.000Z",
+              "uid": "35240-ff3cfba8-4887-401d-a7e8-c67cb91a2709"
+            },
+            {
+              "id": "77e735d0-968c-4b45-ba0a-49b80e37326e",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeTapeArchives"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TapeARNs\": [\n    \"arn:aws:storagegateway:jpc90:20702035:tape/YIOBEOarn:aws:storagegateway:jpc90:20702035:tape/YIOBEO\",\n    \"arn:aws:storagegateway:bxqy4z0se1:3:tape/UTK5E6QUDPRDQJU\"\n  ],\n  \"Marker\": \"<string>\",\n  \"Limit\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Limit=<string>&Marker=<string>#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "Limit",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "Marker",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:57:23.000Z",
+              "updatedAt": "2026-07-28T00:57:23.000Z",
+              "uid": "35240-77e735d0-968c-4b45-ba0a-49b80e37326e"
+            },
+            {
+              "id": "e6b74c6f-0ad3-4925-8386-b8f6f71eab5e",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeTapeArchives"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TapeARNs\": [\n    \"arn:aws:storagegateway:jpc90:20702035:tape/YIOBEOarn:aws:storagegateway:jpc90:20702035:tape/YIOBEO\",\n    \"arn:aws:storagegateway:bxqy4z0se1:3:tape/UTK5E6QUDPRDQJU\"\n  ],\n  \"Marker\": \"<string>\",\n  \"Limit\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Limit=<string>&Marker=<string>#X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "Limit",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "Marker",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeTapeArchives"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:57:23.000Z",
+              "updatedAt": "2026-07-28T00:57:23.000Z",
+              "uid": "35240-e6b74c6f-0ad3-4925-8386-b8f6f71eab5e"
+            }
+          ],
+          "createdAt": "2026-07-28T00:57:23.000Z",
+          "updatedAt": "2026-07-28T00:57:23.000Z",
+          "uid": "35240-e8538fe2-55bf-44e2-9386-fbe526eced9c"
+        }
+      ],
+      "id": "0a72d248-e73f-4cc5-a58c-4a605ecf074e",
+      "createdAt": "2026-07-28T00:57:23.000Z",
+      "updatedAt": "2026-07-28T00:57:23.000Z",
+      "uid": "35240-0a72d248-e73f-4cc5-a58c-4a605ecf074e"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}

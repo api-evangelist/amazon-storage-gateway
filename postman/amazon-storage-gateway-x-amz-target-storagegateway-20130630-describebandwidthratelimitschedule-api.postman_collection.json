@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "af29ee24-cd85-4d45-a41a-3b24e44fbe1e",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule API",
+    "description": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:51.000Z",
+    "updatedAt": "2026-07-28T00:56:51.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-af29ee24-cd85-4d45-a41a-3b24e44fbe1e"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+      "item": [
+        {
+          "name": "Describe Bandwidth Rate Limit Schedule",
+          "id": "ebe5f37a-b413-46b7-b072-ce27deaba942",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"GatewayARN\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+            },
+            "description": "<p> Returns information about the bandwidth rate limit schedule of a gateway. By default, gateways do not have bandwidth rate limit schedules, which means no bandwidth rate limiting is in effect. This operation is supported only for volume, tape and S3 file gateways. FSx file gateways do not support bandwidth rate limits.</p> <p>This operation returns information about a gateway's bandwidth rate limit schedule. A bandwidth rate limit schedule consists of one or more bandwidth rate limit intervals. A bandwidth rate limit interval defines a period of time on one or more days of the week, during which bandwidth rate limits are specified for uploading, downloading, or both. </p> <p> A bandwidth rate limit interval consists of one or more days of the week, a start hour and minute, an ending hour and minute, and bandwidth rate limits for uploading and downloading </p> <p> If no bandwidth rate limit schedule intervals are set for the gateway, this operation returns an empty response. To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in your request.</p>"
+          },
+          "response": [
+            {
+              "id": "428404d1-5793-4a6d-b783-56a963ee7c8d",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"GatewayARN\": \"<string>\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        \"<integer>\"\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-428404d1-5793-4a6d-b783-56a963ee7c8d"
+            },
+            {
+              "id": "d79f99e8-2431-471b-bad8-2a85fe6d5cab",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-d79f99e8-2431-471b-bad8-2a85fe6d5cab"
+            },
+            {
+              "id": "ef26949d-791b-4533-881b-086bc57741fa",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-ef26949d-791b-4533-881b-086bc57741fa"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:51.000Z",
+          "updatedAt": "2026-07-28T00:56:51.000Z",
+          "uid": "35240-ebe5f37a-b413-46b7-b072-ce27deaba942"
+        }
+      ],
+      "id": "5775acb2-dd3b-4dea-be19-a5bd0aa08d9c",
+      "createdAt": "2026-07-28T00:56:51.000Z",
+      "updatedAt": "2026-07-28T00:56:51.000Z",
+      "uid": "35240-5775acb2-dd3b-4dea-be19-a5bd0aa08d9c"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://storagegateway.{{region}}.amazonaws.com"
+    }
+  ]
+}
