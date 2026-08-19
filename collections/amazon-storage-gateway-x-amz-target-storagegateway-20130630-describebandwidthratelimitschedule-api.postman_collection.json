@@ -1,0 +1,481 @@
+{
+  "item": [
+    {
+      "id": "1820cc4a-cd7a-4975-bfb9-6bb2670c808b",
+      "name": "#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54efb282-4631-4374-9a4a-0ca582bf6300",
+          "name": "Describe Bandwidth Rate Limit Schedule",
+          "request": {
+            "name": "Describe Bandwidth Rate Limit Schedule",
+            "description": {
+              "content": "<p> Returns information about the bandwidth rate limit schedule of a gateway. By default, gateways do not have bandwidth rate limit schedules, which means no bandwidth rate limiting is in effect. This operation is supported only for volume, tape and S3 file gateways. FSx file gateways do not support bandwidth rate limits.</p> <p>This operation returns information about a gateway's bandwidth rate limit schedule. A bandwidth rate limit schedule consists of one or more bandwidth rate limit intervals. A bandwidth rate limit interval defines a period of time on one or more days of the week, during which bandwidth rate limits are specified for uploading, downloading, or both. </p> <p> A bandwidth rate limit interval consists of one or more days of the week, a start hour and minute, an ending hour and minute, and bandwidth rate limits for uploading and downloading </p> <p> If no bandwidth rate limit schedule intervals are set for the gateway, this operation returns an empty response. To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in your request.</p>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"GatewayARN\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b3ef992f-d32d-4da2-bac4-a8e22941d44a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 3,\n      \"EndHourOfDay\": 11,\n      \"EndMinuteOfHour\": 7,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 31,\n      \"EndHourOfDay\": 2,\n      \"EndMinuteOfHour\": 23,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 14,\n      \"StartMinuteOfHour\": 3,\n      \"EndHourOfDay\": 11,\n      \"EndMinuteOfHour\": 49,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 15,\n      \"StartMinuteOfHour\": 8,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 16,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 12,\n      \"StartMinuteOfHour\": 7,\n      \"EndHourOfDay\": 12,\n      \"EndMinuteOfHour\": 24,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 22,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 14,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 6,\n      \"EndHourOfDay\": 4,\n      \"EndMinuteOfHour\": 22,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 8,\n      \"EndHourOfDay\": 1,\n      \"EndMinuteOfHour\": 18,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 22,\n      \"StartMinuteOfHour\": 27,\n      \"EndHourOfDay\": 4,\n      \"EndMinuteOfHour\": 54,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 12,\n      \"StartMinuteOfHour\": 22,\n      \"EndHourOfDay\": 8,\n      \"EndMinuteOfHour\": 29,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 43,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 39,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 30,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 4,\n      \"StartMinuteOfHour\": 7,\n      \"EndHourOfDay\": 21,\n      \"EndMinuteOfHour\": 10,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 52,\n      \"EndHourOfDay\": 14,\n      \"EndMinuteOfHour\": 31,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 21,\n      \"StartMinuteOfHour\": 31,\n      \"EndHourOfDay\": 8,\n      \"EndMinuteOfHour\": 10,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 8,\n      \"EndHourOfDay\": 5,\n      \"EndMinuteOfHour\": 50,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 1,\n      \"StartMinuteOfHour\": 41,\n      \"EndHourOfDay\": 3,\n      \"EndMinuteOfHour\": 21,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 22,\n      \"StartMinuteOfHour\": 41,\n      \"EndHourOfDay\": 12,\n      \"EndMinuteOfHour\": 35,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 14,\n      \"EndHourOfDay\": 2,\n      \"EndMinuteOfHour\": 9,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 1,\n      \"StartMinuteOfHour\": 6,\n      \"EndHourOfDay\": 16,\n      \"EndMinuteOfHour\": 44,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c208e76c-3f0b-4c2d-89ab-c4d626ea2294",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9d92d3ba-da5d-44ea-8db6-1c1e97b6da6d",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.DescribeBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://storagegateway.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d0445c87-9e6f-47e0-9324-447c74331e0d",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}

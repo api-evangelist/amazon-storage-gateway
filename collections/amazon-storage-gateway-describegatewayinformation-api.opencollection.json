@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #DescribeGatewayInformation API",
+    "version": "2013-06-30"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#DescribeGatewayInformation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Storage Gateway Describe Gateway Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#DescribeGatewayInformation",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

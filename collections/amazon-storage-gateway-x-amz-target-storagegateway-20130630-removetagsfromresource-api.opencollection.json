@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.RemoveTagsFromResource API",
+    "version": "2013-06-30"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#X Amz Target=StorageGateway 20130630.RemoveTagsFromResource",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "RemoveTagsFromResource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://storagegateway.{region}.amazonaws.com/#X-Amz-Target=StorageGateway_20130630.RemoveTagsFromResource",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Target",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Removes one or more tags from the specified resource. This operation is supported in storage gateways of all types."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,481 @@
+{
+  "item": [
+    {
+      "id": "8b533cc4-de36-49d4-9091-be224a11389d",
+      "name": "#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d6b53ad4-ccd0-479f-b90f-7f3277022dda",
+          "name": "Update Bandwidth Rate Limit Schedule",
+          "request": {
+            "name": "Update Bandwidth Rate Limit Schedule",
+            "description": {
+              "content": " Updates the bandwidth rate limit schedule for a specified gateway. By default, gateways do not have bandwidth rate limit schedules, which means no bandwidth rate limiting is in effect. Use this to initiate or update a gateway's bandwidth rate limit schedule. This operation is supported only for volume, tape and S3 file gateways. FSx file gateways do not support bandwidth rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimitSchedule",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"GatewayARN\": \"<string>\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    },\n    {\n      \"StartHourOfDay\": \"<integer>\",\n      \"StartMinuteOfHour\": \"<integer>\",\n      \"EndHourOfDay\": \"<integer>\",\n      \"EndMinuteOfHour\": \"<integer>\",\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": \"<integer>\",\n      \"AverageDownloadRateLimitInBitsPerSec\": \"<integer>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4f63e1d4-ed75-4f26-be6f-db6d959d592b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 55,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 11,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 15,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 1,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 7,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 5,\n      \"EndMinuteOfHour\": 3,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 44,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 11,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 52,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 14,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 41,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 19,\n      \"StartMinuteOfHour\": 10,\n      \"EndHourOfDay\": 7,\n      \"EndMinuteOfHour\": 56,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 30,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 22,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 17,\n      \"StartMinuteOfHour\": 3,\n      \"EndHourOfDay\": 4,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 14,\n      \"StartMinuteOfHour\": 35,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 43,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 26,\n      \"EndHourOfDay\": 21,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 36,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 6,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 21,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 34,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 38,\n      \"EndHourOfDay\": 12,\n      \"EndMinuteOfHour\": 54,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 9,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 13,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 40,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 15,\n      \"EndHourOfDay\": 6,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 0,\n      \"StartMinuteOfHour\": 5,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2635d185-7a70-4624-b0ab-e568912b1991",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 55,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 11,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 15,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 1,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 7,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 5,\n      \"EndMinuteOfHour\": 3,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 44,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 11,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 52,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 14,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 41,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 19,\n      \"StartMinuteOfHour\": 10,\n      \"EndHourOfDay\": 7,\n      \"EndMinuteOfHour\": 56,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 30,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 22,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 17,\n      \"StartMinuteOfHour\": 3,\n      \"EndHourOfDay\": 4,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 14,\n      \"StartMinuteOfHour\": 35,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 43,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 26,\n      \"EndHourOfDay\": 21,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 36,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 6,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 21,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 34,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 38,\n      \"EndHourOfDay\": 12,\n      \"EndMinuteOfHour\": 54,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 9,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 13,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 40,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 15,\n      \"EndHourOfDay\": 6,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 0,\n      \"StartMinuteOfHour\": 5,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4fa55962-01f4-4026-8f33-c28dfb6d58cc",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateBandwidthRateLimitSchedule",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"GatewayARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"BandwidthRateLimitIntervals\": [\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 55,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 11,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 19,\n      \"EndMinuteOfHour\": 15,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 1,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 7,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 47,\n      \"EndHourOfDay\": 5,\n      \"EndMinuteOfHour\": 3,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 44,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 6,\n      \"StartMinuteOfHour\": 11,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 52,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 14,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 53,\n      \"EndHourOfDay\": 17,\n      \"EndMinuteOfHour\": 41,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 19,\n      \"StartMinuteOfHour\": 10,\n      \"EndHourOfDay\": 7,\n      \"EndMinuteOfHour\": 56,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 30,\n      \"EndHourOfDay\": 20,\n      \"EndMinuteOfHour\": 22,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 17,\n      \"StartMinuteOfHour\": 3,\n      \"EndHourOfDay\": 4,\n      \"EndMinuteOfHour\": 32,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 14,\n      \"StartMinuteOfHour\": 35,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 43,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 2,\n      \"StartMinuteOfHour\": 26,\n      \"EndHourOfDay\": 21,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 8,\n      \"StartMinuteOfHour\": 36,\n      \"EndHourOfDay\": 10,\n      \"EndMinuteOfHour\": 6,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 21,\n      \"StartMinuteOfHour\": 33,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 34,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 5,\n      \"StartMinuteOfHour\": 38,\n      \"EndHourOfDay\": 12,\n      \"EndMinuteOfHour\": 54,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 16,\n      \"StartMinuteOfHour\": 9,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 13,\n      \"StartMinuteOfHour\": 34,\n      \"EndHourOfDay\": 0,\n      \"EndMinuteOfHour\": 40,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 9,\n      \"StartMinuteOfHour\": 15,\n      \"EndHourOfDay\": 6,\n      \"EndMinuteOfHour\": 17,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    },\n    {\n      \"StartHourOfDay\": 0,\n      \"StartMinuteOfHour\": 5,\n      \"EndHourOfDay\": 15,\n      \"EndMinuteOfHour\": 58,\n      \"DaysOfWeek\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"AverageUploadRateLimitInBitsPerSec\": null,\n      \"AverageDownloadRateLimitInBitsPerSec\": null\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://storagegateway.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fd1df4d9-7f96-4990-9ff6-8f5d68405cda",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}

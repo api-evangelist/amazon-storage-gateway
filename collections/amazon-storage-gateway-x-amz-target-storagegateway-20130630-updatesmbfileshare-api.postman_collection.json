@@ -1,0 +1,481 @@
+{
+  "item": [
+    {
+      "id": "2457d322-7c3e-4d16-8ec6-803314c3fd98",
+      "name": "#X Amz Target=StorageGateway 20130630.UpdateSMBFileShare",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ba64a2da-67b5-48c8-9a99-1156dade80f6",
+          "name": "Update SMB File Share",
+          "request": {
+            "name": "Update SMB File Share",
+            "description": {
+              "content": "<p>Updates a Server Message Block (SMB) file share. This operation is only supported for S3 File Gateways.</p> <note> <p>To leave a file share field unchanged, set the corresponding input field to null.</p> </note> <important> <p>File gateways require Security Token Service (Amazon Web Services STS) to be activated to enable you to create a file share. Make sure that Amazon Web Services STS is activated in the Amazon Web Services Region you are creating your file gateway in. If Amazon Web Services STS is not activated in this Amazon Web Services Region, activate it. For information about how to activate Amazon Web Services STS, see <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html\">Activating and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't support creating hard or symbolic links on a file share.</p> </important>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShare",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"FileShareARN\": \"<string>\",\n  \"KMSEncrypted\": \"<boolean>\",\n  \"KMSKey\": \"<string>\",\n  \"DefaultStorageClass\": \"<string>\",\n  \"ObjectACL\": \"<string>\",\n  \"ReadOnly\": \"<boolean>\",\n  \"GuessMIMETypeEnabled\": \"<boolean>\",\n  \"RequesterPays\": \"<boolean>\",\n  \"SMBACLEnabled\": \"<boolean>\",\n  \"AccessBasedEnumeration\": \"<boolean>\",\n  \"AdminUserList\": [\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ValidUserList\": [\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"InvalidUserList\": [\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"AuditDestinationARN\": \"<string>\",\n  \"CaseSensitivity\": \"<string>\",\n  \"FileShareName\": \"<string>\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": \"<integer>\"\n  },\n  \"NotificationPolicy\": \"<string>\",\n  \"OplocksEnabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8575e919-d2e8-4bc2-b698-f1ff3d89582a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"KMSEncrypted\": true,\n  \"KMSKey\": \"alias/3Ha{P,&;\",\n  \"DefaultStorageClass\": \"string\",\n  \"ObjectACL\": \"public-read-write\",\n  \"ReadOnly\": true,\n  \"GuessMIMETypeEnabled\": true,\n  \"RequesterPays\": true,\n  \"SMBACLEnabled\": false,\n  \"AccessBasedEnumeration\": true,\n  \"AdminUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"ValidUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"InvalidUserList\": [\n    \"string\",\n    \"string\",\n    \"s\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"st\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"AuditDestinationARN\": \"string\",\n  \"CaseSensitivity\": \"ClientSpecified\",\n  \"FileShareName\": \"string\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": 357\n  },\n  \"NotificationPolicy\": \"{}\",\n  \"OplocksEnabled\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FileShareARN\": \"stringstringstringstringstringstringstringstringstring\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1f696f5b-ecd1-4148-a372-113b199841a8",
+              "name": "InvalidGatewayRequestException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"KMSEncrypted\": true,\n  \"KMSKey\": \"alias/3Ha{P,&;\",\n  \"DefaultStorageClass\": \"string\",\n  \"ObjectACL\": \"public-read-write\",\n  \"ReadOnly\": true,\n  \"GuessMIMETypeEnabled\": true,\n  \"RequesterPays\": true,\n  \"SMBACLEnabled\": false,\n  \"AccessBasedEnumeration\": true,\n  \"AdminUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"ValidUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"InvalidUserList\": [\n    \"string\",\n    \"string\",\n    \"s\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"st\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"AuditDestinationARN\": \"string\",\n  \"CaseSensitivity\": \"ClientSpecified\",\n  \"FileShareName\": \"string\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": 357\n  },\n  \"NotificationPolicy\": \"{}\",\n  \"OplocksEnabled\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "176bc675-7e91-4f42-8774-e47dd9589bcc",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=StorageGateway_20130630.UpdateSMBFileShare",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileShareARN\": \"stringstringstringstringstringstringstringstringstring\",\n  \"KMSEncrypted\": true,\n  \"KMSKey\": \"alias/3Ha{P,&;\",\n  \"DefaultStorageClass\": \"string\",\n  \"ObjectACL\": \"public-read-write\",\n  \"ReadOnly\": true,\n  \"GuessMIMETypeEnabled\": true,\n  \"RequesterPays\": true,\n  \"SMBACLEnabled\": false,\n  \"AccessBasedEnumeration\": true,\n  \"AdminUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"ValidUserList\": [\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"stri\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"InvalidUserList\": [\n    \"string\",\n    \"string\",\n    \"s\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"st\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\",\n    \"string\"\n  ],\n  \"AuditDestinationARN\": \"string\",\n  \"CaseSensitivity\": \"ClientSpecified\",\n  \"FileShareName\": \"string\",\n  \"CacheAttributes\": {\n    \"CacheStaleTimeoutInSeconds\": 357\n  },\n  \"NotificationPolicy\": \"{}\",\n  \"OplocksEnabled\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,sa-east-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://storagegateway.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3b8d77fd-35d7-4998-85d9-750184073743",
+    "name": "Amazon Storage Gateway REST Amazon Storage Gateway REST API #X Amz Target=StorageGateway 20130630.UpdateSMBFileShare API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}
