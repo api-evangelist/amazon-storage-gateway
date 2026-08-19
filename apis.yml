@@ -3,6 +3,7 @@ description: >-
   AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud
   storage. It seamlessly connects on-premises environments to AWS cloud storage, providing low-latency data access with
   local caching.
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
