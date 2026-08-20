@@ -344,7 +344,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.createcachediscsivolume.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.CreateCachediSCSIVolume'
   properties:
   - type: OpenAPI
@@ -434,7 +435,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.createsnapshotfromvolumerecoverypoint.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.CreateSnapshotFromVolumeRecoveryPoint'
   properties:
   - type: OpenAPI
@@ -456,7 +458,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.createstorediscsivolume.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.CreateStorediSCSIVolume'
   properties:
   - type: OpenAPI
@@ -545,7 +548,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.deleteautomatictapecreationpolicy.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DeleteAutomaticTapeCreationPolicy'
   properties:
   - type: OpenAPI
@@ -568,7 +572,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.deletebandwidthratelimit.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DeleteBandwidthRateLimit'
   properties:
   - type: OpenAPI
@@ -767,7 +772,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.describeavailabilitymonitortest.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeAvailabilityMonitorTest'
   properties:
   - type: OpenAPI
@@ -790,7 +796,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describebandwidthratelimit.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimit'
   properties:
   - type: OpenAPI
@@ -813,7 +820,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.describebandwidthratelimitschedule.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule'
   properties:
   - type: OpenAPI
@@ -858,7 +866,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describecachediscsivolumes.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes'
   properties:
   - type: OpenAPI
@@ -880,7 +889,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describechapcredentials.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeChapCredentials'
   properties:
   - type: OpenAPI
@@ -903,7 +913,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describefilesystemassociations.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations'
   properties:
   - type: OpenAPI
@@ -926,7 +937,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describegatewayinformation.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeGatewayInformation'
   properties:
   - type: OpenAPI
@@ -949,7 +961,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describemaintenancestarttime.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeMaintenanceStartTime'
   properties:
   - type: OpenAPI
@@ -1038,7 +1051,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describesnapshotschedule.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeSnapshotSchedule'
   properties:
   - type: OpenAPI
@@ -1061,7 +1075,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describestorediscsivolumes.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeStorediSCSIVolumes'
   properties:
   - type: OpenAPI
@@ -1106,7 +1121,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.describetaperecoverypoints.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.DescribeTapeRecoveryPoints'
   properties:
   - type: OpenAPI
@@ -1305,7 +1321,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.listautomatictapecreationpolicies.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.ListAutomaticTapeCreationPolicies'
   properties:
   - type: OpenAPI
@@ -1350,7 +1367,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.listfilesystemassociations.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.ListFileSystemAssociations'
   properties:
   - type: OpenAPI
@@ -1505,7 +1523,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.listvolumerecoverypoints.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.ListVolumeRecoveryPoints'
   properties:
   - type: OpenAPI
@@ -1660,7 +1679,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.retrievetaperecoverypoint.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.RetrieveTapeRecoveryPoint'
   properties:
   - type: OpenAPI
@@ -1682,7 +1702,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.setlocalconsolepassword.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.SetLocalConsolePassword'
   properties:
   - type: OpenAPI
@@ -1749,7 +1770,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.startavailabilitymonitortest.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.StartAvailabilityMonitorTest'
   properties:
   - type: OpenAPI
@@ -1794,7 +1816,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.updateautomatictapecreationpolicy.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateAutomaticTapeCreationPolicy'
   properties:
   - type: OpenAPI
@@ -1817,7 +1840,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updatebandwidthratelimit.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimit'
   properties:
   - type: OpenAPI
@@ -1840,7 +1864,8 @@ apis:
     Gateway — 1 operation(s) for #x amz target=storagegateway 20130630.updatebandwidthratelimitschedule.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule'
   properties:
   - type: OpenAPI
@@ -1885,7 +1910,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updatefilesystemassociation.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateFileSystemAssociation'
   properties:
   - type: OpenAPI
@@ -1908,7 +1934,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updategatewayinformation.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateGatewayInformation'
   properties:
   - type: OpenAPI
@@ -1931,7 +1958,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updategatewaysoftwarenow.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateGatewaySoftwareNow'
   properties:
   - type: OpenAPI
@@ -1954,7 +1982,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updatemaintenancestarttime.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateMaintenanceStartTime'
   properties:
   - type: OpenAPI
@@ -2021,7 +2050,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updatesmbfilesharevisibility.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateSMBFileShareVisibility'
   properties:
   - type: OpenAPI
@@ -2066,7 +2096,8 @@ apis:
     — 1 operation(s) for #x amz target=storagegateway 20130630.updatesmbsecuritystrategy.
   humanURL: https://aws.amazon.com/storagegateway/
   baseURL: https://storagegateway.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=StorageGateway 20130630.UpdateSMBSecurityStrategy'
   properties:
   - type: OpenAPI
