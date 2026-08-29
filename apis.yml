@@ -2168,6 +2168,9 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/storagegateway/faqs/
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-storage-gateway-capability-edges.yml
+    name: Amazon Storage Gateway Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-storage-gateway/overview
   - type: AgenticAccess
