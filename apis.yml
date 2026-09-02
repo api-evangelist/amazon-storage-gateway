@@ -2268,3 +2268,5 @@ tags:
   - Hybrid Cloud
   - Storage
 kind: company
+x-parent: aws
+x-relationship: product

@@ -1,0 +1,632 @@
+slug: amazon-storage-gateway
+provider: Amazon Storage Gateway
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 71
+edges:
+- tag: '#CreateNFSFileShare'
+  spec_file: amazon-storage-gateway-createnfsfileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: createNFSFileShare  Amazon Storage Gateway Create NFS File Share; 'hybrid cloud storage service
+    that gives you on-premises access to virtually unlimited cloud storage'
+  reason: Creating an NFS file share on a storage gateway is provisioning of storage infrastructure, mapping
+    to IT Infrastructure Management (compute, storage, network, cloud infrastructure).
+- tag: '#DescribeGatewayInformation'
+  spec_file: amazon-storage-gateway-describegatewayinformation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: describeGatewayInformation  Amazon Storage Gateway Describe Gateway Information; 'This API
+    enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources'
+  reason: Inspecting storage gateway appliance details is storage/cloud infrastructure management, not
+    a business-domain capability.
+- tag: '#ListGateways'
+  spec_file: amazon-storage-gateway-listgateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: 'listGateways  Amazon Storage Gateway List Gateways; schemas: GatewayInfo'
+  reason: Enumerating storage gateway appliances is inventory/management of storage infrastructure resources
+    — IT Infrastructure Management.
+- tag: '#ListVolumes'
+  spec_file: amazon-storage-gateway-listvolumes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: listVolumes  Amazon Storage Gateway List Volumes; 'management of gateways, volumes, virtual
+    tapes, file shares, and cached storage resources'
+  reason: Volumes here are cloud storage volumes, not inventory or trading volumes; listing them is storage
+    infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.ActivateGateway'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-activategateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: 'ActivateGateway; schemas: ActivationKey, GatewayARN, GatewayType, GatewayTimezone, TapeDriveType'
+  reason: Activating a storage gateway appliance (with tape drive/medium changer types) is provisioning
+    of hybrid cloud storage infrastructure, mapping to IT Infrastructure Management.
+- tag: '#X Amz Target=StorageGateway 20130630.AddCache'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-addcache-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AddCache; schemas GatewayARN, DiskIds — "hybrid cloud storage service ... management of gateways,
+    volumes, virtual tapes, file shares, and cached storage resources"
+  reason: Operation adds local disks as cache to a storage gateway — provisioning of storage infrastructure,
+    i.e. IT Infrastructure Management.
+- tag: '#X Amz Target=StorageGateway 20130630.AddUploadBuffer'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-adduploadbuffer-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AddUploadBuffer; schemas GatewayARN, DiskIds, AddUploadBufferInput
+  reason: Configures upload buffer disks on a storage gateway — storage infrastructure provisioning.
+- tag: '#X Amz Target=StorageGateway 20130630.AddWorkingStorage'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-addworkingstorage-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AddWorkingStorage; schemas GatewayARN, DiskIds, AddWorkingStorageInput
+  reason: Adds working storage disks to a gateway — compute/storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.AttachVolume'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-attachvolume-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AttachVolume; schemas VolumeARN, GatewayARN, NetworkInterfaceId, TargetARN
+  reason: Attaches an iSCSI storage volume to a gateway — storage infrastructure operation.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateCachediSCSIVolume'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createcachediscsivolume-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: CreateCachediSCSIVolume; schemas VolumeARN, SnapshotId, TargetARN, KMSKey
+  reason: Creates a cached iSCSI storage volume on a gateway — provisioning of storage infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateNFSFileShare'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createnfsfileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: CreateNFSFileShare; schemas FileShareARN, NFSFileShareDefaults, GatewayARN, StorageClass
+  reason: Creates an NFS file share backed by cloud object storage — storage infrastructure provisioning.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateSMBFileShare'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsmbfileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: CreateSMBFileShare; schemas FileShareARN, GatewayARN, Authentication, StorageClass
+  reason: Creates an SMB file share on a storage gateway — storage infrastructure provisioning.
+- tag: '#X Amz Target=StorageGateway 20130630.ListGateways'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listgateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: ListGateways; schemas GatewayInfo, GatewayType, GatewayOperationalState, Ec2InstanceId
+  reason: Inventory of storage gateway appliances/instances is squarely cloud infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.ListLocalDisks'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listlocaldisks-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: ListLocalDisks; schemas Disk, DiskAllocationType, DiskId
+  reason: Enumerating local physical disks attached to the gateway is storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.ListVolumes'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: ListVolumes; schemas VolumeInfo, VolumeType, GatewayId — "hybrid cloud storage service"
+  reason: Inventory of storage volumes managed by the gateway; this is compute/storage/cloud infrastructure
+    management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeCachediSCSIVolumes'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecachediscsivolumes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: POST DescribeCachediSCSIVolumes; CachediSCSIVolumes, VolumeiSCSIAttributes, VolumeStatus
+  reason: Describes cached iSCSI storage volumes and their attributes — clearly storage/compute infrastructure
+    management.
+- tag: '#X Amz Target=StorageGateway 20130630.ShutdownGateway'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-shutdowngateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: ShutdownGateway; schemas GatewayARN, ShutdownGatewayInput
+  reason: Shuts down a storage gateway appliance — lifecycle operation on cloud/on-prem storage infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.AssociateFileSystem'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-associatefilesystem-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: AssociateFileSystem; schemas FileSystemAssociationARN, GatewayARN, CacheAttributes
+  reason: Associates an Amazon FSx file system with a gateway — storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateStorediSCSIVolume'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createstorediscsivolume-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateStorediSCSIVolume; schemas GatewayARN, VolumeARN, DiskId, TargetARN, NetworkInterfaceId
+  reason: Provisions an iSCSI storage volume on a gateway — plainly compute/storage infrastructure provisioning.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteGateway'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletegateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DeleteGateway; schemas GatewayARN, DeleteGatewayInput
+  reason: Decommissions a storage gateway appliance — clearly cloud/storage infrastructure lifecycle management.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteTape'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetape-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST DeleteTape; schemas GatewayARN, TapeARN; "management of gateways, volumes, virtual tapes,
+    file shares, and cached storage resources"
+  reason: Deleting a virtual tape from a cloud storage gateway is management of storage infrastructure
+    resources, i.e. cloud/storage infrastructure management, not a business-domain capability.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteVolume'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletevolume-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST DeleteVolume; VolumeARN, DeleteVolumeInput
+  reason: Deleting a storage volume is plainly compute/storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeGatewayInformation'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describegatewayinformation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST DescribeGatewayInformation; GatewayNetworkInterfaces, GatewayState, LastSoftwareUpdate
+  reason: Inventory/state of the deployed gateway appliance including network interfaces and software
+    update status — cloud/on-prem infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeNFSFileShares'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describenfsfileshares-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeNFSFileShares; schemas NFSFileShareInfoList, FileShareARN, CacheAttributes, GatewayARN
+  reason: Describes NFS file shares exposed by a storage gateway — management of cloud storage infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeSMBFileShares'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbfileshares-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeSMBFileShares; schemas SMBFileShareInfoList, FileShareARN, GatewayARN, CacheAttributes
+  reason: Describes SMB file shares on a storage gateway — cloud storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeStorediSCSIVolumes'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describestorediscsivolumes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeStorediSCSIVolumes; schemas StorediSCSIVolumes, VolumeiSCSIAttributes, VolumeUsedInBytes,
+    DiskId
+  reason: Describes iSCSI storage volumes provided by the gateway — storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DetachVolume'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-detachvolume-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST DetachVolume; schemas VolumeARN, DetachVolumeInput — "management of gateways, volumes,
+    virtual tapes, file shares, and cached storage resources"
+  reason: Detaching a storage volume from a hybrid cloud storage gateway is cloud/storage infrastructure
+    administration, not a business-domain function.
+- tag: '#X Amz Target=StorageGateway 20130630.DisableGateway'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-disablegateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST DisableGateway; schemas GatewayARN, DisableGatewayInput
+  reason: Disabling a storage gateway appliance is management of storage infrastructure resources.
+- tag: '#X Amz Target=StorageGateway 20130630.ListFileShares'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfileshares-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: ListFileShares; schemas FileShareARN, FileShareType, FileShareStatus
+  reason: Listing NFS/SMB file shares served by the gateway is storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.StartGateway'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-startgateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: 'StartGateway ... schemas: GatewayARN, StartGatewayInput'
+  reason: Starts a hybrid cloud storage gateway appliance; lifecycle control of storage infrastructure
+    resources maps to IT Infrastructure Management.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateGatewayInformation'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updategatewayinformation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: UpdateGatewayInformation ... GatewayName, GatewayCapacity, GatewayTimezone
+  reason: Configures gateway appliance attributes and capacity — infrastructure resource administration.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteTapeArchive'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapearchive-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: POST DeleteTapeArchive; DeleteTapeArchiveInput, TapeARN
+  reason: Removal of an archived virtual tape from the gateway's virtual tape shelf is storage infrastructure
+    resource management.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteTapePool'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletetapepool-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: POST DeleteTapePool; DeleteTapePoolInput, PoolARN
+  reason: Tape pool lifecycle on a cloud storage service is administration of storage infrastructure objects.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeCache'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describecache-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: POST DescribeCache; DescribeCacheOutput, DiskIds, GatewayARN
+  reason: Reports cache disk allocation on the storage gateway — storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeFileSystemAssociations'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describefilesystemassociations-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: POST DescribeFileSystemAssociations; FileSystemAssociationInfo, FileSystemLocationARN, CacheAttributes
+  reason: Describes file system associations attached to a gateway — storage infrastructure resource management.
+- tag: '#X Amz Target=StorageGateway 20130630.DisassociateFileSystem'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-disassociatefilesystem-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: POST DisassociateFileSystem; schemas FileSystemAssociationARN
+  reason: Managing file-system associations of a gateway is storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.ListFileSystemAssociations'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listfilesystemassociations-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: ListFileSystemAssociations; schemas FileSystemAssociationSummary, GatewayARN
+  reason: Enumerating file-system associations of gateways is storage infrastructure inventory/management.
+- tag: '#X Amz Target=StorageGateway 20130630.ListVolumeInitiators'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumeinitiators-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.78
+  evidence: ListVolumeInitiators; schemas VolumeARN, Initiator — "management of gateways, volumes, virtual
+    tapes, file shares, and cached storage resources"
+  reason: Lists iSCSI initiators connected to a storage volume in AWS Storage Gateway — operational visibility
+    over cloud/on-prem storage infrastructure, i.e. IT Infrastructure Management (storage/cloud).
+- tag: '#X Amz Target=StorageGateway 20130630.CreateSnapshot'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshot-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: POST ... CreateSnapshot; schemas CreateSnapshotInput, SnapshotId, VolumeARN — "hybrid cloud
+    storage service ... management of gateways, volumes, virtual tapes, file shares"
+  reason: Creates a point-in-time snapshot of a cloud storage volume on a gateway appliance. This is cloud/storage
+    infrastructure operation, mapping to IT Infrastructure Management; not a business-domain capability.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateTapePool'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapepool-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: CreateTapePool; schemas PoolARN, TapeStorageClass, RetentionLockType
+  reason: Creates a virtual tape pool with a storage class and retention lock — archival storage infrastructure
+    configuration, not a business records capability.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateTapeWithBarcode'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapewithbarcode-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: CreateTapeWithBarcode; schemas TapeBarcode, TapeSize, TapeARN, GatewayARN
+  reason: Creates a virtual tape (archival storage object) on a gateway — cloud storage infrastructure
+    management.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateTapes'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createtapes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: CreateTapes; schemas NumTapesToCreate, TapeARNs, TapeSize, GatewayARN
+  reason: Bulk creation of virtual tapes on a storage gateway — storage infrastructure provisioning.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteFileShare'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletefileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: DeleteFileShare; schemas FileShareARN, DeleteFileShareInput
+  reason: Deletes an NFS/SMB file share exposed by the gateway — storage infrastructure resource lifecycle.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeTapes'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: DescribeTapes; schemas Tape, TapeBarcode, TapeStatus, VTLDeviceARN
+  reason: Describes virtual tapes managed by the storage gateway — cloud storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeVTLDevices'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describevtldevices-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: DescribeVTLDevices; schemas VTLDevice, DeviceiSCSIAttributes, VTLDeviceType, TargetARN
+  reason: Describes virtual tape library devices presented by the gateway — storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.RefreshCache'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-refreshcache-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: RefreshCache; schemas FileShareARN, Folder, FolderList
+  reason: Refreshes the gateway's cache of file-share contents — operational control of cloud storage
+    infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.ResetCache'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-resetcache-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: ResetCache; schemas GatewayARN, ResetCacheInput
+  reason: Resets the cache disk of a storage gateway appliance — day-to-day management of storage infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimit'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimit-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: UpdateBandwidthRateLimit ... BandwidthUploadRateLimit, BandwidthDownloadRateLimit
+  reason: Sets network bandwidth throttling on the gateway appliance — infrastructure (compute/storage/network)
+    configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateBandwidthRateLimitSchedule'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatebandwidthratelimitschedule-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: UpdateBandwidthRateLimitSchedule ... BandwidthRateLimitIntervals, DaysOfWeek
+  reason: Schedules bandwidth limits for the storage gateway — network/storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateFileSystemAssociation'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatefilesystemassociation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: UpdateFileSystemAssociation ... FileSystemAssociationARN, CacheAttributes
+  reason: Updates association of a gateway to a file system with cache settings — cloud storage infrastructure
+    management.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateNFSFileShare'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatenfsfileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: UpdateNFSFileShare ... FileShareARN, NFSFileShareDefaults, StorageClass
+  reason: Updates NFS file share settings on cloud storage — storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateSMBFileShare'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfileshare-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: UpdateSMBFileShare ... FileShareARN, UserList, StorageClass, CaseSensitivity
+  reason: Updates SMB file share settings on cloud storage — storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.CreateSnapshotFromVolumeRecoveryPoint'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-createsnapshotfromvolumerecoverypoint-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.72
+  evidence: CreateSnapshotFromVolumeRecoveryPoint; schemas CreateSnapshotFromVolumeRecoveryPointInput,
+    SnapshotId, VolumeARN
+  reason: Storage volume snapshot from a recovery point — cloud storage infrastructure operation. Could
+    touch backup/DR but the surface is infrastructure storage management.
+- tag: '#X Amz Target=StorageGateway 20130630.AssignTapePool'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-assigntapepool-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: AssignTapePool; schemas TapeARN, PoolId — "management of gateways, volumes, virtual tapes,
+    file shares"
+  reason: Assigns a virtual tape to an archival storage pool; this is storage infrastructure/archival
+    tiering management rather than a distinct business capability. Could arguably relate to backup, but
+    evidence supports infrastructure.
+- tag: '#X Amz Target=StorageGateway 20130630.CancelArchival'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelarchival-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: CancelArchival; schemas TapeARN, GatewayARN, CancelArchivalInput
+  reason: Cancels archiving of a virtual tape to the archive tier — storage infrastructure/archival operation,
+    not a business capability of its own.
+- tag: '#X Amz Target=StorageGateway 20130630.CancelRetrieval'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-cancelretrieval-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: CancelRetrieval; schemas TapeARN, GatewayARN, CancelRetrievalInput
+  reason: Cancels retrieval of an archived virtual tape — storage infrastructure operation.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteAutomaticTapeCreationPolicy'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deleteautomatictapecreationpolicy-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DeleteAutomaticTapeCreationPolicy; schemas GatewayARN, DeleteAutomaticTapeCreationPolicyInput
+  reason: Removes an automation policy governing virtual tape creation on a gateway — infrastructure configuration,
+    despite the word 'Policy' this is not corporate Policy Management.
+- tag: '#X Amz Target=StorageGateway 20130630.DeleteSnapshotSchedule'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-deletesnapshotschedule-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DeleteSnapshotSchedule; schemas VolumeARN, DeleteSnapshotScheduleInput
+  reason: Removes the scheduled snapshot (backup) configuration for a storage volume — storage infrastructure
+    configuration; a backup/DR reading is adjacent but this is the infrastructure control plane.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimit'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimit-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: POST DescribeBandwidthRateLimit; BandwidthUploadRateLimit, BandwidthDownloadRateLimit, GatewayARN
+  reason: Network throughput configuration of a storage gateway appliance — infrastructure (network/storage)
+    configuration, not API consumption governance of a SaaS product.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeBandwidthRateLimitSchedule'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describebandwidthratelimitschedule-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: POST DescribeBandwidthRateLimitSchedule; BandwidthRateLimitIntervals, DaysOfWeek
+  reason: Scheduled bandwidth throttling for the gateway appliance is infrastructure network configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeSMBSettings'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describesmbsettings-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DescribeSMBSettings; schemas ActiveDirectoryStatus, SMBSecurityStrategy, DomainName, SMBLocalGroups
+  reason: Reads SMB protocol/domain settings of a storage gateway; primarily storage infrastructure configuration
+    (with an identity-join aspect), so infrastructure management is the honest fit.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeTapeArchives'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describetapearchives-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DescribeTapeArchives; schemas TapeArchive, TapeBarcode, TapeArchiveStatus, PoolId
+  reason: Describes archived virtual tapes in the virtual tape library — cloud storage/archival infrastructure
+    administration.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeUploadBuffer'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeuploadbuffer-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DescribeUploadBuffer; schemas GatewayARN, DiskIds, DescribeUploadBufferOutput
+  reason: Reports upload buffer disk allocation on the gateway — low-level storage infrastructure configuration.
+- tag: '#X Amz Target=StorageGateway 20130630.DescribeWorkingStorage'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-describeworkingstorage-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: DescribeWorkingStorage; schemas GatewayARN, DiskIds, DescribeWorkingStorageOutput
+  reason: Reports working storage disk configuration of the gateway — storage infrastructure administration.
+- tag: '#X Amz Target=StorageGateway 20130630.ListAutomaticTapeCreationPolicies'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listautomatictapecreationpolicies-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: ListAutomaticTapeCreationPolicies; schemas AutomaticTapeCreationRule, TapeSize, PoolId
+  reason: Virtual tape creation policies on a storage gateway are storage infrastructure/backup media
+    configuration, not a business capability.
+- tag: '#X Amz Target=StorageGateway 20130630.ListTapePools'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listtapepools-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: ListTapePools; schemas PoolInfo, TapeStorageClass, RetentionLockType
+  reason: Virtual tape pool/storage-class inventory is management of cloud storage infrastructure resources.
+- tag: '#X Amz Target=StorageGateway 20130630.ListVolumeRecoveryPoints'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-listvolumerecoverypoints-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: ListVolumeRecoveryPoints; schemas GatewayARN, VolumeRecoveryPointInfo
+  reason: Enumerates recovery points of cached storage volumes — storage infrastructure operation. Backup/DR
+    framing is possible but the surface is plainly storage-resource management, so the infrastructure
+    capability is the honest mapping.
+- tag: '#X Amz Target=StorageGateway 20130630.RetrieveTapeArchive'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-retrievetapearchive-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: RetrieveTapeArchive; schemas TapeARN, GatewayARN — "virtual tapes"
+  reason: Retrieves a virtual tape from the archive back to a gateway; virtual tape library operation
+    within cloud storage infrastructure management.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateAutomaticTapeCreationPolicy'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updateautomatictapecreationpolicy-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: UpdateAutomaticTapeCreationPolicy ... AutomaticTapeCreationRules, TapeSize, MinimumNumTapes
+  reason: Configures virtual tape provisioning rules on the storage gateway — storage infrastructure configuration,
+    not a business/records capability.
+- tag: '#X Amz Target=StorageGateway 20130630.UpdateSMBFileShareVisibility'
+  spec_file: amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatesmbfilesharevisibility-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: UpdateSMBFileShareVisibility; "This API enables management of gateways, volumes, virtual tapes,
+    file shares, and cached storage resources"
+  reason: Single operation configures visibility of SMB file shares on a hybrid cloud storage gateway
+    — storage infrastructure configuration, i.e. IT Infrastructure Management, not any business-domain
+    capability.
+- tag: Amazon Storage Gateway REST API
+  spec_file: amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: activateGateway  Amazon Storage Gateway Activate Gateway
+  reason: Activates a storage gateway appliance connecting on-premises environments to cloud storage —
+    provisioning of storage infrastructure.
