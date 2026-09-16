@@ -1874,6 +1874,8 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/storagegateway/faqs/
 common:
+- type: Website
+  url: https://amazon.com
 - type: CapabilityMap
   url: capabilities/amazon-storage-gateway-capability-edges.yml
   name: Amazon Storage Gateway Business Capability Map
