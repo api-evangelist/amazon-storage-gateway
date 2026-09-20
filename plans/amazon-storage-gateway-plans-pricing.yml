@@ -10,6 +10,10 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: developer-api
 pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
 published: true
 note: Most rate values on the page are unrendered pricing templates (e.g. {priceOf!...}), so per-GB storage,
   request, and data transfer prices are not visible. Only the $125.00/gateway/month cap, the free 100
