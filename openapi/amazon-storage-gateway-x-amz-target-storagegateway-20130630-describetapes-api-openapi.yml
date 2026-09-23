@@ -2,8 +2,10 @@ openapi: 3.2.0
 info:
   version: '2013-06-30'
   x-release: v4
-  title: 'AWS Storage Gateway #X Amz Target=StorageGateway 20130630.DescribeTapes API'
-  description: '<fullname>Storage Gateway Service</fullname> <p>Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization''s on-premises IT environment and the Amazon Web Services storage infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost effective backup and rapid disaster recovery.</p> <p>Use the following links to get started using the <i>Storage Gateway Service API Reference</i>:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">Storage Gateway required request headers</a>: Describes the required headers that you must send with every POST request to Storage Gateway.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing requests</a>: Storage Gateway requires that you authenticate every request you send; this topic describes how sign such a request.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error responses</a>: Provides reference information about Storage Gateway errors.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in Storage Gateway</a>: Contains detailed descriptions of all Storage Gateway operations, their request parameters, response elements, possible errors, and examples of requests and responses.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a list of each Amazon Web Services Region and the endpoints available for use with Storage Gateway.</p> </li> </ul> <note> <p>Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API, you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as expected.</p> </note> <important> <p>IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format. Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information, see <a href="http://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS resource IDs</a>.</p> <p>For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the following:</p> <p> <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>.</p> <p>A snapshot ID with the longer ID format looks like the following: <code>snap-78e226633445566ee</code>.</p> <p>For more information, see <a href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer Storage Gateway volume and snapshot IDs coming in 2016</a>.</p> </important>'
+  title: 'AWS Storage Gateway #X Amz Target=StorageGateway…'
+  description: 'Storage Gateway Service
+
+    Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization''s on-premises IT environment and the Amazon Web Services storage infrastructure.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -125,7 +127,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: DescribeTapes
-      description: Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a <code>TapeARN</code> is not specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only supported in the tape gateway type.
+      description: Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a TapeARN is not specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only supported in the tape gateway type.
       responses:
         '200':
           description: Success
@@ -173,51 +175,39 @@ paths:
           - StorageGateway_20130630.DescribeTapes
       tags:
       - '#X Amz Target=StorageGateway 20130630.DescribeTapes'
+      summary: Describe tapes
+      x-summary-source: derived
 components:
   schemas:
-    InternalServerError: {}
-    Tapes:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tape'
-    KMSKey:
-      type: string
-      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
-      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
-      minLength: 7
-      maxLength: 2048
     DoubleObject:
       type: number
       format: double
-    DescribeTapesOutput:
+    Time:
+      type: string
+      format: date-time
+    DescribeTapesInput:
       type: object
-      example:
-        Marker: '1'
-        Tapes:
-        - TapeARN: arn:aws:storagegateway:us-east-1:999999999999:tape/TEST04A2A1
-          TapeBarcode: TEST04A2A1
-          TapeSizeInBytes: 107374182400
-          TapeStatus: AVAILABLE
-        - TapeARN: arn:aws:storagegateway:us-east-1:999999999999:tape/TEST05A2A0
-          TapeBarcode: TEST05A2A0
-          TapeSizeInBytes: 107374182400
-          TapeStatus: AVAILABLE
+      required:
+      - GatewayARN
+      title: DescribeTapesInput
       properties:
-        Tapes:
+        GatewayARN:
+          $ref: '#/components/schemas/GatewayARN'
+        TapeARNs:
           allOf:
-          - $ref: '#/components/schemas/Tapes'
-          - description: An array of virtual tape descriptions.
+          - $ref: '#/components/schemas/TapeARNs'
+          - description: Specifies one or more unique Amazon Resource Names (ARNs) that represent the virtual tapes you want to describe. If this parameter is not specified, Tape gateway returns a description of all virtual tapes associated with the specified gateway.
         Marker:
           allOf:
           - $ref: '#/components/schemas/Marker'
-          - description: <p>An opaque string that can be used as part of a subsequent <code>DescribeTapes</code> call to retrieve the next page of results.</p> <p>If a response does not contain a marker, then there are no more results to be retrieved.</p>
-      description: DescribeTapesOutput
-    PositiveIntObject:
-      type: integer
-      minimum: 1
-    TapeARN:
+          - description: <p>A marker value, obtained in a previous call to <code>DescribeTapes</code>. This marker indicates which page of results to retrieve.</p> <p>If not specified, the first page of results is retrieved.</p>
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PositiveIntObject'
+          - description: <p>Specifies that the number of virtual tapes described be limited to the specified number.</p> <note> <p>Amazon Web Services may impose its own limit, if this field is not set.</p> </note>
+      description: DescribeTapesInput
+    VTLDeviceARN:
       type: string
-      pattern: ^arn:(aws|aws-cn|aws-us-gov):storagegateway:[a-z\-0-9]+:[0-9]+:tape\/[0-9A-Z]{5,16}$
       minLength: 50
       maxLength: 500
     Tape:
@@ -280,63 +270,77 @@ components:
       type: string
       minLength: 1
       maxLength: 100
-    DescribeTapesInput:
-      type: object
-      required:
-      - GatewayARN
-      title: DescribeTapesInput
-      properties:
-        GatewayARN:
-          $ref: '#/components/schemas/GatewayARN'
-        TapeARNs:
-          allOf:
-          - $ref: '#/components/schemas/TapeARNs'
-          - description: Specifies one or more unique Amazon Resource Names (ARNs) that represent the virtual tapes you want to describe. If this parameter is not specified, Tape gateway returns a description of all virtual tapes associated with the specified gateway.
-        Marker:
-          allOf:
-          - $ref: '#/components/schemas/Marker'
-          - description: <p>A marker value, obtained in a previous call to <code>DescribeTapes</code>. This marker indicates which page of results to retrieve.</p> <p>If not specified, the first page of results is retrieved.</p>
-        Limit:
-          allOf:
-          - $ref: '#/components/schemas/PositiveIntObject'
-          - description: <p>Specifies that the number of virtual tapes described be limited to the specified number.</p> <note> <p>Amazon Web Services may impose its own limit, if this field is not set.</p> </note>
-      description: DescribeTapesInput
-    TapeUsage:
-      type: integer
-    TapeSize:
-      type: integer
+    Tapes:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tape'
     TapeARNs:
       type: array
       description: The Amazon Resource Name (ARN) of each of the tapes you want to list. If you don't specify a tape ARN, the response lists all tapes in both your VTL and VTS.
       items:
         $ref: '#/components/schemas/TapeARN'
-    VTLDeviceARN:
+    DescribeTapesOutput:
+      type: object
+      example:
+        Marker: '1'
+        Tapes:
+        - TapeARN: arn:aws:storagegateway:us-east-1:999999999999:tape/TEST04A2A1
+          TapeBarcode: TEST04A2A1
+          TapeSizeInBytes: 107374182400
+          TapeStatus: AVAILABLE
+        - TapeARN: arn:aws:storagegateway:us-east-1:999999999999:tape/TEST05A2A0
+          TapeBarcode: TEST05A2A0
+          TapeSizeInBytes: 107374182400
+          TapeStatus: AVAILABLE
+      properties:
+        Tapes:
+          allOf:
+          - $ref: '#/components/schemas/Tapes'
+          - description: An array of virtual tape descriptions.
+        Marker:
+          allOf:
+          - $ref: '#/components/schemas/Marker'
+          - description: <p>An opaque string that can be used as part of a subsequent <code>DescribeTapes</code> call to retrieve the next page of results.</p> <p>If a response does not contain a marker, then there are no more results to be retrieved.</p>
+      description: DescribeTapesOutput
+    TapeStatus:
       type: string
-      minLength: 50
-      maxLength: 500
-    InvalidGatewayRequestException: {}
+    InternalServerError: {}
+    KMSKey:
+      type: string
+      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
+      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
+      minLength: 7
+      maxLength: 2048
+    PositiveIntObject:
+      type: integer
+      minimum: 1
     GatewayARN:
       type: string
       description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
       minLength: 50
       maxLength: 500
-    Time:
+    TapeSize:
+      type: integer
+    Marker:
       type: string
-      format: date-time
+      minLength: 1
+      maxLength: 1000
+    InvalidGatewayRequestException: {}
     TapeBarcode:
       type: string
       pattern: ^[A-Z0-9]*$
       minLength: 5
       maxLength: 16
-    Marker:
+    TapeARN:
       type: string
-      minLength: 1
-      maxLength: 1000
-    TapeStatus:
-      type: string
+      pattern: ^arn:(aws|aws-cn|aws-us-gov):storagegateway:[a-z\-0-9]+:[0-9]+:tape\/[0-9A-Z]{5,16}$
+      minLength: 50
+      maxLength: 500
+    TapeUsage:
+      type: integer
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -347,32 +351,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

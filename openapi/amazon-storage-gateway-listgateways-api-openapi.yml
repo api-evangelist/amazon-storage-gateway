@@ -59,6 +59,15 @@ paths:
       - '#ListGateways'
 components:
   schemas:
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
     ListGatewaysInput:
       type: object
       properties:
@@ -78,15 +87,6 @@ components:
         GatewayOperationalState:
           type: string
         GatewayName:
-          type: string
-    ListGatewaysOutput:
-      type: object
-      properties:
-        Gateways:
-          type: array
-          items:
-            $ref: '#/components/schemas/GatewayInfo'
-        Marker:
           type: string
   securitySchemes:
     sigv4:

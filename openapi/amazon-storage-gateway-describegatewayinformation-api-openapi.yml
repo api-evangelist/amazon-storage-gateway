@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: 'Amazon Storage Gateway REST #Describe Gateway Information API'
+  title: 'Amazon Storage Gateway REST #Describe Gateway Information…'
   description: AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. This API enables management of gateways, volumes, virtual tapes, file shares, and cached storage resources.
   version: '2013-06-30'
   contact:

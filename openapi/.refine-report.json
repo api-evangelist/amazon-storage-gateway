@@ -289,7 +289,8 @@
     "amazon-storage-gateway.yaml: declared missing tag: #X Amz Target=StorageGateway 20130630.UpdateSMBLocalGroups",
     "amazon-storage-gateway.yaml: declared missing tag: #X Amz Target=StorageGateway 20130630.UpdateSMBSecurityStrategy",
     "amazon-storage-gateway.yaml: declared missing tag: #X Amz Target=StorageGateway 20130630.UpdateSnapshotSchedule",
-    "amazon-storage-gateway.yaml: declared missing tag: #X Amz Target=StorageGateway 20130630.UpdateVTLDeviceType"
+    "amazon-storage-gateway.yaml: declared missing tag: #X Amz Target=StorageGateway 20130630.UpdateVTLDeviceType",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",

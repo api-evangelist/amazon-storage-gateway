@@ -2,8 +2,10 @@ openapi: 3.2.0
 info:
   version: '2013-06-30'
   x-release: v4
-  title: 'AWS Storage Gateway #X Amz Target=StorageGateway 20130630.CreateNFSFileShare API'
-  description: '<fullname>Storage Gateway Service</fullname> <p>Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization''s on-premises IT environment and the Amazon Web Services storage infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost effective backup and rapid disaster recovery.</p> <p>Use the following links to get started using the <i>Storage Gateway Service API Reference</i>:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">Storage Gateway required request headers</a>: Describes the required headers that you must send with every POST request to Storage Gateway.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing requests</a>: Storage Gateway requires that you authenticate every request you send; this topic describes how sign such a request.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error responses</a>: Provides reference information about Storage Gateway errors.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in Storage Gateway</a>: Contains detailed descriptions of all Storage Gateway operations, their request parameters, response elements, possible errors, and examples of requests and responses.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a list of each Amazon Web Services Region and the endpoints available for use with Storage Gateway.</p> </li> </ul> <note> <p>Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API, you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as expected.</p> </note> <important> <p>IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format. Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information, see <a href="http://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS resource IDs</a>.</p> <p>For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the following:</p> <p> <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>.</p> <p>A snapshot ID with the longer ID format looks like the following: <code>snap-78e226633445566ee</code>.</p> <p>For more information, see <a href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer Storage Gateway volume and snapshot IDs coming in 2016</a>.</p> </important>'
+  title: 'AWS Storage Gateway #X Amz Target=StorageGateway…'
+  description: 'Storage Gateway Service
+
+    Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization''s on-premises IT environment and the Amazon Web Services storage infrastructure.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -125,7 +127,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateNFSFileShare
-      description: <p>Creates a Network File System (NFS) file share on an existing S3 File Gateway. In Storage Gateway, a file share is a file system mount point backed by Amazon S3 cloud storage. Storage Gateway exposes file shares using an NFS interface. This operation is only supported for S3 File Gateways.</p> <important> <p>S3 File gateway requires Security Token Service (Amazon Web Services STS) to be activated to enable you to create a file share. Make sure Amazon Web Services STS is activated in the Amazon Web Services Region you are creating your S3 File Gateway in. If Amazon Web Services STS is not activated in the Amazon Web Services Region, activate it. For information about how to activate Amazon Web Services STS, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Identity and Access Management User Guide</i>.</p> <p>S3 File Gateways do not support creating hard or symbolic links on a file share.</p> </important>
+      description: 'Creates a Network File System (NFS) file share on an existing S3 File Gateway. In Storage Gateway, a file share is a file system mount point backed by Amazon S3 cloud storage. Storage Gateway exposes file shares using an NFS interface. This operation is only supported for S3 File Gateways.
+
+
+        S3 File gateway requires Security Token Service (Amazon Web Services STS) to be activated to enable you to create a file share. Make sure Amazon Web Services STS is activated in the Amazon Web Services Region you are creating your S3 File Gateway in. If Amazon Web Services STS is not activated in the Amazon Web Services Region, activate it. For information about how to activate Amazon Web Services STS, see Activating and deactivating Amazon Web Services STS in an Amazon Web Services Region in the Identity and Access Management User Guide.
+
+
+        S3 File Gateways do not support creating hard or symbolic links on a file share.'
       responses:
         '200':
           description: Success
@@ -161,23 +169,28 @@ paths:
           - StorageGateway_20130630.CreateNFSFileShare
       tags:
       - '#X Amz Target=StorageGateway 20130630.CreateNFSFileShare'
+      summary: Create NFS file share
+      x-summary-source: derived
 components:
   schemas:
-    InternalServerError: {}
-    IPV4AddressCIDR:
+    CreateNFSFileShareOutput:
+      type: object
+      properties:
+        FileShareARN:
+          allOf:
+          - $ref: '#/components/schemas/FileShareARN'
+          - description: The Amazon Resource Name (ARN) of the newly created file share.
+      description: CreateNFSFileShareOutput
+    StorageClass:
       type: string
-      pattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))?$
-    Squash:
-      type: string
-      description: '<p>The user mapped to anonymous user. Valid options are the following:</p> <ul> <li> <p> <code>RootSquash</code>: Only root is mapped to anonymous user.</p> </li> <li> <p> <code>NoSquash</code>: No one is mapped to anonymous user.</p> </li> <li> <p> <code>AllSquash</code>: Everyone is mapped to anonymous user.</p> </li> </ul>'
+      description: <p/>
       minLength: 5
-      maxLength: 15
-    KMSKey:
+      maxLength: 50
+    TagKey:
       type: string
-      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
-      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
-      minLength: 7
-      maxLength: 2048
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
     CacheAttributes:
       type: object
       properties:
@@ -186,34 +199,88 @@ components:
           - $ref: '#/components/schemas/CacheStaleTimeoutInSeconds'
           - description: <p>Refreshes a file share's cache by using Time To Live (TTL). TTL is the length of time since the last refresh after which access to the directory would cause the file gateway to first refresh that directory's contents from the Amazon S3 bucket or Amazon FSx file system. The TTL duration is in seconds.</p> <p>Valid Values:0, 300 to 2,592,000 seconds (5 minutes to 30 days)</p>
       description: The refresh cache information for the file share or FSx file systems.
-    ObjectACL:
+    Boolean:
+      type: boolean
+    FileShareName:
       type: string
-      enum:
-      - private
-      - public-read
-      - public-read-write
-      - authenticated-read
-      - bucket-owner-read
-      - bucket-owner-full-control
-      - aws-exec-read
-      description: A value that sets the access control list (ACL) permission for objects in the S3 bucket that an S3 File Gateway puts objects into. The default value is <code>private</code>.
-    AuditDestinationARN:
+      minLength: 1
+      maxLength: 255
+    TagValue:
       type: string
-      maxLength: 1024
-    ClientToken:
+      maxLength: 256
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: Tag key. The key can't start with aws:.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: Value of the tag key.
+      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
+    Squash:
       type: string
+      description: '<p>The user mapped to anonymous user. Valid options are the following:</p> <ul> <li> <p> <code>RootSquash</code>: Only root is mapped to anonymous user.</p> </li> <li> <p> <code>NoSquash</code>: No one is mapped to anonymous user.</p> </li> <li> <p> <code>AllSquash</code>: Everyone is mapped to anonymous user.</p> </li> </ul>'
       minLength: 5
-      maxLength: 100
+      maxLength: 15
     PermissionMode:
       type: string
       pattern: ^[0-7]{4}$
       minLength: 1
       maxLength: 4
+    PermissionId:
+      type: integer
+      minimum: 0
+      maximum: 4294967294
+    NFSFileShareDefaults:
+      type: object
+      properties:
+        FileMode:
+          allOf:
+          - $ref: '#/components/schemas/PermissionMode'
+          - description: The Unix file mode in the form "nnnn". For example, <code>0666</code> represents the default file mode inside the file share. The default value is <code>0666</code>.
+        DirectoryMode:
+          allOf:
+          - $ref: '#/components/schemas/PermissionMode'
+          - description: The Unix directory mode in the form "nnnn". For example, <code>0666</code> represents the default access mode for all directories inside the file share. The default value is <code>0777</code>.
+        GroupId:
+          allOf:
+          - $ref: '#/components/schemas/PermissionId'
+          - description: The default group ID for the file share (unless the files have another group ID specified). The default value is <code>nfsnobody</code>.
+        OwnerId:
+          allOf:
+          - $ref: '#/components/schemas/PermissionId'
+          - description: The default owner ID for files in the file share (unless the files have another owner ID specified). The default value is <code>nfsnobody</code>.
+      description: Describes Network File System (NFS) file share default values. Files and folders stored as Amazon S3 objects in S3 buckets don't, by default, have Unix file permissions assigned to them. Upon discovery in an S3 bucket by Storage Gateway, the S3 objects that represent files and folders are assigned these default Unix permissions. This operation is only supported for S3 File Gateways.
     DNSHostName:
       type: string
       pattern: ^(([a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9\-]*[A-Za-z0-9])$
       minLength: 1
       maxLength: 255
+    Tags:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    InternalServerError: {}
+    AuditDestinationARN:
+      type: string
+      maxLength: 1024
+    IPV4AddressCIDR:
+      type: string
+      pattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))?$
+    RegionId:
+      type: string
+      minLength: 1
+      maxLength: 25
+    ClientToken:
+      type: string
+      minLength: 5
+      maxLength: 100
     CreateNFSFileShareInput:
       type: object
       required:
@@ -308,109 +375,18 @@ components:
           - $ref: '#/components/schemas/AuditDestinationARN'
           - description: The Amazon Resource Name (ARN) of the storage used for audit logs.
       description: CreateNFSFileShareInput
-    PermissionId:
-      type: integer
-      minimum: 0
-      maximum: 4294967294
-    NFSFileShareDefaults:
-      type: object
-      properties:
-        FileMode:
-          allOf:
-          - $ref: '#/components/schemas/PermissionMode'
-          - description: The Unix file mode in the form "nnnn". For example, <code>0666</code> represents the default file mode inside the file share. The default value is <code>0666</code>.
-        DirectoryMode:
-          allOf:
-          - $ref: '#/components/schemas/PermissionMode'
-          - description: The Unix directory mode in the form "nnnn". For example, <code>0666</code> represents the default access mode for all directories inside the file share. The default value is <code>0777</code>.
-        GroupId:
-          allOf:
-          - $ref: '#/components/schemas/PermissionId'
-          - description: The default group ID for the file share (unless the files have another group ID specified). The default value is <code>nfsnobody</code>.
-        OwnerId:
-          allOf:
-          - $ref: '#/components/schemas/PermissionId'
-          - description: The default owner ID for files in the file share (unless the files have another owner ID specified). The default value is <code>nfsnobody</code>.
-      description: Describes Network File System (NFS) file share default values. Files and folders stored as Amazon S3 objects in S3 buckets don't, by default, have Unix file permissions assigned to them. Upon discovery in an S3 bucket by Storage Gateway, the S3 objects that represent files and folders are assigned these default Unix permissions. This operation is only supported for S3 File Gateways.
-    InvalidGatewayRequestException: {}
-    StorageClass:
-      type: string
-      description: <p/>
-      minLength: 5
-      maxLength: 50
-    TagValue:
-      type: string
-      maxLength: 256
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    CreateNFSFileShareOutput:
-      type: object
-      properties:
-        FileShareARN:
-          allOf:
-          - $ref: '#/components/schemas/FileShareARN'
-          - description: The Amazon Resource Name (ARN) of the newly created file share.
-      description: CreateNFSFileShareOutput
-    FileShareName:
-      type: string
-      minLength: 1
-      maxLength: 255
-    GatewayARN:
-      type: string
-      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
-      minLength: 50
-      maxLength: 500
-    Boolean:
-      type: boolean
     Role:
       type: string
       pattern: ^arn:(aws|aws-cn|aws-us-gov):iam::([0-9]+):role/(\S+)$
       description: The ARN of the IAM role that an S3 File Gateway assumes when it accesses the underlying storage.
       minLength: 20
       maxLength: 2048
-    Tags:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: Tag key. The key can't start with aws:.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: Value of the tag key.
-      description: 'A key-value pair that helps you manage, filter, and search for your resource. Allowed characters: letters, white space, and numbers, representable in UTF-8, and the following characters: + - = . _ : /.'
-    RegionId:
+    KMSKey:
       type: string
-      minLength: 1
-      maxLength: 25
-    FileShareARN:
-      type: string
-      description: The Amazon Resource Name (ARN) of the file share.
-      minLength: 50
-      maxLength: 500
-    LocationARN:
-      type: string
-      description: <p>A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note> <p>You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following examples.</p> <p>Bucket ARN:</p> <p> <code>arn:aws:s3:::my-bucket/prefix/</code> </p> <p>Access point ARN:</p> <p> <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code> </p> <p>If you specify an access point, the bucket policy must be configured to delegate access control to the access point. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control">Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Access point alias:</p> <p> <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code> </p> </note>
-      minLength: 16
-      maxLength: 1400
-    NotificationPolicy:
-      type: string
-      pattern: ^\{[\w\s:\{\}\[\]"]*}$
-      minLength: 2
-      maxLength: 100
-    CacheStaleTimeoutInSeconds:
-      type: integer
+      pattern: (^arn:(aws|aws-cn|aws-us-gov):kms:([a-zA-Z0-9-]+):([0-9]+):(key|alias)/(\S+)$)|(^alias/(\S+)$)
+      description: The Amazon Resource Name (ARN) of a symmetric customer master key (CMK) used for Amazon S3 server-side encryption. Storage Gateway does not support asymmetric CMKs. This value can only be set when <code>KMSEncrypted</code> is <code>true</code>. Optional.
+      minLength: 7
+      maxLength: 2048
     FileShareClientList:
       type: array
       description: The list of clients that are allowed to access the S3 File Gateway. The list must contain either valid IP addresses or valid CIDR blocks.
@@ -418,9 +394,43 @@ components:
         $ref: '#/components/schemas/IPV4AddressCIDR'
       minItems: 1
       maxItems: 100
+    ObjectACL:
+      type: string
+      enum:
+      - private
+      - public-read
+      - public-read-write
+      - authenticated-read
+      - bucket-owner-read
+      - bucket-owner-full-control
+      - aws-exec-read
+      description: A value that sets the access control list (ACL) permission for objects in the S3 bucket that an S3 File Gateway puts objects into. The default value is <code>private</code>.
+    LocationARN:
+      type: string
+      description: <p>A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note> <p>You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following examples.</p> <p>Bucket ARN:</p> <p> <code>arn:aws:s3:::my-bucket/prefix/</code> </p> <p>Access point ARN:</p> <p> <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code> </p> <p>If you specify an access point, the bucket policy must be configured to delegate access control to the access point. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control">Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Access point alias:</p> <p> <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code> </p> </note>
+      minLength: 16
+      maxLength: 1400
+    GatewayARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
+      minLength: 50
+      maxLength: 500
+    FileShareARN:
+      type: string
+      description: The Amazon Resource Name (ARN) of the file share.
+      minLength: 50
+      maxLength: 500
+    NotificationPolicy:
+      type: string
+      pattern: ^\{[\w\s:\{\}\[\]"]*}$
+      minLength: 2
+      maxLength: 100
+    InvalidGatewayRequestException: {}
+    CacheStaleTimeoutInSeconds:
+      type: integer
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -431,32 +441,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
