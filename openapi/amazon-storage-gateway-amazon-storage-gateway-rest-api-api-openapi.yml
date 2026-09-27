@@ -58,10 +58,142 @@ paths:
       x-amz-target: StorageGateway_20130630.ActivateGateway
       tags:
       - Amazon Storage Gateway REST API
+  /#ListGateways:
+    post:
+      summary: Amazon Storage Gateway List Gateways
+      description: Lists gateways owned by an AWS account in an AWS Region.
+      operationId: listGateways
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListGatewaysInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListGatewaysOutput'
+      x-amz-target: StorageGateway_20130630.ListGateways
+      tags:
+      - Amazon Storage Gateway REST API
+  /#DescribeGatewayInformation:
+    post:
+      summary: Amazon Storage Gateway Describe Gateway Information
+      description: Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version.
+      operationId: describeGatewayInformation
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/DescribeGatewayInformationInput'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeGatewayInformationOutput'
+      x-amz-target: StorageGateway_20130630.DescribeGatewayInformation
+      tags:
+      - Amazon Storage Gateway REST API
+  /#CreateNFSFileShare:
+    post:
+      summary: Amazon Storage Gateway Create NFS File Share
+      description: Creates a Network File System (NFS) file share on an existing S3 File Gateway.
+      operationId: createNFSFileShare
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateNFSFileShareInput'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: StorageGateway_20130630.CreateNFSFileShare
+      tags:
+      - Amazon Storage Gateway REST API
+  /#ListVolumes:
+    post:
+      summary: Amazon Storage Gateway List Volumes
+      description: Lists the iSCSI stored volumes of a gateway.
+      operationId: listVolumes
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListVolumesInput'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: StorageGateway_20130630.ListVolumes
+      tags:
+      - Amazon Storage Gateway REST API
 components:
   schemas:
-    ActivateGatewayOutput:
+    ListVolumesInput:
       type: object
+      properties:
+        GatewayARN:
+          type: string
+        Marker:
+          type: string
+        Limit:
+          type: integer
+    DescribeGatewayInformationOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        GatewayId:
+          type: string
+        GatewayName:
+          type: string
+        GatewayTimezone:
+          type: string
+        GatewayState:
+          type: string
+        GatewayType:
+          type: string
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
+    ListGatewaysInput:
+      type: object
+      properties:
+        Marker:
+          type: string
+        Limit:
+          type: integer
+    CreateNFSFileShareInput:
+      type: object
+      required:
+      - ClientToken
+      - GatewayARN
+      - Role
+      - LocationARN
+      properties:
+        ClientToken:
+          type: string
+        GatewayARN:
+          type: string
+        Role:
+          type: string
+        LocationARN:
+          type: string
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+      - GatewayARN
       properties:
         GatewayARN:
           type: string
@@ -93,6 +225,24 @@ components:
           - VTL
           - S3_FILE_GATEWAY
           - FSX_SMB
+    ActivateGatewayOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+    GatewayInfo:
+      type: object
+      properties:
+        GatewayId:
+          type: string
+        GatewayARN:
+          type: string
+        GatewayType:
+          type: string
+        GatewayOperationalState:
+          type: string
+        GatewayName:
+          type: string
   securitySchemes:
     sigv4:
       type: apiKey
