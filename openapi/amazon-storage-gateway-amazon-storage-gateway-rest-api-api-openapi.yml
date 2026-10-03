@@ -143,37 +143,6 @@ components:
           type: string
         Limit:
           type: integer
-    DescribeGatewayInformationOutput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
-        GatewayId:
-          type: string
-        GatewayName:
-          type: string
-        GatewayTimezone:
-          type: string
-        GatewayState:
-          type: string
-        GatewayType:
-          type: string
-    ListGatewaysOutput:
-      type: object
-      properties:
-        Gateways:
-          type: array
-          items:
-            $ref: '#/components/schemas/GatewayInfo'
-        Marker:
-          type: string
-    ListGatewaysInput:
-      type: object
-      properties:
-        Marker:
-          type: string
-        Limit:
-          type: integer
     CreateNFSFileShareInput:
       type: object
       required:
@@ -189,13 +158,6 @@ components:
         Role:
           type: string
         LocationARN:
-          type: string
-    DescribeGatewayInformationInput:
-      type: object
-      required:
-      - GatewayARN
-      properties:
-        GatewayARN:
           type: string
     ActivateGatewayInput:
       type: object
@@ -225,10 +187,48 @@ components:
           - VTL
           - S3_FILE_GATEWAY
           - FSX_SMB
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
     ActivateGatewayOutput:
       type: object
       properties:
         GatewayARN:
+          type: string
+    ListGatewaysInput:
+      type: object
+      properties:
+        Marker:
+          type: string
+        Limit:
+          type: integer
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+      - GatewayARN
+      properties:
+        GatewayARN:
+          type: string
+    DescribeGatewayInformationOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        GatewayId:
+          type: string
+        GatewayName:
+          type: string
+        GatewayTimezone:
+          type: string
+        GatewayState:
+          type: string
+        GatewayType:
           type: string
     GatewayInfo:
       type: object
