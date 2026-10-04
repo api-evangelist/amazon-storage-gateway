@@ -134,15 +134,6 @@ paths:
       - Amazon Storage Gateway REST API
 components:
   schemas:
-    ListVolumesInput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
-        Marker:
-          type: string
-        Limit:
-          type: integer
     CreateNFSFileShareInput:
       type: object
       required:
@@ -159,6 +150,20 @@ components:
           type: string
         LocationARN:
           type: string
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+      - GatewayARN
+      properties:
+        GatewayARN:
+          type: string
+    ListGatewaysInput:
+      type: object
+      properties:
+        Marker:
+          type: string
+        Limit:
+          type: integer
     ActivateGatewayInput:
       type: object
       required:
@@ -187,34 +192,6 @@ components:
           - VTL
           - S3_FILE_GATEWAY
           - FSX_SMB
-    ListGatewaysOutput:
-      type: object
-      properties:
-        Gateways:
-          type: array
-          items:
-            $ref: '#/components/schemas/GatewayInfo'
-        Marker:
-          type: string
-    ActivateGatewayOutput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
-    ListGatewaysInput:
-      type: object
-      properties:
-        Marker:
-          type: string
-        Limit:
-          type: integer
-    DescribeGatewayInformationInput:
-      type: object
-      required:
-      - GatewayARN
-      properties:
-        GatewayARN:
-          type: string
     DescribeGatewayInformationOutput:
       type: object
       properties:
@@ -230,6 +207,24 @@ components:
           type: string
         GatewayType:
           type: string
+    ListVolumesInput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        Marker:
+          type: string
+        Limit:
+          type: integer
+    ListGatewaysOutput:
+      type: object
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
     GatewayInfo:
       type: object
       properties:
@@ -242,6 +237,11 @@ components:
         GatewayOperationalState:
           type: string
         GatewayName:
+          type: string
+    ActivateGatewayOutput:
+      type: object
+      properties:
+        GatewayARN:
           type: string
   securitySchemes:
     sigv4:
