@@ -74,6 +74,8 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/storagegateway/faqs/
 common:
+- type: Pricing
+  url: https://aws.amazon.com/storagegateway/pricing/
 - type: Plans
   url: plans/amazon-storage-gateway-plans-pricing.yml
 - type: Website
