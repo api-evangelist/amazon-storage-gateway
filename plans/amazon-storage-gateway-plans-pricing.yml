@@ -35,3 +35,28 @@ plans:
   currency: USD
   period: per-use
   unit: per GB
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - data
+  plans:
+  - name: Data written to AWS per-gateway monthly cap
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Data Transfer OUT to an Amazon EC2-based gateway appliance in the same region
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
