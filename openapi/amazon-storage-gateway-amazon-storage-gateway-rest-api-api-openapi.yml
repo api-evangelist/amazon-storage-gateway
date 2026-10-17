@@ -134,6 +134,34 @@ paths:
       - Amazon Storage Gateway REST API
 components:
   schemas:
+    DescribeGatewayInformationOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+        GatewayId:
+          type: string
+        GatewayName:
+          type: string
+        GatewayTimezone:
+          type: string
+        GatewayState:
+          type: string
+        GatewayType:
+          type: string
+    GatewayInfo:
+      type: object
+      properties:
+        GatewayId:
+          type: string
+        GatewayARN:
+          type: string
+        GatewayType:
+          type: string
+        GatewayOperationalState:
+          type: string
+        GatewayName:
+          type: string
     CreateNFSFileShareInput:
       type: object
       required:
@@ -150,13 +178,24 @@ components:
           type: string
         LocationARN:
           type: string
-    DescribeGatewayInformationInput:
+    ListGatewaysOutput:
       type: object
-      required:
-      - GatewayARN
+      properties:
+        Gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/GatewayInfo'
+        Marker:
+          type: string
+    ListVolumesInput:
+      type: object
       properties:
         GatewayARN:
           type: string
+        Marker:
+          type: string
+        Limit:
+          type: integer
     ListGatewaysInput:
       type: object
       properties:
@@ -164,6 +203,18 @@ components:
           type: string
         Limit:
           type: integer
+    ActivateGatewayOutput:
+      type: object
+      properties:
+        GatewayARN:
+          type: string
+    DescribeGatewayInformationInput:
+      type: object
+      required:
+      - GatewayARN
+      properties:
+        GatewayARN:
+          type: string
     ActivateGatewayInput:
       type: object
       required:
@@ -192,57 +243,6 @@ components:
           - VTL
           - S3_FILE_GATEWAY
           - FSX_SMB
-    DescribeGatewayInformationOutput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
-        GatewayId:
-          type: string
-        GatewayName:
-          type: string
-        GatewayTimezone:
-          type: string
-        GatewayState:
-          type: string
-        GatewayType:
-          type: string
-    ListVolumesInput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
-        Marker:
-          type: string
-        Limit:
-          type: integer
-    ListGatewaysOutput:
-      type: object
-      properties:
-        Gateways:
-          type: array
-          items:
-            $ref: '#/components/schemas/GatewayInfo'
-        Marker:
-          type: string
-    GatewayInfo:
-      type: object
-      properties:
-        GatewayId:
-          type: string
-        GatewayARN:
-          type: string
-        GatewayType:
-          type: string
-        GatewayOperationalState:
-          type: string
-        GatewayName:
-          type: string
-    ActivateGatewayOutput:
-      type: object
-      properties:
-        GatewayARN:
-          type: string
   securitySchemes:
     sigv4:
       type: apiKey
