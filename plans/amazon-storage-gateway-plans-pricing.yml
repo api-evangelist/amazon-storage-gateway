@@ -1,0 +1,62 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://aws.amazon.com/storagegateway/pricing/
+sources:
+- https://aws.amazon.com/storagegateway/pricing/
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
+published: true
+note: Most rate values on the page are unrendered pricing templates (e.g. {priceOf!...}), so per-GB storage,
+  request, and data transfer prices are not visible. Only the $125.00/gateway/month cap, the free 100
+  GB allowance, and the $0.00 per GB same-region EC2 transfer are numerically stated. Page also says 'Contact
+  sales for custom pricing in unusual situations.'
+plan_count: 2
+currency: USD
+plans:
+- name: Data written to AWS per-gateway monthly cap
+  price_text: Up to a maximum of $125.00 per gateway per month.
+  price: 125
+  currency: USD
+  period: month
+  unit: per gateway
+  included_quota: The first 100 GB written to AWS per account is free.
+- name: Data Transfer OUT to an Amazon EC2-based gateway appliance in the same region
+  price_text: $0.00 per GB
+  price: 0
+  currency: USD
+  period: per-use
+  unit: per GB
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - data
+  plans:
+  - name: Data written to AWS per-gateway monthly cap
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Data Transfer OUT to an Amazon EC2-based gateway appliance in the same region
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
