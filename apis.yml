@@ -1,7 +1,8 @@
 name: Amazon Storage Gateway
-description: AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to
-  virtually unlimited cloud storage. It seamlessly connects on-premises environments to AWS cloud storage,
-  providing low-latency data access with local caching.
+
+description: AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage. It seamlessly
+  connects on-premises environments to AWS cloud storage, providing low-latency data access with local caching.
+
 deliveryModel:
   model: saas
   open_source: false
@@ -14,7 +15,9 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 specificationVersion: '0.23'
+
 accessModel:
   pricing: freemium
   onboarding: self-serve
@@ -30,77 +33,87 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+
 url: https://aws.amazon.com/storagegateway/
+
 created: '2024-01-15'
+
 modified: '2026-09-16'
-apis:
-- aid: amazon-storage-gateway:amazon-storage-gateway-amazon-storage-gateway-rest-api-api
-  name: Amazon Storage Gateway Amazon Storage Gateway REST API
-  description: >-
-    The Amazon Storage Gateway REST API API from Amazon Storage Gateway — 1 operation(s) for amazon storage
-    gateway rest api.
-  humanURL: https://aws.amazon.com/storagegateway/
-  baseURL: https://storagegateway.amazonaws.com
-  tags:
-  - Amazon Storage Gateway REST API
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
-  - type: GettingStarted
-    url: https://aws.amazon.com/storagegateway/
-  - type: Pricing
-    url: https://aws.amazon.com/storagegateway/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/storagegateway/faqs/
-- aid: amazon-storage-gateway:amazon-storage-gateway-aws-storage-gateway-api
-  name: Amazon Storage Gateway AWS Storage Gateway API
-  description: >-
-    The AWS Storage Gateway API from Amazon Storage Gateway — 90 operation(s) for aws storage gateway.
-  humanURL: https://aws.amazon.com/storagegateway/
-  baseURL: https://storagegateway.amazonaws.com
-  tags:
-  - AWS Storage Gateway
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-storage-gateway-aws-storage-gateway-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
-  - type: GettingStarted
-    url: https://aws.amazon.com/storagegateway/
-  - type: Pricing
-    url: https://aws.amazon.com/storagegateway/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/storagegateway/faqs/
-- aid: amazon-storage-gateway:amazon-storage-gateway-cache-report-api
-  name: Amazon Storage Gateway Storage Gateway Cache Report API
-  description: >-
-    The Storage Gateway Cache Report API from Amazon Storage Gateway — 5 operation(s) for storage gateway
-    cache report.
-  humanURL: https://aws.amazon.com/storagegateway/
-  baseURL: https://storagegateway.amazonaws.com
-  tags:
-  - Storage Gateway Cache Report
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-storage-gateway-cache-report-api-openapi.yml
-- aid: amazon-storage-gateway:amazon-storage-gateway-operations-api
-  name: Amazon Storage Gateway Storage Gateway Operations API
-  description: >-
-    The Storage Gateway Operations API from Amazon Storage Gateway — 1 operation(s) for storage gateway
-    operations.
-  humanURL: https://aws.amazon.com/storagegateway/
-  baseURL: https://storagegateway.amazonaws.com
-  tags:
-  - Storage Gateway Operations
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-storage-gateway-operations-api-openapi.yml
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+
+tags:
+- Amazon Web Services
+- Backup
+- File Storage
+- Gateways
+- Hybrid Cloud
+- Storage
+tags_raw:
+- AWS
+- Backup
+- File Storage
+- Gateways
+- Hybrid Cloud
+- Storage
+
+kind: company
+
 common:
+- type: Spectral
+  url: rules/amazon-storage-gateway-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-storage-gateway-rules.yml
+- type: Spectral
+  url: rules/amazon-storage-gateway-jsonschema-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/amazon-storage-gateway-context.jsonld
+- type: Vocabulary
+  url: vocabulary/amazon-storage-gateway-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-storage-gateway-data-model.yml
+- type: CLI
+  url: cli/amazon-storage-gateway-cli.yml
+- type: Idempotency
+  url: conventions/amazon-storage-gateway-conventions.yml
+- type: Conventions
+  url: conventions/amazon-storage-gateway-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Lifecycle
+  url: lifecycle/amazon-storage-gateway-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-storage-gateway-error-codes.yml
+- type: ErrorCatalog
+  url: errors/amazon-storage-gateway-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-storage-gateway-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-storage-gateway-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-storage-gateway-security.txt
+- type: WellKnown
+  url: well-known/amazon-storage-gateway-well-known.yml
+- type: Hosts
+  url: hosts/amazon-storage-gateway-hosts.yml
+- type: Vendors
+  url: vendors/amazon-storage-gateway-vendors.yml
+- type: SDKs
+  url: packages/amazon-storage-gateway-packages.yml
+- type: Packages
+  url: packages/amazon-storage-gateway-packages.yml
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: GettingStarted
+  url: https://developer.amazon.com/frustration-free-setup
 - type: RateLimits
   url: rate-limits/amazon-storage-gateway-rate-limits.yml
 - type: FinOps
@@ -190,6 +203,123 @@ common:
     description: Audit all Storage Gateway API calls for compliance.
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-storage-gateway-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-storage-gateway-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-storage-gateway-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-storage-gateway-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-storage-gateway-ai-preferences.yml
+
+apis:
+- aid: amazon-storage-gateway:amazon-storage-gateway-amazon-storage-gateway-rest-api-api
+  name: Amazon Storage Gateway Amazon Storage Gateway REST API
+  description: The Amazon Storage Gateway REST API API from Amazon Storage Gateway — 1 operation(s) for amazon storage gateway rest api.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - Amazon Storage Gateway REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-create-nfsfile-share-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-describe-gateway-information-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-activate-gateway-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-list-volumes-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-list-volumes-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-list-gateways-output-schema.json
+- aid: amazon-storage-gateway:amazon-storage-gateway-aws-storage-gateway-api
+  name: Amazon Storage Gateway AWS Storage Gateway API
+  description: The AWS Storage Gateway API from Amazon Storage Gateway — 90 operation(s) for aws storage gateway.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - AWS Storage Gateway
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-aws-storage-gateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/storagegateway/
+  - type: Pricing
+    url: https://aws.amazon.com/storagegateway/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/storagegateway/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-create-smbfile-share-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-create-nfsfile-share-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-update-smbfile-share-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-update-nfsfile-share-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-describe-gateway-information-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-activate-gateway-input-schema.json
+- aid: amazon-storage-gateway:amazon-storage-gateway-cache-report-api
+  name: Amazon Storage Gateway Storage Gateway Cache Report API
+  description: The Storage Gateway Cache Report API from Amazon Storage Gateway — 5 operation(s) for storage gateway cache report.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - Storage Gateway Cache Report
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-cache-report-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-start-cache-report-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-list-cache-reports-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-list-cache-reports-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-describe-cache-report-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-cancel-cache-report-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-delete-cache-report-input-schema.json
+- aid: amazon-storage-gateway:amazon-storage-gateway-operations-api
+  name: Amazon Storage Gateway Storage Gateway Operations API
+  description: The Storage Gateway Operations API from Amazon Storage Gateway — 1 operation(s) for storage gateway operations.
+  humanURL: https://aws.amazon.com/storagegateway/
+  baseURL: https://storagegateway.amazonaws.com
+  tags:
+  - Storage Gateway Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-storage-gateway-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-activate-gateway-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-join-domain-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-refresh-cache-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-assign-tape-pool-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-join-domain-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-storage-gateway-evict-files-failing-upload-input-schema.json
+
 integrations:
 - name: Partner Programs
 - name: Resources
@@ -199,17 +329,7 @@ integrations:
 - name: AWS Partner Central
 - name: Partner Paths
 - name: co-sell with AWS
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-  url: https://apievangelist.com
-tags:
-- Amazon Web Services
-- Backup
-- File Storage
-- Gateways
-- Hybrid Cloud
-- Storage
+
 tags_raw:
 - AWS
 - Backup
@@ -217,6 +337,12 @@ tags_raw:
 - Gateway
 - Hybrid Cloud
 - Storage
-kind: company
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v6

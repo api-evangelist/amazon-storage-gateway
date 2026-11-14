@@ -5,12 +5,21 @@ artifacts:
   agentic-access/amazon-storage-gateway-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-storage-gateway-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-storage-gateway-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-storage-gateway-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  cli/amazon-storage-gateway-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-storage-gateway-amazon-storage-gateway-rest-api-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-storage-gateway-amazon-storage-gateway-rest-api-api
@@ -587,6 +596,27 @@ artifacts:
   collections/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatevtldevicetype-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  compliance/amazon-storage-gateway-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-storage-gateway-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-storage-gateway-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-storage-gateway-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-storage-gateway-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-storage-gateway-error-codes.yml:
+    method: searched
+    evidence: declared in the artifact
+  errors/amazon-storage-gateway-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-storage-gateway-activate-gateway-input-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -1259,6 +1289,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-storage-gateway-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -1343,6 +1376,9 @@ artifacts:
   json-schema/amazon-storage-gateway-cancel-archival-output-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-cancel-cache-report-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-storage-gateway-cancel-retrieval-input-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -1367,10 +1403,16 @@ artifacts:
   json-schema/amazon-storage-gateway-create-nfs-file-share-output-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-create-nfsfile-share-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-storage-gateway-create-smb-file-share-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-create-smb-file-share-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-create-smbfile-share-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-create-snapshot-from-volume-recovery-point-input-schema.json:
@@ -1419,6 +1461,9 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-delete-bandwidth-rate-limit-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-delete-cache-report-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-delete-chap-credentials-input-schema.json:
@@ -1491,6 +1536,9 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-describe-cache-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-describe-cache-report-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-describe-cachedi-scsi-volumes-input-schema.json:
@@ -1616,6 +1664,9 @@ artifacts:
   json-schema/amazon-storage-gateway-endpoint-network-configuration-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-evict-files-failing-upload-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-storage-gateway-file-share-info-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -1650,6 +1701,12 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-list-automatic-tape-creation-policies-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-list-cache-reports-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-list-cache-reports-output-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-list-file-shares-input-schema.json:
@@ -1805,6 +1862,9 @@ artifacts:
   json-schema/amazon-storage-gateway-start-availability-monitor-test-output-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-start-cache-report-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-storage-gateway-start-gateway-input-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -1886,6 +1946,9 @@ artifacts:
   json-schema/amazon-storage-gateway-update-nfs-file-share-output-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-update-nfsfile-share-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-storage-gateway-update-smb-file-share-input-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -1908,6 +1971,9 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-update-smb-security-strategy-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-storage-gateway-update-smbfile-share-input-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-storage-gateway-update-snapshot-schedule-input-schema.json:
@@ -2603,7 +2669,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -2672,14 +2738,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-storage-gateway-api-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
-  openapi/_original/amazon-storage-gateway.yaml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-storage-gateway-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-storage-gateway-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-storage-gateway-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-storage-gateway-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-storage-gateway-amazon-storage-gateway-rest-api-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -2692,6 +2765,12 @@ artifacts:
   openapi/amazon-storage-gateway-operations-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-storage-gateway-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-storage-gateway-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-storage-gateway-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -2980,10 +3059,16 @@ artifacts:
   postman/amazon-storage-gateway-x-amz-target-storagegateway-20130630-updatevtldevicetype-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  privacy/amazon-storage-gateway-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-storage-gateway-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-storage-gateway-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-storage-gateway-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-storage-gateway-spectral-rules.yml:
@@ -3002,8 +3087,27 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/storage-gateway-2013-06-30.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/storage-gateway/service/2013-06-30/storage-gateway-2013-06-30.json
+      (sha256 f9ef5fbb6f41, fetched 2026-11-11T21:15:40+00:00)
+  terms/amazon-storage-gateway-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-storage-gateway-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-storage-gateway-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-storage-gateway-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-storage-gateway-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-storage-gateway-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-storage-gateway-well-known.yml:
     method: unknown
     evidence: no authorship recorded
